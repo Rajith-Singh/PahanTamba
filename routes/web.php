@@ -16,3 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/class', function () {
+    return view('AddLessons');
+});
+
+Route::get('/timetable', function () {
+    return view('create-timetable');
+});
+
+
+Route::get('/common-class', function () {
+    return view('common-class');
+});
+
+
+Route::get('/teacher-timetable', function () {
+    return view('TeacherTimetable');
+});
