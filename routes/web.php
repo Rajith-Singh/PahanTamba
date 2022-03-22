@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/student-registation', function () {
+    return view('stdreg');
+});
+
+
+Route::get('/teacher-registation', function () {
+    return view('treg');
+});
+
+
+// Route::get('/attendance-sheet', function () {
+//     return view('attendance');
+// });
+
