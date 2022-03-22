@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::get('/add-task', function () {
+    return view('add-task');
+});
+
+Route::get('/add-result', function () {
+    return view('add-result');
+});
