@@ -28,8 +28,51 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/css-p/piyumika1.css">
+    <style>
+
+    body {
+
+    background-image: url('/images-p/kid1.png');
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    background-size: cover;
+
+    }
+
+    </style>
+
+
   </head>
   <body>
+
+      <!-- Header Starts -->
+      <nav class="navigaation-bar background-dark">
+      <h1>
+        <a href="index.html">
+            <i class="fas fa-graduation-cap"> </i> PahanTamba
+        </a>
+      </h1>
+
+      <ul>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Notices</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Finance</a></li>
+        <li>
+          <i class="fas fa-bars align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+        </li>
+	      <li><a href="#">Logout</a></li>      
+      </ul>
+    </nav>
+
+        <!-- Header Ends -->  
+
 
   <div class="container mt-5 m-auto">
     <br> <br>    
@@ -155,6 +198,76 @@
         </form>
 
         <br>
+
+
+<!-- Footer Starts -->
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-lists">
+          <ul>
+            <div class="micro-eye-logo">
+              <a href="index.html">
+                <img src="images-p/pahan_tamba_logo.png" alt="" width="80px" height="180px">
+              </a>
+            </div>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Pofile</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Timetables</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Tasks</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Notices</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Sitemap</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Contact Us</li>
+            <li><a href="#">124/B</a></li>
+            <li><a href="#">Aluthgama</a></li>
+            <li><a href="#">Bogamuwa</a></li>
+            <li><a href="#">Yakkala</a></li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </footer>
+<!-- Footer end -->
+
+    <!-- Sitemap starts -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <img src="/images-p/pahan_tamba_logo.png" alt="" width="340px" height="150px">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="fw-bold h3 ms-3">
+        Sample Test         
+        </div>
+          <div class="my-3">
+            <ul class="lead">
+                <li class="mb-2"><a href="add-exam" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="manage-exam" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <!-- Sitemap Ends --> 
+
 
 </body>
 </html>
