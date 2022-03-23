@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blacklist', function () {
+    return view('blacklist');
+});
+
+Route::get('/view', function () {
+    return view('view');
+});
