@@ -7,8 +7,14 @@ use App\Models\Task;
 
 class TaskController extends Controller
 {
-    public function storeTask(Request $request)
-    {
+    public function storeTask(Request $request) {
+
+        $request->validate([
+            'taskClass' => 'required',
+            'taskLevel' => 'required',
+            'task' => 'required|min:10',
+        ]);
+
         $task = new Task;
 
         $task->class=$request->taskClass;

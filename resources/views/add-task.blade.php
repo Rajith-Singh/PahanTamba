@@ -74,29 +74,31 @@
 
             <div class="col-md-12">
                 <label class="form-label">Class</label>     
-                <select class="form-select" name="taskClass" required>
+                <select class="form-select" name="taskClass">
                     <option selected disabled value="">Choose...</option>
                     <option> Autism </option>
                     <option> Down syndrome </option>
                     <option> Hyperactive </option>
                 </select>
-               
+                <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>
             </div>
 
             <div class="col-md-12">
                 <label class="form-label">Select Grade</label>
-                <select class="form-select" name="taskLevel" required>
+                <select class="form-select" name="taskLevel">
                     <option selected disabled value="">Choose...</option>
                     <option> Level 1 </option>
                     <option> Level 2 </option>
                     <option> Level 3 </option>
                 </select>
+                <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
             </div>
 
             <div class="form-group">
                 <label class="form-label">Task</label>
                 <textarea class="form-control rounded-0" rows="10" name="task" id='editor'></textarea>
-            </div>
+                <span style="color:red"> @error('task'){{$message}}@enderror</span>            
+              </div>
             
             <br>
 
