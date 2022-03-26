@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/add-task', function () {
 Route::get('/add-result', function () {
     return view('add-result');
 });
+
+Route::post('/saveTask',[TaskController::class,'storeTask']);

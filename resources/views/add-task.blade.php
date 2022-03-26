@@ -69,10 +69,8 @@
   <div class="container mt-5 m-auto">
     <br> <br>    
     <h2> Add Task </h2>
-        <form class="row g-3" nethod="post">
-        {{ method_field('POST') }}
-            @csrf
-            @method('PUT')
+        <form class="row g-3" method="post" action="/saveTask">
+        {{csrf_field()}}
 
             <div class="col-md-12">
                 <label class="form-label">Class</label>     
@@ -97,7 +95,7 @@
 
             <div class="form-group">
                 <label class="form-label">Task</label>
-                <textarea class="form-control rounded-0" rows="10" name="examQuestion" id='editor'></textarea>
+                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'></textarea>
             </div>
             
             <br>
