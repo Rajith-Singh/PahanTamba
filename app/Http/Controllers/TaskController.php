@@ -21,6 +21,8 @@ class TaskController extends Controller
         $task->level=$request->taskLevel;
         $task->task=$request->task;
         $task->save();
+
+        return back()->with('msg', 'The task was successfully added.');
         //dd($request->all());
     }
 }

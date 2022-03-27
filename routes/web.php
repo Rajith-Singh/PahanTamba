@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/test2', function () {
+    return view('test2');
 });
 
 Route::get('/add-task', function () {
@@ -32,3 +32,7 @@ Route::get('/add-result', function () {
 });
 
 Route::post('/saveTask',[TaskController::class,'storeTask']);
+
+Route::get('view-category', function () {
+    return view('view-category');
+});

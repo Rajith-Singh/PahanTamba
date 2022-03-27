@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Task</title>
+    <title>View Category</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -57,22 +57,16 @@
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
 
-    <style>
-    body {
-    background-image: url('/images/children-background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    }
-    </style>
+    <link rel="stylesheet" href="css/rajith2.css" media="screen">
+    <link rel="stylesheet" href="css/rajith3.css" media="screen">
 
   </head>
   <body class="u-body u-xl-mode">
-
+  
           <!-- Header Start --> 
 		  
 		  
-          <header class="u-align-left u-clearfix u-header u-section-row-container" id="sec-d704"><div class="u-section-rows">
+  <header class="u-align-left u-clearfix u-header u-section-row-container" id="sec-d704"><div class="u-section-rows">
         <div class="u-grey-70 u-section-row u-section-row-1" id="sec-46aa">
           <div class="u-clearfix u-sheet u-sheet-1">
             <a href="https://nicepage.me" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"><span class="u-icon"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M373.333,266.88c-25.003,0-49.493-3.904-72.704-11.563c-11.328-3.904-24.192-0.896-31.637,6.699l-46.016,34.752    c-52.8-28.181-86.592-61.952-114.389-114.368l33.813-44.928c8.512-8.512,11.563-20.971,7.915-32.64    C142.592,81.472,138.667,56.96,138.667,32c0-17.643-14.357-32-32-32H32C14.357,0,0,14.357,0,32    c0,205.845,167.488,373.333,373.333,373.333c17.643,0,32-14.357,32-32V298.88C405.333,281.237,390.976,266.88,373.333,266.88z"></path></svg><img></span>&nbsp;(+94) 719726803
@@ -138,62 +132,49 @@
       </div></header> 
 	  
 	  
-          <!-- Header End --> 
+          <!-- Header End -->  
 
-  <div class="container mt-5 m-auto">  
-    <h2> Add Task </h2>
-        <form class="row g-3" method="post" action="/saveTask">
-        {{csrf_field()}}
-
-        @if(session('msg'))
-              <div class="alert alert-success">{{session('msg')}} </div>
-        @endif
-
-            <div class="col-md-12">
-                <label class="form-label">Class</label>     
-                <select class="form-select" name="taskClass">
-                    <option selected disabled value="">Choose...</option>
-                    <option> Autism </option>
-                    <option> Down syndrome </option>
-                    <option> Hyperactive </option>
-                </select>
-                <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>
+    <section class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-clearfix u-section-1" id="carousel_46de">
+      <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-valign-top-md u-container-layout-1">
+            <div class="u-palette-1-light-2 u-shape u-shape-circle u-shape-1"></div>
+            <div class="u-align-left u-image u-image-circle u-image-1" data-image-width="1200" data-image-height="624"></div>
+            <div class="u-shape u-shape-svg u-text-palette-1-light-3 u-shape-2">
+              <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cbc0"></use></svg>
+              <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-cbc0" style="enable-background:new 0 0 160 160;"><path d="M80,30c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S52.4,30,80,30 M80,0C35.8,0,0,35.8,0,80s35.8,80,80,80
+	s80-35.8,80-80S124.2,0,80,0L80,0z"></path></svg>
             </div>
-
-            <div class="col-md-12">
-                <label class="form-label">Select Grade</label>
-                <select class="form-select" name="taskLevel">
-                    <option selected disabled value="">Choose...</option>
-                    <option> Level 1 </option>
-                    <option> Level 2 </option>
-                    <option> Level 3 </option>
-                </select>
-                <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">Task</label>
-                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'></textarea>
-                <span style="color:red"> @error('task'){{$message}}@enderror</span>            
+          </div>
+        </div>
+        <div class="u-expanded-width-md u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-1 u-radius-50 u-repeater-item u-shape-round u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-1"><img src="images/14911711.png" alt=""></span>
+                <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-1"> autism</h3>
               </div>
-            
-            <br>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-2 u-radius-50 u-repeater-item u-shape-round">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-2"><img src="images/62067871.png" alt=""></span>
+                <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-2"> down syndrome</h3>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-3 u-radius-50 u-repeater-item u-shape-round">
+              <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-3"><img src="images/32038111.png" alt=""></span>
+                <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-3"> hyperactive</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add Task</button>
-                <button class="btn btn-warning" type="reset">Clear</button>
-            </div>  
-            <br> 
-        </div>        
-        </form>
-
-        <br>
 
 
 	        <!-- Footer Start --> 	  
     
     
-          <footer class="u-clearfix u-footer u-grey-80" id="sec-867e"><div class="u-clearfix u-sheet u-sheet-1">
+            <footer class="u-clearfix u-footer u-grey-80" id="sec-867e"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
@@ -310,19 +291,4 @@
 	
 
 </body>
-
-<script src="/js/ckeditor.js"> </script>
-  <script>
-    CKEDITOR.replace('editor',
-    {
-      extraPlugins : 'html5video, videoembed',
-    });
-  </script>
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
 </html>
