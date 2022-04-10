@@ -61,7 +61,9 @@
     <link rel="stylesheet" href="css/rajith3.css" media="screen">
 
   </head>
-  <body class="u-body u-xl-mode">
+  <body class="u-body u-xl-mode" onload="myFunction()">
+
+  <div id="loading"></div>
   
           <!-- Header Start --> 
 		  
@@ -288,7 +290,14 @@
       </div>
 
         <!-- Sitemap End --> 
-	
+
+  <script>
+		var preloader = document.getElementById("loading");
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>	        
 
 </body>
 </html>

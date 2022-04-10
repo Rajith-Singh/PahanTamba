@@ -36,3 +36,15 @@ Route::post('/saveTask',[TaskController::class,'storeTask']);
 Route::get('view-category', function () {
     return view('view-category');
 });
+
+Route::get('autism-level', function () {
+    return view('autism-level');
+});
+
+Route::get('down-syndrome-level', function () {
+    return view('down-syndrome-level');
+});
+
+Route::get('hyperactive-level', function () {
+    return view('hyperactive-level');
+});

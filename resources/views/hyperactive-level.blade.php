@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Task</title>
+    <title>Hyperactive</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -32,6 +32,7 @@
     />
 
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
+<link rel="stylesheet" href="About.css" media="screen">
     <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
@@ -55,18 +56,12 @@
     <meta name="twitter:description" content="">
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/rajith5.css" media="screen">
+<link rel="stylesheet" href="css/rajith4.css" media="screen">
 
-    <style>
-    body {
-    background-image: url('/images/children-background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    }
-    </style>
 
   </head>
-  <body class="u-body u-xl-mode" onload="myFunction()">
+  <body class="u-body u-palette-1-base u-xl-mode" onload="myFunction()">
 
   <div id="loading"></div>
 
@@ -139,62 +134,56 @@
       </div></header> 
 	  
 	  
-          <!-- Header End --> 
+          <!-- Header End -->  
 
-  <div class="container mt-5 m-auto">  
-    <h2> Add Task </h2>
-        <form class="row g-3" method="post" action="/saveTask">
-        {{csrf_field()}}
 
-        @if(session('msg'))
-              <div class="alert alert-success">{{session('msg')}} </div>
-        @endif
-
-            <div class="col-md-12">
-                <label class="form-label">Class</label>     
-                <select class="form-select" name="taskClass">
-                    <option selected disabled value="">Choose...</option>
-                    <option> Autism </option>
-                    <option> Down syndrome </option>
-                    <option> Hyperactive </option>
-                </select>
-                <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>
-            </div>
-
-            <div class="col-md-12">
-                <label class="form-label">Select Grade</label>
-                <select class="form-select" name="taskLevel">
-                    <option selected disabled value="">Choose...</option>
-                    <option> Level 1 </option>
-                    <option> Level 2 </option>
-                    <option> Level 3 </option>
-                </select>
-                <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">Task</label>
-                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'></textarea>
-                <span style="color:red"> @error('task'){{$message}}@enderror</span>            
+    <section class="u-clearfix u-palette-5-light-2 u-section-1" id="carousel_5d2d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-left-cell u-size-32 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <img class="u-expand-resize u-expanded-width u-image u-image-1" src="images/hyperactive-removebg-preview.png" data-image-width="613" data-image-height="407">
+                </div>
               </div>
-            
-            <br>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-28 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h1 class="u-custom-font u-font-oswald u-text u-text-palette-3-base u-text-1"> Hyperactive</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-2">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-palette-3-base u-size-20 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-1"><img src="images/3564180.png" alt=""></span>
+                  <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-white u-text-2">Level 1</h2>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-palette-2-base u-size-20 u-layout-cell-4">
+                <div class="u-container-layout u-container-layout-4"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-2"><img src="images/3564186.png" alt=""></span>
+                  <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-3">level 2</h2>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-right-cell u-size-20 u-layout-cell-5">
+                <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-3"><img src="images/3564189.png" alt=""></span>
+                  <h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-4">level 3</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add Task</button>
-                <button class="btn btn-warning" type="reset">Clear</button>
-            </div>  
-            <br> 
-        </div>        
-        </form>
 
-        <br>
-
-
-	        <!-- Footer Start --> 	  
+    	        <!-- Footer Start --> 	  
     
     
-          <footer class="u-clearfix u-footer u-grey-80" id="sec-867e"><div class="u-clearfix u-sheet u-sheet-1">
+                <footer class="u-clearfix u-footer u-grey-80" id="sec-867e"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
@@ -308,8 +297,7 @@
       </div>
 
         <!-- Sitemap End --> 
-
-    <script>
+  <script>
 		var preloader = document.getElementById("loading");
 
 		function myFunction(){
@@ -317,20 +305,5 @@
 		};
 	</script>	
 
-</body>
-
-<script src="/js/ckeditor.js"> </script>
-  <script>
-    CKEDITOR.replace('editor',
-    {
-      extraPlugins : 'html5video, videoembed',
-    });
-  </script>
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
+  </body>
 </html>
