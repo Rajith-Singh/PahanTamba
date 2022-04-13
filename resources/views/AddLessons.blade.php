@@ -23,8 +23,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../css/dulsara.css">
-  <link rel="stylesheet" href="css/dulsara1.css">
+    <link rel="stylesheet" href="../css-d/dulsara1.css">
+  <link rel="stylesheet" href="css-d/dulsara1.css">
     <title>Add lessons</title>
    
 
@@ -51,19 +51,74 @@ margin-bottom: 1.2rem !important;
 margin-top: 0.3rem !important;
 
 }
+
+
+
+
+
+body {
+
+background-image: url('/images-d/kids11.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+
+
+
+
+
+
+
 </style>
 
-    
+<link rel="stylesheet" href="/css-d/header-footer.css">
 
 </head>
 
   <body>
+
+<!-- Header Starts -->
+<nav class="navigaation-bar background-dark">
+      <h1>
+        <a href="index.html">
+            <i class="fas fa-graduation-cap"> </i> PahanTamba
+        </a>
+      </h1>
+
+      <ul>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Notices</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Finance</a></li>
+        <li>
+          <i class="fas fa-bars align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+        </li>
+	      <li><a href="#">Logout</a></li>      
+      </ul>
+    </nav>
+
+        <!-- Header Ends -->  
+
+
+<br><br><br>
+
 <center>
 <h2>Add Lessons</h2>
 </center>
 <br><br>
-    
-    <form action="{{ url('/store') }}" method="POST" enctype="multipart/form-data">
+
+
+
+
+    <form action="/Lesson-store" method="POST"  enctype="multipart/form-data">
         {{csrf_field()}}
     <div class="container">
     <div class="row">
@@ -73,14 +128,16 @@ margin-top: 0.3rem !important;
       <h4>Enter ClassID</h4>
       <input type="text" class="form-control py-2" name="ClassID" placeholder="Enter the class ID">
     </div>
-     @error('ClassLname')
+
+
+     @error('ClassID')
     <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
      @enderror
       <br>
                     
     <div class="form-group">
     <h4>Subject</h4>
-    <input type="text" class="form-control py-2" name="class-subject" placeholder="Enter the subject">
+    <input type="text" class="form-control py-2" name="csubject" placeholder="Enter the subject">
     </div>
     @error('classLtype')
     <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -91,28 +148,38 @@ margin-top: 0.3rem !important;
     <div class="form-group">
     <h4>Disease</h4>
    
-    <div class="form-group">
-    <input type="radio" id="html" name="class-Disease" value="HTML">
-<label for="html">Autism</label><br>
-<input type="radio" id="css" name="fav_language" value="CSS">
-<label for="css">Down Syndrome</label><br>
-<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-<label for="javascript">Hyperactive</label>
-    </div>
-    @error('classLtype')
+  
+     
+
+    <div class="col-md-3">
+                <label class="form-label">Select Disease</label>
+                <select class="form-select" name="cDisease" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> Autism </option>
+                    <option> DownSyndrome </option>
+                    <option> Hyperactive </option>
+                   
+                </select>
+            </div>
+
+            @error('classLtype')
     <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
     @enderror
     <br>
-     
-    <h4>Level</h4>
-    <div class="form-group">
-    <input type="radio" id="html" name="class-level" value="HTML">
-<label for="html">Level 01</label><br>
-<input type="radio" id="css" name="fav_language" value="CSS">
-<label for="css">Level 02</label><br>
-<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-<label for="javascript">Leve 03</label>
-    </div>
+
+
+
+
+    <div class="col-md-3">
+                <label class="form-label">Select Level</label>
+                <select class="form-select" name="clevel" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> 1 </option>
+                    <option> 2 </option>
+                    <option> 3 </option>
+                    
+                </select>
+            </div>
     @error('classLSubject')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
      @enderror
@@ -120,7 +187,7 @@ margin-top: 0.3rem !important;
 
     <h4>Enter Grade</h4>
     <div class="form-group">
-    <input type="text"  class="form-control py-2" name="class-grade" placeholder="Enter the grade" id="file">
+    <input type="text"  class="form-control py-2" name="cgrade" placeholder="Enter the grade" id="file">
     </div>
     @error('file')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -130,7 +197,7 @@ margin-top: 0.3rem !important;
 
     <h4> Enter the content</h4>
     <div class="form-group">
-    <input type="file"  class="form-control py-2" name="class-file" placeholder="Choose file" id="file">
+    <input type="file"  class="form-control py-2" name="cfile" placeholder="Choose file" id="file">
 
     </div>
     @error('file')
@@ -148,6 +215,75 @@ margin-top: 0.3rem !important;
 </div>
 </form>
 <br><br><br>
+
+<!-- Footer Starts -->
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-lists">
+          <ul>
+            <div class="micro-eye-logo">
+              <a href="index.html">
+                <img src="images-d/pahan_tamba_logo.png" alt="" width="80px" height="180px">
+              </a>
+            </div>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Pofile</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Timetables</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Tasks</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Notices</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Sitemap</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Contact Us</li>
+            <li><a href="#">124/B</a></li>
+            <li><a href="#">Aluthgama</a></li>
+            <li><a href="#">Bogamuwa</a></li>
+            <li><a href="#">Yakkala</a></li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </footer>
+<!-- Footer end -->
+
+
+    <!-- Sitemap starts -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <img src="/images-d/pahan_tamba_logo.png" alt="" width="340px" height="150px">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="fw-bold h3 ms-3">
+        Sample Test         
+        </div>
+          <div class="my-3">
+            <ul class="lead">
+                <li class="mb-2"><a href="add-exam" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="manage-exam" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
+                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <!-- Sitemap Ends --> 
 
 
 

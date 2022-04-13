@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LessonController; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +20,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/class', function () {
+Route::get('/add-lessons', function () {
     return view('AddLessons');
 });
 
-Route::get('/timetable', function () {
+Route::get('/create-timetable', function () {
     return view('create-timetable');
 });
 
@@ -35,3 +37,21 @@ Route::get('/common-class', function () {
 Route::get('/teacher-timetable', function () {
     return view('TeacherTimetable');
 });
+
+
+Route::get('/edit-lessons', function () {
+    return view('TeacherTimetable');
+});
+
+
+Route::post('/Lesson-store', [LessonController::class, 'LessonStore']);
+
+//edit lessons
+Route::get('/edit-lesson', function(){
+
+    $data=App\Models\Lessons::all();
+    return view('updateLessons')->with('lesson', $data);
+   });
+
+   //delete lessons
+   Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
