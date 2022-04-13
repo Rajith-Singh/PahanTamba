@@ -45,7 +45,39 @@
 
 	</head>
 	<body>
+
+
 	<section>
+
+        	<!-- Start Sudebar -->
+    <aside class="sidebar" style="margin-top:35px;">
+      <div class="toggle">
+        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+      </div>
+      <div class="side-inner">
+
+        <div>
+          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+        </div>
+
+        <div class="counter d-flex justify-content-center">
+
+        </div>
+        
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
+            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </aside>	
 	
 	<!-- Header Start -->
 
@@ -98,43 +130,7 @@
 	<!-- END header -->
 
 
-
-
-	<!-- Start Sudebar -->
-	
-    <aside class="sidebar">
-      <div class="toggle">
-        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-              <span></span>
-            </a>
-      </div>
-      <div class="side-inner">
-
-        <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
-        </div>
-
-        <div class="counter d-flex justify-content-center">
-
-        </div>
-        
-        <div class="nav-menu">
-          <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
-          </ul>
-        </div>
-      </div>
-      
-    </aside>	
-	
-	<!-- End Sudebar -->
-
-
-
+    <h1> Sample Test </h1> 
 
 
 

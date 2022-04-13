@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Result</title>
+    <title>Manage Tasks</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,14 +49,7 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/css/footer/style.css">
 
-  <style>
-    body {
-    background-image: url('/images/pngwing.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    }
-    </style>
+
 
   </head>
 	<body  onload="myFunction()">
@@ -145,67 +138,41 @@
 	</section>
 	<!-- END header -->
 
-  <div class="container mt-5 m-auto">
-    <br> <br>    
-    <h2> Add Result </h2>
     <br>
-        <form class="row g-3" method="post">
-        {{ method_field('POST') }}
-            @csrf
-            @method('PUT')
+  <center> <h3> Manage Tasks - Hyperactive - Level 3 </h3> </center>
+  <br>
 
-            <div class="col-md-12">
-                <label class="form-label"> <h5> <b> Name </b> </h5> </label>
-                <input type="text" class="form-control py-2" name="stdName" required>
-            </div>
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><center>Tasks</center></th>
+                    <th><center>Action</center></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($viewTasks as $data)
+                    <tr>
+                        <td>{!!$data->task!!}</td>
+                        <td><center>
+                            <table>
+                                <tr>
+                                    <td> 
+                                        <a href="#" class="btn btn-success"> Update </a>
+                                    </td> 
 
+                                    <td> 
+                                        <a href="#" class="btn btn-danger"> Delete </a>
+                                    </td> 
+                                </tr>    
+                            </table></center>
+                        </td>        
+                    </tr>
+                    @endforeach
+            </tbody>
+            </table>
 
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Class </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdClass" required>
-            </div>
-
-
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Level </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdLevel" required>
-            </div>
-
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Task </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdTask" id='editor'></textarea>
-            </div>
-
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Answer </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdAns" id='editor2'></textarea>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Marks </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdMarks" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Feedback </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdFeedback" id='editor3'></textarea>
-            </div>
-
-
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add</button>
-            </div>  
-            <br> 
-        </div>        
-        </form>
-
-        <br>
-
-
-    	<!-- Start Footer -->
-	    <footer class="footer-32892 pb-0">
+    <!-- Start Footer -->
+      <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -301,33 +268,3 @@
 	</script>	
 
 </body>
-
-<script src="/js/ckeditor.js"> </script>
-  <script>
-    CKEDITOR.replace('editor',
-    {
-      extraPlugins : 'html5video, videoembed',
-    });
-  </script>
-
-    <script>
-        CKEDITOR.replace('editor2',
-        {
-        extraPlugins : 'html5video, videoembed',
-        });
-    </script>
-
-<script>
-        CKEDITOR.replace('editor3',
-        {
-        extraPlugins : 'html5video, videoembed',
-        });
-    </script>
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-</html>
