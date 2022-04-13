@@ -13,19 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('timetables', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('TeacherId');
-            $table->String('Subject');
-            $table->String(' Topic');
-            $table->String('StartDate');
-            $table->String('Level');
-            $table->String('StartTime');
-            $table->String('EndTime');
-            $table->String('Link');
-            $table->String('Description');
+            $table->string('class');
+            $table->string('level');
+            $table->string('task');
             $table->timestamps();
-            
         });
     }
 
@@ -36,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('timetables');
+        Schema::dropIfExists('tasks');
     }
 };
