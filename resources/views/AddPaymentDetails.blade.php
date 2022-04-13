@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Exam</title>
+    <title>Add payment details</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -33,7 +33,7 @@
 
   <div class="container mt-5 m-auto">
     <br> <br>    
-    <h2> Add Fees </h2>
+    <h2> Add Payment Details </h2>
         <form class="row g-3" nethod="post">
         {{ method_field('POST') }}
             @csrf
@@ -52,12 +52,12 @@
             <div class="col-md-12">
                 <label class="form-label">Class</label>
                 <select class="form-select py-2" name="examDuration" required>
-                    <option>30 Minutes</option>
-                    <option>60 Minutes</option>
-                    <option>90 Minutes</option>
-                    <option>120 Minutes</option>
-                    <option>180 Minutes</option>
-                    <option>1 Minutes</option>
+                    <option>Level 1 </option>
+                    <option>Level 2</option>
+                    <option>Level 3</option>
+                    <option>Level 4</option>
+                    <option>Level 5</option>
+                    <option>Level 6</option>
                 </select>
 
 
@@ -76,15 +76,19 @@
                 <input type="text" class="form-control py-2" name="examTitle" required>
             </div>
         <br>
-        <div class="col-md-6">
+
+        <div class="col-md-12">
                 <label class="form-label">Payment Proof</label>
-                <input type="text" class="form-control py-2" name="examTitle" required>
+                <input type="file" class="form-control py-2" name="examTitle" required>
             </div>
 <br>
-<div class="col-md-6">
+<div class="col-md-12">
                 <label class="form-label">Note</label>
-                <input type="text" class="form-control py-2" name="examTitle" required>
+                <textarea class="form-control rounded-0" rows="10">
+</textarea>
             </div>
+        
+
 
 
     
@@ -102,3 +106,4 @@
 
 
 </body>
+

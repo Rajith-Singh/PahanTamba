@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,6 +31,31 @@
     />
   </head>
   <body>
+
+
+  <!-- Header Starts -->
+  <nav class="navigaation-bar background-dark">
+      <h1>
+        <a href="index.html">
+            <i class="fas fa-graduation-cap"> </i> PahanTamba
+        </a>
+      </h1>
+
+      <ul>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Notices</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Finance</a></li>
+        <li>
+          <i class="fas fa-bars align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+        </li>
+	      <li><a href="#">Logout</a></li>      
+      </ul>
+    </nav>
+
+        <!-- Header Ends -->  
 
   <div class="container mt-5 m-auto">
     <br> <br>    
@@ -99,7 +125,50 @@
         </div>        
         </form>
 
-        <br>
+    <br>
+<!-- Footer Starts -->
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-lists">
+          <ul>
+            <div class="micro-eye-logo">
+              <a href="index.html">
+                <img src="images/pahan_tamba_logo.png" alt="" width="80px" height="180px">
+              </a>
+            </div>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Pofile</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Timetables</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Quick Links</li>
+            <li><a href="#">My Tasks</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Notices</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Sitemap</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Contact Us</li>
+            <li><a href="#">124/B</a></li>
+            <li><a href="#">Aluthgama</a></li>
+            <li><a href="#">Bogamuwa</a></li>
+            <li><a href="#">Yakkala</a></li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </footer>
+<!-- Footer end -->
 
 
 </body>

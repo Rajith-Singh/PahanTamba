@@ -24,3 +24,13 @@ Route::get('/blacklist', function () {
 Route::get('/view', function () {
     return view('view');
 });
+
+Route::get('/Addfees', function () {
+    return view('Addfees');
+});
+
+
+Route::get('/Addpaymentdetails', function () {
+    return view('Addpaymentdetails');
+});
+
