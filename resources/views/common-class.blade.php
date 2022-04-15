@@ -113,9 +113,9 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
@@ -209,7 +209,7 @@ body {
     <div class="flip-card-back">
       
     <br><br><br>
-    <a href="/math" name="btn-1" class="btn btn-primary">View</a>
+    <a href="/add-lessons" name="btn-1" class="btn btn-primary">Add Lessons</a>
 
     </div>
   </div>
@@ -226,7 +226,7 @@ body {
     </div>
     <div class="flip-card-back">
     <br><br><br><br>
-    <a href="/science" name="btn-1" class="btn btn-primary">View</a>
+    <a href="/add-lessons" name="btn-1" class="btn btn-primary">Add Lessons</a>
 
     </div>
   </div>
@@ -242,7 +242,7 @@ body {
     </div>
     <div class="flip-card-back">
     <br><br><br><br>
-    <a href="/science" name="btn-1" class="btn btn-primary">View</a>
+    <a href="/add-lessons" name="btn-1" class="btn btn-primary">Add Lessons</a>
 
     </div>
   </div>

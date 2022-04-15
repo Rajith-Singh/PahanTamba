@@ -31,13 +31,24 @@ Route::get('/create-timetable', function () {
     return view('create-timetable');
 });
 
+//insert timetable
+Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
 
 //manage timetable
 Route::get('/manage-timetable', function () {
-    return view('manage-timetable');
+    $time=App\Models\CTimetable::all();
+    return view('manage-timetable')->with('time', $time);
 });
 
 
+
+
+Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+
+//delete timetable
+Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
 
 Route::get('/common-class', function () {
     return view('common-class');
@@ -53,8 +64,7 @@ Route::get('/edit-lessons', function () {
 //insert lessons
 Route::post('/Lesson-store', [LessonController::class, 'LessonStore']);
 
-//insert timetable
-Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
+
 
 
 //edit lessons
@@ -66,6 +76,73 @@ Route::get('/edit-lesson', function(){
 
    //delete lessons
    Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
+Auth::routes([
+    'verify' => true
+]);
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//                         //User//
+
+// Route::prefix('user')->name('user.')->group(function(){
+  
+//     Route::middleware(['guest:web', 'PreventBackHistory'])->group(function(){
+//         Route::view('/login','dashboard.user.login')->name('login');
+//         Route::view('/register','dashboard.user.register')->name('register');
+//         Route::post('/create',[UserController::class,'create'])->name('create');
+//         Route::post('/check',[UserController::class,'check'])->name('check');
+//     });
+
+//     Route::middleware(['auth:web', 'PreventBackHistory'])->group(function(){
+//         Route::view('/home','dashboard.user.home')->name('home');
+//         Route::post('/logout',[UserController::class,'logout'])->name('logout');
+//     });
+
+// });
+
+//                     //Teacher//
+
+
+// Route::prefix('teacher')->name('teacher.')->group(function(){
+
+//     Route::middleware(['guest:teacher','PreventBackHistory'])->group(function(){
+//         Route::view('/login','dashboard.teacher.login')->name('login');
+//         Route::view('/register','dashboard.teacher.register')->name('register');
+//         Route::post('/create',[TeacherController::class,'create'])->name('create');
+//         Route::post('/check',[TeacherController::class,'check'])->name('check');
+
+//     });
+
+//     Route::middleware(['auth:teacher','PreventBackHistory'])->group(function(){
+//         Route::view('/home','dashboard.teacher.home')->name('home');
+//         Route::post('/logout',[TeacherController::class,'logout'])->name('logout');
+
+//     });
+// });
+
+
+//                         //Student//
+
+// Route::prefix('student')->name('student.')->group(function(){
+    
+//     Route::middleware(['guest:student','PreventBackHistory'])->group(function(){
+//         Route::view('/login','dashboard.student.login')->name('login');
+//         Route::view('/register','dashboard.student.register')->name('register');
+//         Route::post('/create',[StudentController::class,'create'])->name('create');
+//         Route::post('/check',[StudentController::class,'check'])->name('check'); 
+
+//     });
+
+//     Route::middleware(['auth:student','PreventBackHistory'])->group(function(){
+//         Route::view('/home','dashboard.student.home')->name('home');
+//         Route::post('/logout',[StudentController::class,'logout'])->name('logout');
+
+//     });
+// });
+
+
 Route::get('/test2', function () {
     return view('test2');
 });
@@ -140,3 +217,7 @@ Route::get('manage-hyperactive-tasks-level3', function () {
     $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 3');
     return view('manage-hyperactive-tasks-level3')->with('viewTasks',$data);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -17,6 +17,14 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'teacher'=>[
+       'driver'=>'eloquent',
+       'model'=>App\Models\Teacher::class,
+    ],
+    'student'=>[
+        'driver'=>'eloquent',
+        'model'=>App\Models\Student::class,
+     ],
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +39,7 @@ return [
     | users are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
-    | Supported: "session"
+    | Supported: "session", "token"
     |
     */
 
@@ -40,6 +48,20 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+        'teacher'=>[
+           'driver'=>'session',
+           'provider'=>'teachers',
+        ],
+        'student'=>[
+            'driver'=>'session',
+            'provider'=>'students',
+         ],
     ],
 
     /*
@@ -69,6 +91,14 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'teachers'=>[
+           'driver'=>'eloquent',
+           'model'=>App\Models\Teacher::class,
+        ],
+        'students'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Student::class,
+         ],
     ],
 
     /*
@@ -80,7 +110,7 @@ return [
     | than one user table or model in the application and you want to have
     | separate password reset settings based on the specific user types.
     |
-    | The expire time is the number of minutes that each reset token will be
+    | The expire time is the number of minutes that the reset token should be
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
@@ -93,6 +123,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'teachers'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Teacher::class,
+        ],
+        'students'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Student::class,
+        ]
     ],
 
     /*

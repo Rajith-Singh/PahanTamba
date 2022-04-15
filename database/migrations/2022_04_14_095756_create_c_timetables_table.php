@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('timetables', function (Blueprint $table) {
-            //$table->increments('id');
-            $table->increments('TeacherID');
+        Schema::create('c_timetables', function (Blueprint $table) {
+            $table->id();
             $table->String('Subject');
             $table->String('Topic');
             $table->String('StartDate');
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('timetables');
+        Schema::dropIfExists('c_timetables');
     }
 };

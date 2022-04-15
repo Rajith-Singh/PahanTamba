@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Lessons;
-
+use App\Models\Timetables;
 class LessonController extends Controller
 {
     //
@@ -44,7 +44,7 @@ class LessonController extends Controller
         $fileModel->save();
        // $data->Lessons::all();
 
-    return view('updateLessons')->with('fileModel', $data);
+   // return view('updateLessons')->with('fileModel', $data);
 
 //return view('studentLessonview', compact('file'));
 
@@ -60,4 +60,22 @@ class LessonController extends Controller
         return redirect()->back();
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }

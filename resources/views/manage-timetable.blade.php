@@ -35,6 +35,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -68,11 +70,11 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
         </div>
       </div>
@@ -113,10 +115,10 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item active"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -133,15 +135,16 @@
   
 <br><br>
 <center>
+  <form method="POST" action="">
 <section class="container">
     
         <div class="jumbotorn">
     <h1>Manage Lessons</h1>
     <br>
-    <a href="/teacher/Ladd" class="btn btn-primary">Add new Lessons</a>
+    <a href="/" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
-    @if(session('status'))
-    <div class="alert alert-success">{{session('status')}}</div>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
     @endif
     
 </div><br>
@@ -150,30 +153,37 @@
         <thead class="thead-dark">
         <tr>
             
-            <th>LessonName</th>
-            <th>Lessontype</th>
-            <th>subject</th>
-            <th>Grade</th>
-            <th>File</th>
+            <th>id</th>
+            <th>Subject</th>
+            <th>Topic</th>
+            <th>StartDate</th>
+            <th>Level</th>
+            <th>StartTime</th>
+            <th>EndDate</th>
+            <th>EndTime</th>
+            <th>Link</th>
+            <th>Description</th>
             <th>Action</th>
-            
         </tr></thead>
 <tbody>
-    @foreach($Timetable as $timetable)
+    @foreach($time as $time)
     <tr style="background:white;">
-    
-    <td>{{$timetable->id}}</td>
-    <td>{{$timetable->Subject}}</td>
-    <td>{{$timetable->Disease}}</td>
-    <td>{{$timetable->Level}}</td>
-    <td>{{$timetable->Grade}}</td>
-    <td>{{$timetable->Content}}</td>
-
+     
+    <td>{{$time->id}}</td>
+    <td>{{$time->Subject}}</td>
+    <td>{{$time->Topic}}</td>
+    <td>{{$time->StartDate}}</td>
+    <td>{{$time->Level}}</td>
+    <td>{{$time->StartTime}}</td>
+    <td>{{$time->EndDate}}</td>
+    <td>{{$time->EndTime}}</td>
+    <td>{{$time->Link}}</td>
+    <td>{{$time->Description}}</td>
     <td>
-<a href="/deleteL/{{$timetable->id}}" class="btn btn-warning">Update</a>
+<a href="/updateTimetable/{{$time->id}}" class="btn btn-warning">Update</a>
 </td>
 <td>
-<a href="/deleteL/{{$timetable->id}}" class="btn btn-warning">Delete</a>
+<a href="/delete/{{$time->id}}" class="btn btn-danger">Delete</a>
 </td>
 
 
@@ -182,6 +192,7 @@
 </tbody>
 
 </table>
+</form>
 </center>
 </div>
 

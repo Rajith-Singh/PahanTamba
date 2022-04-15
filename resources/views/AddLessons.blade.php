@@ -41,7 +41,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <style>
 
@@ -77,7 +77,7 @@ background-size: cover;
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -86,11 +86,11 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="#"><span class="icon-search2 mr-3"></span> </a></li>
+            <li><a href="/edit-lesson"><span class="icon-notifications mr-3"></span>Manage Lessons</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span>View Profile</a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
         </div>
       </div>
@@ -131,9 +131,9 @@ background-size: cover;
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
@@ -150,9 +150,9 @@ background-size: cover;
 <br><br><br>
 
 <center>
-<h2 style="font-size:35px;"> Add Lessons </h2> <br>
+<h2 style="font-size:35px;" style="font-size:35px;"> Add Lessons </h2> <br>
 </center>
-<br><br>
+<br>
     
 
 
@@ -160,39 +160,32 @@ background-size: cover;
 
     <form action="/Lesson-store" method="POST"  enctype="multipart/form-data">
         {{csrf_field()}}
+
+      
+        @if(session('message'))
+              <div class="alert alert-success">{{session('message')}} </div>
+        @endif
     <div class="container">
     <div class="row">
    <div class="col-md-20">
      <br>
-     <div class="col-md-12">
-     <label class="form-label"> <b>Enter class ID</b> </label>     
-      <input type="text" class="form-control py-2" name="ClassID" placeholder="Enter the class ID">
-    </div>
+     
 
 
-     @error('ClassID')
-    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
-     @enderror
-      <br>
+     
                     
     <div class="form-group">
     <h4>Subject</h4>
     <input type="text" class="form-control py-2" name="csubject" placeholder="Enter the subject">
     </div>
-    @error('classLtype')
-    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
-    @enderror
+    <span style="color:red"> @error('subject'){{$message}}@enderror</span>
     <br>
 
 
     <div class="form-group">
-    <h4>Disease</h4>
-   
-  
-     
-
     <div class="col-md-12">
-                <label class="form-label">Select Disease</label>
+    <h4>Select Disease</h4>
+               
                 <select class="form-select" name="cDisease" required>
                     <option selected disabled value="">Choose...</option>
                     <option> Autism </option>
@@ -200,6 +193,8 @@ background-size: cover;
                     <option> Hyperactive </option>
                    
                 </select>
+                <span style="color:red"> @error('Disease'){{$message}}@enderror</span>
+
             </div>
 
             @error('classLtype')
@@ -211,7 +206,8 @@ background-size: cover;
 
 
     <div class="col-md-3">
-                <label class="form-label">Select Level</label>
+    <h4>Select Level</h4>
+              
                 <select class="form-select" name="clevel" required>
                     <option selected disabled value="">Choose...</option>
                     <option> 1 </option>
@@ -219,6 +215,8 @@ background-size: cover;
                     <option> 3 </option>
                     
                 </select>
+                <span style="color:red"> @error('level'){{$message}}@enderror</span>
+                
             </div>
     @error('classLSubject')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -228,6 +226,8 @@ background-size: cover;
     <h4>Enter Grade</h4>
     <div class="form-group">
     <input type="text"  class="form-control py-2" name="cgrade" placeholder="Enter the grade" id="file">
+    <span style="color:red"> @error('grade'){{$message}}@enderror</span>
+
     </div>
     @error('file')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -238,6 +238,7 @@ background-size: cover;
     <h4> Enter the content</h4>
     <div class="form-group">
     <input type="file"  class="form-control py-2" name="cfile" placeholder="Choose file" id="file">
+    <span style="color:red"> @error('file'){{$message}}@enderror</span>
 
     </div>
     @error('file')
