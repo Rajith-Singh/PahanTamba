@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>User Login</title>
+    <title>Admin Login</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -87,7 +87,7 @@
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
                   <br>
                   <br>
-                  <center><h4><b>User Login</b></h4></center>
+                  <center><h4><b>Admin Login</b></h4></center>
                   <br>
                   <form action="{{ route('user.check') }}" method="post" autocomplete="off">
                     @if (Session::get('fail'))
@@ -121,13 +121,13 @@
                       <div class="form-group">
                           <button type="submit" class="btn btn-primary">Login</button>
                       </div>
-                      <br>
+                      <!-- <br>
                       
                       <a href="{{ route('user.register') }}"><b><i>Create new Account</i></b></a>
                       <br>
                       <a href="{{ route('student.register') }}"><b><i>New Students Register</i></b> </a>
                       <br>
-                      <a href="{{ route('teacher.register') }}"><b><i>New Teachers Register</i></b></a>
+                      <a href="{{ route('teacher.register') }}"><b><i>New Teachers Register</i></b></a> -->
                   </form>
             </div>
         </div>

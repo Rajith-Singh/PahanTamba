@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Student-Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -135,8 +135,9 @@
           <br>
             <div class="col-md-6 offset-md-3" style="margin-top: 45px">
             <br>
-            <br>
                  <center><h4><b>Student Dashboard</b></h4></center>
+              <br>
+                 <br>
                  <table class="table table-striped table-inverse table-responsive">
                      <thead class="thead-inverse">
                          <tr>

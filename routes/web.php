@@ -167,6 +167,11 @@ Route::get('select-login-type', function () {
     return view('select-login-type');
 });
 
+Route::get('contact-us', function () {
+    return view('contact-us');
+});
+
+
 
 
 

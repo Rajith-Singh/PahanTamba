@@ -36,7 +36,7 @@
                   </div>
                   <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                     <div class="u-container-layout u-valign-middle u-container-layout-2">
-                      <a href="#" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-radius-50 u-btn-2">Join with us</a>
+                      <a href="/contact-us" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-radius-50 u-btn-2">Join with us</a>
                     </div>
                   </div>
                 </div>

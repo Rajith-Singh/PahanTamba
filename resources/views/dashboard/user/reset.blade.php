@@ -168,7 +168,7 @@
                           <button type="submit" class="btn btn-primary">Reset password</button>
                       </div>
                       <br>
-                      <a href="{{ route('user.login') }}">Login</a>
+                      <a href="{{ route('admin.login') }}">Login</a>
                   </form>
             </div>
         </div>

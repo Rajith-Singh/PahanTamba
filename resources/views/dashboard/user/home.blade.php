@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Admin-Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -137,7 +137,7 @@
             <div class="col-md-6 offset-md-3" style="margin-top: 45px">
             <br>
             <br>
-                 <center><h4><b>User Dashboard</b></h4></center>
+                 <center><h4><b>Admin Dashboard</b></h4></center>
                  <br>
                  <br>
                  <br>
