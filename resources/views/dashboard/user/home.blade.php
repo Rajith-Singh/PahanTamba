@@ -147,6 +147,7 @@
             <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('web')->user()->name }} </b> 
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('user.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
         <form action="{{ route('user.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+        
         </li>				
 	        </ul>
 	      </div>
