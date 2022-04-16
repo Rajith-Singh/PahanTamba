@@ -166,6 +166,10 @@ Route::get('select-login-type', function () {
     return view('select-login-type');
 });
 
+Route::get('ftf-activity', function () {
+    return view('face-to-face-activities');
+});
+
 
 
 

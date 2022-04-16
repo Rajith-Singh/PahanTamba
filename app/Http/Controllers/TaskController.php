@@ -90,4 +90,30 @@ class TaskController extends Controller
         DB::table('tasks')->where('id',$id)->delete();
         return back()->with('deleteTask')->with('message', 'The task was successfully deleted.');
     }
+
+    
+    public function editTask($id){
+        $data = DB::table('tasks')->where('id',$id)->first();
+        return view('dashboard.teacher.edit-task', compact('data'));
+    }
+
+
+    public function updateExam(Request $request){
+
+        $request->validate([
+            'taskClass' => 'required',
+            'taskLevel' => 'required',
+            'task' => 'required|min:10',
+        ]);
+
+        DB::table('tasks')->where('id', $request->id)->update([
+            'class'=>$request->taskClass,
+            'level'=>$request->taskLevel,
+            'task'=>$request->task,
+        ]);
+        return redirect()->to('/teacher/view-category')->with('message', 'The task was successfully updated.');
+    }
+
+
+
 }
