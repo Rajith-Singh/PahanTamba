@@ -40,8 +40,8 @@
     
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
-	
-	
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 	</head>
 	<body>
@@ -122,9 +122,26 @@
 	<!-- END header -->
 
 
-    <a href="{{route ('student.login')}}"> Student </a> <br>
-    <a href="{{route ('teacher.login')}}"> Teacher </a> <br>
-    <a href="{{route ('user.login')}}"> Admin </a>
+    <section class="container">
+    <div class="py-3">
+<div class="card text-center">
+    <div class="card-header py-1 h3">
+        Select Your Login Type
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title p-1">Special title treatment</h5> -->
+        <p class="card-text py-2"> <font color="black" size="5px"> Select whether you are a student, teacher, administrator, librarian or accountant </font> </p>
+        <a href="{{route ('student.login')}}" class="btn btn-primary mb-5 py-1">Student</a>
+        <a href="{{route ('teacher.login')}}" class="btn btn-primary mb-5 py-1">Teacher</a>
+        <a href="{{route ('user.login')}}" class="btn btn-primary mb-5 py-1">Admin</a>
+
+    </div>
+    <div class="card-footer text-muted py-1">
+    </div>
+    </div>
+    </div>
+
+</section>
 
     
     	<!-- Start Footer -->
