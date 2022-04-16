@@ -161,7 +161,7 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
+                                        <a href="/teacher/editTask/{{$data->id}}" class="btn btn-success"> Update </a>
                                     </td> 
 
                                     <td> 

@@ -96,6 +96,8 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   </head>
   <body class="u-body u-xl-mode" onload="myFunction()">
 
@@ -183,8 +185,11 @@
 	</section>
 	<!-- END header -->  
 
+
+
     <section class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-clearfix u-section-1" id="carousel_46de">
-      <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+    
+    <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
           <div class="u-container-layout u-valign-top-md u-container-layout-1">
             <div class="u-palette-1-light-2 u-shape u-shape-circle u-shape-1"></div>

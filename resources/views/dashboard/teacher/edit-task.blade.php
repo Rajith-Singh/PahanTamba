@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Task</title>
+    <title>Update Task</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -147,8 +147,8 @@
 
   <div class="container mt-5 m-auto">  
     <br>
-    <h2 style="font-size:35px;"> Add Task </h2> <br>
-        <form class="row g-3" method="post" action="">
+    <h2 style="font-size:35px;"> Update Task </h2> <br>
+        <form class="row g-3" method="post" action="/updateTask">
         {{csrf_field()}}
 
         <input type="hidden" name="id" value="{{$data->id}}">
@@ -167,14 +167,14 @@
 
             <div class="form-group">
                 <label class="form-label"> <b> Task </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="task" id='editor' value="{{$data->task}}"></textarea>
+                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'> {{$data->task}} </textarea>
                 <span style="color:red"> @error('task'){{$message}}@enderror</span>            
               </div>
             
             <br>
 
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add Task</button>
+                <button class="btn btn-primary" type="submit">Update Task</button>
                 <button class="btn btn-warning" type="reset">Clear</button>
             </div>  
             <br> 

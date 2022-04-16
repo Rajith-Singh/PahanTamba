@@ -170,6 +170,9 @@ Route::get('ftf-activity', function () {
     return view('face-to-face-activities');
 });
 
+Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+
 
 
 

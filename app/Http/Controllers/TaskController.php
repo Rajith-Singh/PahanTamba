@@ -98,7 +98,7 @@ class TaskController extends Controller
     }
 
 
-    public function updateExam(Request $request){
+    public function updateTask(Request $request){
 
         $request->validate([
             'taskClass' => 'required',

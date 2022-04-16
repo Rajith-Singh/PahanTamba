@@ -95,5 +95,11 @@ use App\Http\Controllers\TaskController;
 
         Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
+        Route::get('/editTask/{id}', [TaskController::class, 'editTask']);
+
+        Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+
+
     });
 });
