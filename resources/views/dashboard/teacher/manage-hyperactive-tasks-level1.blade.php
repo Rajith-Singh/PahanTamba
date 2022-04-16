@@ -10,61 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>View Category</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
+    <title>Manage Tasks</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/nicepage.css" media="screen">
-<link rel="stylesheet" href="About.css" media="screen">
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/pahan_tamba_logo.png",
-		"sameAs": [
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://www.instagram.com/name"
-		]
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About">
-    <meta name="twitter:description" content="">
-    <meta property="og:title" content="About">
-    <meta property="og:type" content="website">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/rajith2.css" media="screen">
-    <link rel="stylesheet" href="css/rajith3.css" media="screen">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="/css/header/style.css">
-
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -72,13 +25,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -89,18 +42,20 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
+
+
 
   </head>
-  <body class="u-body u-xl-mode" onload="myFunction()">
+	<body  onload="myFunction()">
 
   <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -113,7 +68,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -159,7 +114,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -181,47 +136,47 @@
 	    </div>
 	  </nav>
 	</section>
-	<!-- END header -->  
+	<!-- END header -->
 
-    <section class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-clearfix u-section-1" id="carousel_46de">
-      <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
-          <div class="u-container-layout u-valign-top-md u-container-layout-1">
-            <div class="u-palette-1-light-2 u-shape u-shape-circle u-shape-1"></div>
-            <div class="u-align-left u-image u-image-circle u-image-1" data-image-width="1200" data-image-height="624"></div>
-            <div class="u-shape u-shape-svg u-text-palette-1-light-3 u-shape-2">
-              <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cbc0"></use></svg>
-              <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-cbc0" style="enable-background:new 0 0 160 160;"><path d="M80,30c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S52.4,30,80,30 M80,0C35.8,0,0,35.8,0,80s35.8,80,80,80
-	s80-35.8,80-80S124.2,0,80,0L80,0z"></path></svg>
-            </div>
-          </div>
-        </div>
-        <div class="u-expanded-width-md u-expanded-width-xs u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-1 u-radius-50 u-repeater-item u-shape-round u-list-item-1">
-              <a href="/autism-level"> <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-1"><img src="images/14911711.png" alt=""></span></a>
-                <a href="/autism-level"> <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-1"> autism</h3> </a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-2 u-radius-50 u-repeater-item u-shape-round">
-              <a href="/down-syndrome-level"><div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-2"><img src="images/62067871.png" alt=""></span></a>
-                <a href="/down-syndrome-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-2"> down syndrome</h3></a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-3 u-radius-50 u-repeater-item u-shape-round">
-            <a href="/hyperactive-level"><div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-3"><img src="images/32038111.png" alt=""></span></a>
-                <a href="/hyperactive-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-3"> hyperactive</h3></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <br>
+  <center> <h3> Manage Tasks - Hyperactive - Level 1 </h3> </center>
+  <br>
 
+  @if(session('message'))
+      <div class="alert alert-danger">{{session('message')}} </div>
+  @endif
 
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><center>Tasks</center></th>
+                    <th><center>Action</center></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($viewTasks as $data)
+                    <tr>
+                        <td>{!!$data->task!!}</td>
+                        <td><center>
+                            <table>
+                                <tr>
+                                    <td> 
+                                        <a href="#" class="btn btn-success"> Update </a>
+                                    </td> 
 
-    	<!-- Start Footer -->
-	    <footer class="footer-32892 pb-0">
+                                    <td> 
+                                        <a href="/teacher/deleteTask/{{$data->id}}" class="btn btn-danger"> Delete </a>
+                                    </td> 
+                                </tr>    
+                            </table></center>
+                        </td>        
+                    </tr>
+                    @endforeach
+            </tbody>
+            </table>
+
+    <!-- Start Footer -->
+      <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -268,12 +223,12 @@
               <h3>Gallery</h3>
               <div class="row gallery">
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_2.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_4.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -303,10 +258,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");
@@ -317,5 +272,3 @@
 	</script>	
 
 </body>
-
-</html>

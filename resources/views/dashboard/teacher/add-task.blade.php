@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Manage Tasks</title>
+    <title>Add Task</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -42,14 +42,21 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
 
-
+  <style>
+    body {
+    background-image: url('/../images/children-background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
 
   </head>
 	<body  onload="myFunction()">
@@ -68,7 +75,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -114,7 +121,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,41 +145,59 @@
 	</section>
 	<!-- END header -->
 
+  <div class="container mt-5 m-auto">  
     <br>
-  <center> <h3> Manage Tasks - Autism - Level 2 </h3> </center>
-  <br>
+    <h2 style="font-size:35px;"> Add Task </h2> <br>
+        <form class="row g-3" method="post" action="/saveTask">
+        {{csrf_field()}}
 
-    <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th><center>Tasks</center></th>
-                    <th><center>Action</center></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($viewTasks as $data)
-                    <tr>
-                        <td>{!!$data->task!!}</td>
-                        <td><center>
-                            <table>
-                                <tr>
-                                    <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
-                                    </td> 
+        @if(session('msg'))
+              <div class="alert alert-success">{{session('msg')}} </div>
+        @endif
 
-                                    <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
-                                    </td> 
-                                </tr>    
-                            </table></center>
-                        </td>        
-                    </tr>
-                    @endforeach
-            </tbody>
-            </table>
+            <div class="col-md-12">
+                <label class="form-label"> <b> Class </b> </label>     
+                <select class="form-select" name="taskClass">
+                    <option selected disabled value="">Choose...</option>
+                    <option> Autism </option>
+                    <option> Down syndrome </option>
+                    <option> Hyperactive </option>
+                </select>
+                <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>
+            </div>
 
-    <!-- Start Footer -->
-      <footer class="footer-32892 pb-0">
+            <div class="col-md-12">
+                <label class="form-label"> <b> Select Level </b> </label>
+                <select class="form-select" name="taskLevel">
+                    <option selected disabled value="">Choose...</option>
+                    <option> Level 1 </option>
+                    <option> Level 2 </option>
+                    <option> Level 3 </option>
+                </select>
+                <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"> <b> Task </b> </label>
+                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'></textarea>
+                <span style="color:red"> @error('task'){{$message}}@enderror</span>            
+              </div>
+            
+            <br>
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Add Task</button>
+                <button class="btn btn-warning" type="reset">Clear</button>
+            </div>  
+            <br> 
+        </div>        
+        </form>
+
+        <br>
+
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -254,10 +279,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");
@@ -268,3 +293,20 @@
 	</script>	
 
 </body>
+
+<script src="/js/ckeditor.js"> </script>
+  <script>
+    CKEDITOR.replace('editor',
+    {
+      extraPlugins : 'html5video, videoembed',
+    });
+  </script>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
+</html>
