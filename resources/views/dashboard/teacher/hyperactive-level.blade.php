@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Down Syndrome</title>
+    <title>Hyperactive</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -31,10 +31,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="About.css" media="screen">
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/../js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -56,14 +56,14 @@
     <meta name="twitter:description" content="">
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="css/rajith5.css" media="screen">
-<link rel="stylesheet" href="css/rajith4.css" media="screen">
+    <link rel="stylesheet" href="/../css/rajith5.css" media="screen">
+<link rel="stylesheet" href="/../css/rajith4.css" media="screen">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -71,13 +71,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -88,12 +88,12 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
 
 
   </head>
@@ -112,7 +112,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -158,7 +158,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -190,12 +190,12 @@
             <div class="u-layout-row">
               <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-left-cell u-size-32 u-layout-cell-1">
                 <div class="u-container-layout u-container-layout-1">
-                  <img class="u-expand-resize u-expanded-width u-image u-image-1" src="images/quiz-on-down-syndrome-removebg-preview.png" data-image-width="613" data-image-height="407">
+                  <img class="u-expand-resize u-expanded-width u-image u-image-1" src="/../images/hyperactive-removebg-preview.png" data-image-width="613" data-image-height="407">
                 </div>
               </div>
               <div class="u-container-style u-layout-cell u-right-cell u-size-28 u-layout-cell-2">
                 <div class="u-container-layout u-container-layout-2">
-                  <h1 class="u-custom-font u-font-oswald u-text u-text-palette-3-base u-text-1"> Down Syndrome</h1>
+                  <h1 class="u-custom-font u-font-oswald u-text u-text-palette-3-base u-text-1"> Hyperactive</h1>
                 </div>
               </div>
             </div>
@@ -205,18 +205,18 @@
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
               <div class="u-align-center u-container-style u-layout-cell u-left-cell u-palette-3-base u-size-20 u-layout-cell-3">
-              <a href="/manage-down-syndrome-tasks-level1"><div class="u-container-layout u-container-layout-3"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-1"><img src="images/3564180.png" alt=""></span></a>
-                  <a href="/manage-down-syndrome-tasks-level1"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-white u-text-2">Level 1</h2></a>
+              <a href="/teacher/manage-hyperactive-tasks-level1"><div class="u-container-layout u-container-layout-3"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-1"><img src="/../images/3564180.png" alt=""></span></a>
+                <a href="/teacher/manage-hyperactive-tasks-level1"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-white u-text-2">Level 1</h2></a>
                 </div>
               </div>
               <div class="u-align-center u-container-style u-layout-cell u-palette-2-base u-size-20 u-layout-cell-4">
-              <a href="/manage-down-syndrome-tasks-level2"><div class="u-container-layout u-container-layout-4"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-2"><img src="images/3564186.png" alt=""></span></a>
-                <a href="/manage-down-syndrome-tasks-level2"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-3">level 2</h2></a>
+              <a href="/teacher/manage-hyperactive-tasks-level2"><div class="u-container-layout u-container-layout-4"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-2"><img src="/../images/3564186.png" alt=""></span></a>
+              <a href="/teacher/manage-hyperactive-tasks-level2"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-3">level 2</h2></a>
                 </div>
               </div>
               <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-right-cell u-size-20 u-layout-cell-5">
-              <a href="/manage-down-syndrome-tasks-level3"><div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-3"><img src="images/3564189.png" alt=""></span></a>
-                <a href="/manage-down-syndrome-tasks-level3"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-4">level 3</h2></a>
+              <a href="/teacher/manage-hyperactive-tasks-level3"><div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-3"><img src="/../images/3564189.png" alt=""></span></a>
+              <a href="/teacher/manage-hyperactive-tasks-level3"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-4">level 3</h2></a>
                 </div>
               </div>
             </div>
@@ -274,12 +274,12 @@
               <h3>Gallery</h3>
               <div class="row gallery">
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_2.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_4.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -309,10 +309,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");

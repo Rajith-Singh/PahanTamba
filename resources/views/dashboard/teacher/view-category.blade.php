@@ -33,8 +33,8 @@
 
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
 <link rel="stylesheet" href="About.css" media="screen">
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/..js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/../js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -57,14 +57,14 @@
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="css/rajith2.css" media="screen">
-    <link rel="stylesheet" href="css/rajith3.css" media="screen">
+    <link rel="stylesheet" href="/../css/rajith2.css" media="screen">
+    <link rel="stylesheet" href="/../css/rajith3.css" media="screen">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -72,13 +72,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -89,12 +89,12 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
 
   </head>
   <body class="u-body u-xl-mode" onload="myFunction()">
@@ -113,7 +113,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -159,7 +159,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -199,18 +199,18 @@
         <div class="u-expanded-width-md u-expanded-width-xs u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-1 u-radius-50 u-repeater-item u-shape-round u-list-item-1">
-              <a href="/autism-level"> <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-1"><img src="images/14911711.png" alt=""></span></a>
-                <a href="/autism-level"> <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-1"> autism</h3> </a>
+              <a href="/teacher/autism-level"> <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-1"><img src="/../images/14911711.png" alt=""></span></a>
+                <a href="/teacher/autism-level"> <h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-1"> autism</h3> </a>
               </div>
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-2 u-radius-50 u-repeater-item u-shape-round">
-              <a href="/down-syndrome-level"><div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-2"><img src="images/62067871.png" alt=""></span></a>
-                <a href="/down-syndrome-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-2"> down syndrome</h3></a>
+              <a href="/teacher/down-syndrome-level"><div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-2"><img src="/../images/62067871.png" alt=""></span></a>
+                <a href="/teacher/down-syndrome-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-2"> down syndrome</h3></a>
               </div>
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-light-3 u-radius-50 u-repeater-item u-shape-round">
-            <a href="/hyperactive-level"><div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-3"><img src="images/32038111.png" alt=""></span></a>
-                <a href="/hyperactive-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-3"> hyperactive</h3></a>
+            <a href="/teacher/hyperactive-level"><div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-opacity u-opacity-60 u-icon-3"><img src="/../images/32038111.png" alt=""></span></a>
+                <a href="/teacher/hyperactive-level"><h3 class="u-custom-font u-font-pt-sans u-text u-text-body-color u-text-default u-text-3"> hyperactive</h3></a>
               </div>
             </div>
           </div>
@@ -268,12 +268,12 @@
               <h3>Gallery</h3>
               <div class="row gallery">
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_2.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_4.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -303,10 +303,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");
