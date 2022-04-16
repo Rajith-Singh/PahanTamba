@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes([
     'verify' => true
 ]);

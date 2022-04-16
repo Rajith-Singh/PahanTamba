@@ -150,7 +150,7 @@
                     <div class="alert alert-success">
                         {{ Session::get('success') }}
                     </div>
-                @endif
+                    @endif
                     @csrf
                     <p>
                         Enter your email address and we will send you a link to reset your password.

@@ -129,33 +129,7 @@
 	  </nav>
 	</section>
 	<!-- END header -->
-
-
-
-
-<!-- Header Starts -->
-<nav class="navigaation-bar background-dark">
-      <h1>
-        <a href="index.html">
-            <i class="fas fa-graduation-cap"> </i> PahanTamba
-        </a>
-      </h1>
-
-      <ul>
-        <li><a href="#">Classes</a></li>
-        <li><a href="#">Timetable</a></li>
-        <li><a href="#">Notices</a></li>
-        <li><a href="#">Tasks</a></li>
-        <li><a href="#">Results</a></li>
-        <li><a href="#">Finance</a></li>
-        <li>
-          <i class="fas fa-bars align-items-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
-        </li>
-	      <li><a href="#">Logout</a></li>      
-      </ul>
-    </nav>
-
-        <!-- Header Ends -->  
+ 
  
 
     <div class="container">

@@ -131,7 +131,6 @@
 	<!-- END header -->
 
 
-
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
@@ -161,12 +160,12 @@
                       <div class="form-group">
                           <label for="name">DOB</label>
                           <input type="date" class="form-control" name="dob" placeholder="Enter DOB" value="{{ old('dob') }}">
-                          <span class="text-danger">@error('name'){{ $message }} @enderror</span>
+                          <span class="text-danger">@error('dob'){{ $message }} @enderror</span>
                       </div>
                       <div class="form-group">
                           <label for="name">Mobile Number</label>
-                          <input type="text" class="form-control" name="number" placeholder="Enter Mobile Number" value="{{ old('mobilenumber') }}">
-                          <span class="text-danger">@error('name'){{ $message }} @enderror</span>
+                          <input type="text" class="form-control" name="mobilenumber" placeholder="Enter Mobile Number" value="{{ old('mobilenumber') }}">
+                          <span class="text-danger">@error('mobilenumber'){{ $message }} @enderror</span>
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
@@ -192,7 +191,9 @@
                   </form>
             </div>
         </div>
-    </div>
+    </div> 
+
+ 
 
         <!-- Start Footer -->
    <footer class="footer-32892 pb-0">
