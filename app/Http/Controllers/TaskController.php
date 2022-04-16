@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -83,5 +84,10 @@ class TaskController extends Controller
         $data=Task::all()->where('class', '=', 'Hyperactive')
                         ->where('level', '=', 'Level 3');
         return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
+    }
+
+    public function deleteTask($id){
+        DB::table('tasks')->where('id',$id)->delete();
+        return back()->with('deleteTask')->with('message', 'The task was successfully deleted.');
     }
 }

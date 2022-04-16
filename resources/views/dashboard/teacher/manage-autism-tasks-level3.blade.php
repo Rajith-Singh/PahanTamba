@@ -142,6 +142,10 @@
   <center> <h3> Manage Tasks - Autism - Level 3 </h3> </center>
   <br>
 
+  @if(session('message'))
+      <div class="alert alert-danger">{{session('message')}} </div>
+  @endif
+
     <table class="table table-striped">
             <thead>
                 <tr>
@@ -161,7 +165,7 @@
                                     </td> 
 
                                     <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
+                                        <a href="/teacher/deleteTask/{{$data->id}}" class="btn btn-danger"> Delete </a>
                                     </td> 
                                 </tr>    
                             </table></center>
