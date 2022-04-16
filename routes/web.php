@@ -110,3 +110,18 @@ Route::get('manage-hyperactive-tasks-level3', function () {
     $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 3');
     return view('manage-hyperactive-tasks-level3')->with('viewTasks',$data);
 });
+
+Route::get('/student-registation', function () {
+    return view('stdreg');
+});
+
+
+Route::get('/teacher-registation', function () {
+    return view('treg');
+});
+
+
+// Route::get('/attendance-sheet', function () {
+//     return view('attendance');
+// });
+
