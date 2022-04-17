@@ -114,14 +114,41 @@ class TaskController extends Controller
         return redirect()->to('/teacher/view-category')->with('message', 'The task was successfully updated.');
     }
 
+    public function viewAct($diseasestype) {
+
+        $data = DB::table('tasks')
+        ->select('class')
+        ->where('class', '=', $diseasestype)
+        ->pluck('class')
+        ->first(); 
+
+        if($data == 'Autism'){
+            return view('dashboard.student.autism-activities-home');
+        } else if($data == 'Down syndrome'){
+            return view('dashboard.student.down-syndrome-activities-home');
+        } else {
+            return view('dashboard.student.hyperactive-activities-home');
+        }
+    }
+
     public function viewActivities($diseasestype, $diseaseslevel) {
         $data=Task::all()->where('class', '=', $diseasestype)
                         ->where('level', '=', $diseaseslevel);
         return view('dashboard.student.view-activities')->with('activities',$data);
-    }
+    }    
 
 
+    public function viewdactivities($ddiseasestype, $ddiseaseslevel) {
+        $data=Task::all()->where('class', '=', $ddiseasestype)
+                        ->where('level', '=', $ddiseaseslevel);
+        return view('dashboard.student.view-d-activities')->with('activities',$data);
+    }    
 
+    public function viewaactivities($adiseasestype, $adiseaseslevel) {
+        $data=Task::all()->where('class', '=', $adiseasestype)
+                        ->where('level', '=', $adiseaseslevel);
+        return view('dashboard.student.view-a-activities')->with('activities',$data);
+    }   
 
-
+    
 }

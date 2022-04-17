@@ -160,7 +160,7 @@
                 <select class="form-select" name="taskClass">
                     <option selected disabled value="">Choose...</option>
                     <option> Autism </option>
-                    <option> Down syndrome </option>
+                    <option> Downsyndrom </option>
                     <option> Hyperactive </option>
                 </select>
                 <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>

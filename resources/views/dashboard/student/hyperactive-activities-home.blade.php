@@ -121,15 +121,17 @@
 </button>
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav m-auto">
-    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Results</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-    <li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
+				<li class="nav-item  active"><a href="/student/instructions" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
+            <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b style="color:black"> Hi {{ Auth::guard('student')->user()->fullname }} </b> 
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('student.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
+        <form action="{{ route('student.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+        </li>
 </ul>
 </div>
 </div>

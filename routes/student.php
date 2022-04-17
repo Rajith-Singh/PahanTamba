@@ -43,7 +43,13 @@ Route::prefix('student')->name('student.')->group(function(){
         return view('dashboard.student.hyperactive-activities-home');
     });
 
+    Route::get('/viewAct/{diseasestype}', [TaskController::class, 'viewAct']);
+
     Route::get('/viewActivities/{diseasestype}/{diseaseslevel}', [TaskController::class, 'viewActivities']);
+
+    Route::get('/viewdactivities/{ddiseasestype}/{ddiseaseslevel}', [TaskController::class, 'viewdactivities']);
+
+    Route::get('/viewaactivities/{adiseasestype}/{adiseaseslevel}', [TaskController::class, 'viewaactivities']);
 
     Route::get('instructions', function () {
         return view('dashboard.student.instructions');
