@@ -6,11 +6,11 @@
     <meta name="keywords" content="INTUITIVE">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Autism Activities</title>
-    <link rel="stylesheet" href="/../css/rajith7.css" media="screen">
-<link rel="stylesheet" href="/../css/rajith6.css" media="screen">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="/../css/rajith8.css" media="screen">
+<link rel="stylesheet" href="/../css/rajith9.css" media="screen">
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
     
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
@@ -70,7 +70,9 @@
 <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
 </div>
 
-<div class="counter d-flex justify-content-center">
+<div class="counter d-flex justify-content-center" onload="myFunction()">
+
+<div id="loading"></div>
 
 </div>
 
@@ -138,36 +140,25 @@
 <!-- END header -->
 
 
-    <section class="u-align-center u-clearfix u-white u-section-1" id="carousel_f919">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-opacity u-opacity-65 u-shape u-shape-svg u-text-palette-1-base u-shape-1">
-          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e858"></use></svg>
-          <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-e858" style="enable-background:new 0 0 160 160;"><path d="M80,30c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S52.4,30,80,30 M80,0C35.8,0,0,35.8,0,80s35.8,80,80,80
-	s80-35.8,80-80S124.2,0,80,0L80,0z"></path></svg>
+  </head>
+  <body class="u-body u-palette-1-base u-xl-mode">
+    <section class="u-clearfix u-palette-5-light-2 u-section-1" id="carousel_207c">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <div class="u-container-style u-group u-image u-image-tiles u-image-1" data-image-width="64" data-image-height="80">
+          <div class="u-container-layout u-container-layout-1"></div>
         </div>
-        <div class="u-image u-image-circle u-preserve-proportions u-image-1" data-image-width="1000" data-image-height="521"></div>
-        <div class="u-palette-1-light-1 u-shape u-shape-circle u-shape-2"></div>
-        <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius-50 u-shape-round u-group-1">
-          <div class="u-container-layout u-valign-middle u-container-layout-1">
-            <h2 class="u-custom-font u-heading-font u-text u-text-body-alt-color u-text-1"> Autism Activities</h2>
-            <a href="https://nicepage.com/templates" class="u-active-palette-1-light-3 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-3 u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-white u-btn-1"> continue</a>
+        <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-2"></div>
+        <img class="u-image u-image-2" src="/../images/instruction-page.png" data-image-width="450" data-image-height="300">
+        <div class="u-container-style u-group u-white u-group-2">
+          <div class="u-container-layout u-valign-middle u-container-layout-2">
+            <h1 class="u-text u-text-1"> Instructions</h1>
+            <p class="u-text u-text-2"> As a parent, you should always be on the lookout for your child. If the child is restless or not paying attention to the task, give the child a break immediately. Restart once the child has calmed down. Do not forget to encourage the child at the end of each task.</p>
+            <a href="https://nicepage.com/css-templates" class="u-active-palette-5-dark-3 u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-3 u-border-palette-2-base u-btn u-button-style u-hover-palette-5-dark-3 u-none u-text-active-white u-text-body-color u-text-hover-white u-btn-1">Start</a>
           </div>
-        </div>
-        <div class="u-shape u-shape-svg u-text-palette-1-base u-shape-3">
-          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a0bf"></use></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-a0bf" style="enable-background:new 0 0 160 160;"><path d="M80,30c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S52.4,30,80,30 M80,0C35.8,0,0,35.8,0,80s35.8,80,80,80
-	s80-35.8,80-80S124.2,0,80,0L80,0z"></path></svg>
         </div>
       </div>
     </section>
-
-
-    <form method="post">
-    {{csrf_field()}}
-
-    <input type="text" name="diseasestype" value="{{ Auth::guard('student')->user()->diseasestype}}">
-    <input type="text" name="diseaseslevel" value="{{ Auth::guard('student')->user()->diseaseslevel}}">
-    </form>
 
         	<!-- Start Footer -->
             <footer class="footer-32892 pb-0">

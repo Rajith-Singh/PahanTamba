@@ -6,7 +6,7 @@
     <meta name="keywords" content="INTUITIVE">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Autism Activities</title>
+    <title>Hyperactive Activities</title>
     <link rel="stylesheet" href="/../css/rajith7.css" media="screen">
 <link rel="stylesheet" href="/../css/rajith6.css" media="screen">
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
@@ -150,7 +150,15 @@
         <div class="u-container-style u-expanded-width-xs u-group u-palette-1-base u-radius-50 u-shape-round u-group-1">
           <div class="u-container-layout u-valign-middle u-container-layout-1">
             <h2 class="u-custom-font u-heading-font u-text u-text-body-alt-color u-text-1"> Hyperactive Activities</h2>
-            <a href="https://nicepage.com/templates" class="u-active-palette-1-light-3 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-3 u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-white u-btn-1"> continue</a>
+
+            <form method="post">
+            {{csrf_field()}}
+
+            <input type="hidden" name="diseasestype" value="{{ Auth::guard('student')->user()->diseasestype }}">
+            <input type="hidden" name="diseaseslevel" value="{{ Auth::guard('student')->user()->diseaseslevel }}">
+            </form>
+
+            <a href="/student/viewActivities/{{Auth::guard('student')->user()->diseasestype}}/{{Auth::guard('student')->user()->diseaseslevel}}" class="u-active-palette-1-light-3 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-3 u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-white u-btn-1" type="submit"> continue</a>
           </div>
         </div>
         <div class="u-shape u-shape-svg u-text-palette-1-base u-shape-3">
@@ -160,6 +168,8 @@
         </div>
       </div>
     </section>
+
+
 
 
         	<!-- Start Footer -->

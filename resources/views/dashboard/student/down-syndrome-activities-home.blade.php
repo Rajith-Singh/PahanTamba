@@ -161,6 +161,13 @@
       </div>
     </section>
 
+    <form method="post">
+    {{csrf_field()}}
+
+    <input type="text" name="diseasestype" value="{{ Auth::guard('student')->user()->diseasestype}}">
+    <input type="text" name="diseaseslevel" value="{{ Auth::guard('student')->user()->diseaseslevel}}">
+    </form>
+
 
         	<!-- Start Footer -->
             <footer class="footer-32892 pb-0">

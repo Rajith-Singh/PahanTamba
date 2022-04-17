@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
+use App\Http\Controllers\TaskController;
+
 
 
 
@@ -39,6 +41,12 @@ Route::prefix('student')->name('student.')->group(function(){
 
     Route::get('hyperactive-activities-home', function () {
         return view('dashboard.student.hyperactive-activities-home');
+    });
+
+    Route::get('/viewActivities/{diseasestype}/{diseaseslevel}', [TaskController::class, 'viewActivities']);
+
+    Route::get('instructions', function () {
+        return view('dashboard.student.instructions');
     });
 
     

@@ -114,6 +114,14 @@ class TaskController extends Controller
         return redirect()->to('/teacher/view-category')->with('message', 'The task was successfully updated.');
     }
 
+    public function viewActivities($diseasestype, $diseaseslevel) {
+        $data=Task::all()->where('class', '=', $diseasestype)
+                        ->where('level', '=', $diseaseslevel);
+        return view('dashboard.student.view-activities')->with('activities',$data);
+    }
+
+
+
 
 
 }
