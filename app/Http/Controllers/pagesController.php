@@ -37,7 +37,11 @@ class pagesController extends Controller
           }
 
 
-
+public function deleteSal($id){
+    $data = Salary::find($id);
+    $data->delete();
+    return redirect()->back();
+}
 
 
 

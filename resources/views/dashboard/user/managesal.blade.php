@@ -136,7 +136,9 @@
 
 
     <br>
-  <center> <h3> Manage Salary </h3> </center>
+  <center> 
+  <form method="POST" action="/view-mangesalPage "> 
+  <h3> Manage Salary </h3> </center>
   <br>
 
   <table class="table table-striped">
@@ -168,16 +170,17 @@
                                     </td> 
 
                                     <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
+                                        <a href="/deleteSal/{id}" class="btn btn-danger"> Delete </a>
                                     </td> 
-                                </tr>    
+                                </tr> 
+                                @endforeach   
                             </table></center>
                         </td>        
                     </tr>
-                    @endforeach
+                  
             </tbody>
-          </table>         
-
+              
+</form>
 
 <!-- Start Footer -->
 <footer class="footer-32892 pb-0">

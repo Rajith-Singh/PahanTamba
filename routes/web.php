@@ -39,6 +39,14 @@ Route::get('/Addpaymentdetails', function () {
 
 Route::post('/saveSalary',[pagesController::class,'storeSalary']);
 
+Route::get('/view-mangesalPage', function(){
+      $times=App\Models\Salary::all(); 
+    return view('managesal')->with('times', $times);
+})
+
+
+//delete salary route
+//Route::get('/deleteSal/{id}', [pagesController::class, 'deleteSal'])->name(deleteSal);
 
 
 
@@ -78,10 +86,6 @@ Route::post('/saveSalary',[pagesController::class,'storeSalary']);
 
 
 
-
-Auth::routes([
-    'verify' => true
-]);
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -237,9 +241,7 @@ Route::get('/teacher-registation', function () {
 
 // Auth::routes();
 
-Auth::routes([
-    'verify' => true
-]);
+
 
 
 
