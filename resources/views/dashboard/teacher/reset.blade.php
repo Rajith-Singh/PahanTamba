@@ -160,7 +160,7 @@
                       </div>
                       <div class="form-group">
                         <label for="password">Confirm password</label>
-                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter password" value="{{ old('password_confirmation') }}">
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter canfirm password" value="{{ old('password_confirmation') }}">
                         <span class="text-danger">@error('password_confirmation'){{ $message }}@enderror</span>
                     </div>
           

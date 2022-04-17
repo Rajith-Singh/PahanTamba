@@ -114,6 +114,7 @@ class UserController extends Controller
 
 
 
+
 public function showForgotForm(){
     return view('dashboard.user.forgot');
     }

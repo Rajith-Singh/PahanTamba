@@ -39,10 +39,10 @@ Route::get('/Addpaymentdetails', function () {
 
 Route::post('/saveSalary',[pagesController::class,'storeSalary']);
 
-Route::get('/view-mangesalPage', function(){
-      $times=App\Models\Salary::all(); 
-    return view('managesal')->with('times', $times);
-})
+//Route::get('/view-mangesalPage', function(){
+//      $times=App\Models\Salary::all(); 
+//    return view('managesal')->with('times', $times);
+//})
 
 
 //delete salary route
@@ -86,6 +86,10 @@ Route::get('/view-mangesalPage', function(){
 
 
 
+
+Auth::routes([
+    'verify' => true
+]);
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -225,19 +229,17 @@ Route::get('manage-hyperactive-tasks-level3', function () {
     return view('manage-hyperactive-tasks-level3')->with('viewTasks',$data);
 });
 
-Route::get('/student-registation', function () {
-    return view('stdreg');
+Route::get('select-login-type', function () {
+    return view('select-login-type');
+});
+
+Route::get('contact-us', function () {
+    return view('contact-us');
 });
 
 
-Route::get('/teacher-registation', function () {
-    return view('treg');
-});
 
 
-// Route::get('/attendance-sheet', function () {
-//     return view('attendance');
-// });
 
 // Auth::routes();
 

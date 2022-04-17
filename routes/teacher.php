@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
-use App\Http\Controllers\Teacher\TaskController;
+use App\Http\Controllers\TaskController;
 
  //Teacher//
 
@@ -79,19 +79,21 @@ use App\Http\Controllers\Teacher\TaskController;
         });
         
         Route::get('manage-hyperactive-tasks-level1', function () {
-            $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 3');
+            $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 1');
             return view('dashboard.teacher.manage-hyperactive-tasks-level1')->with('viewTasks',$data);
         });
         
         Route::get('manage-hyperactive-tasks-level2', function () {
             $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 2');
-            return view('manage-hyperactive-tasks-level2')->with('viewTasks',$data);
+            return view('dashboard.teacher.manage-hyperactive-tasks-level2')->with('viewTasks',$data);
         });
         
         Route::get('manage-hyperactive-tasks-level3', function () {
             $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 3');
-            return view('manage-hyperactive-tasks-level3')->with('viewTasks',$data);
+            return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
         });
+
+        Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
     });
 });

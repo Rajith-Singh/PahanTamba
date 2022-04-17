@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>User Login</title>
+    <title>Admin Login</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -87,7 +87,7 @@
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
                   <br>
                   <br>
-                  <center><h4><b>User Login</b></h4></center>
+                  <center><h4><b>Admin Login</b></h4></center>
                   <br>
                   <form action="{{ route('user.check') }}" method="post" autocomplete="off">
                     @if (Session::get('fail'))
@@ -121,86 +121,17 @@
                       <div class="form-group">
                           <button type="submit" class="btn btn-primary">Login</button>
                       </div>
-                      <br>
+                      <!-- <br>
                       
                       <a href="{{ route('user.register') }}"><b><i>Create new Account</i></b></a>
                       <br>
                       <a href="{{ route('student.register') }}"><b><i>New Students Register</i></b> </a>
                       <br>
-                      <a href="{{ route('teacher.register') }}"><b><i>New Teachers Register</i></b></a>
+                      <a href="{{ route('teacher.register') }}"><b><i>New Teachers Register</i></b></a> -->
                   </form>
             </div>
         </div>
     </div>
-
-
-     <!-- Footer Starts -->
-<footer class="footer">
-      <div class="footer-container">
-        <div class="footer-lists">
-          <ul>
-            <div class="micro-eye-logo">
-              <a href="index.html">
-                <img src="images-p/pahan_tamba_logo.png" alt="" width="80px" height="180px">
-              </a>
-            </div>
-          </ul>
-          <ul>
-            <li class="list-head">Quick Links</li>
-            <li><a href="#">My Pofile</a></li>
-            <li><a href="#">Attendance</a></li>
-            <li><a href="#">Finance</a></li>
-            <li><a href="#">Timetables</a></li>
-          </ul>
-          <ul>
-            <li class="list-head">Quick Links</li>
-            <li><a href="#">My Tasks</a></li>
-            <li><a href="#">Results</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Notices</a></li>
-          </ul>
-          <ul>
-            <li class="list-head">Sitemap</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Login</a></li>
-          </ul>
-          <ul>
-            <li class="list-head">Contact Us</li>
-            <li><a href="#">124/B</a></li>
-            <li><a href="#">Aluthgama</a></li>
-            <li><a href="#">Bogamuwa</a></li>
-            <li><a href="#">Yakkala</a></li>
-          </ul>
-        </div>
-        <div class="divider"></div>
-      </div>
-    </footer>
-<!-- Footer end -->
-
-    <!-- Sitemap starts -->
-
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <img src="/images-p/pahan_tamba_logo.png" alt="" width="340px" height="150px">
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="fw-bold h3 ms-3">
-        Sample Test         
-        </div>
-          <div class="my-3">
-            <ul class="lead">
-                <li class="mb-2"><a href="add-exam" class="text-decoration-none">Sample link</a></li>
-                <li class="mb-2"><a href="manage-exam" class="text-decoration-none">Sample link</a></li>
-                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
-                <li class="mb-2"><a href="#" class="text-decoration-none">Sample link</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-        <!-- Sitemap Ends --> 
 
     
     
