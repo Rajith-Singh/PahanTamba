@@ -28,4 +28,18 @@ Route::prefix('student')->name('student.')->group(function(){
         Route::post('/logout',[StudentController::class,'logout'])->name('logout');
 
     });
+
+    Route::get('autism-activities-home', function () {
+        return view('dashboard.student.autism-activities-home');
+    });
+
+    Route::get('down-syndrome-activities-home', function () {
+        return view('dashboard.student.down-syndrome-activities-home');
+    });
+
+    Route::get('hyperactive-activities-home', function () {
+        return view('dashboard.student.hyperactive-activities-home');
+    });
+
+    
 });
