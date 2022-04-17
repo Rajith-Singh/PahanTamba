@@ -43,7 +43,21 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+    <style>
+
+body {
+
+background-image: url('/../images-d/kids223.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
 
 	</head>
 	<body>
@@ -70,7 +84,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="/dashboard.teacher.create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
+            <li><a href="/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
@@ -139,12 +153,12 @@
 <section class="container">
     
         <div class="jumbotorn">
-    <h1>Manage Lessons</h1>
+    <h1>Manage Timetable</h1>
     <br>
-    <a href="/" class="btn btn-primary">Add new Lessons</a>
+    <a href="/add-lessons" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
-    @if(session('status'))
-    <div class="alert alert-success">{{session('status')}}</div>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
     @endif
     
 </div><br>

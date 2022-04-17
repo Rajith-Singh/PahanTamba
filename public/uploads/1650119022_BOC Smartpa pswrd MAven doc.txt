@@ -1,0 +1,10 @@
+SmartPay Admin
+
+https://lvtsit.boc.lk/EPIC_LVT_BOC/LogoutUserLogin.action?
+
+chiran/Chiran@111
+
+
+https://www.baeldung.com/executable-jar-with-maven --> Maven documentation
+
+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

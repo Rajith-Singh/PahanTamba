@@ -133,8 +133,8 @@ background-size: cover;
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/create-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -157,10 +157,10 @@ background-size: cover;
         <div class="jumbotorn">
     <h1>Manage Lessons</h1>
     <br>
-    <a href="/teacher/Ladd" class="btn btn-primary">Add new Lessons</a>
+    <a href="/teacher/add-lessons" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
-    @if(session('status'))
-    <div class="alert alert-success">{{session('status')}}</div>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
     @endif
     
 </div><br>
@@ -169,13 +169,13 @@ background-size: cover;
         <thead class="thead-dark">
         <tr>
             
-            <th>LessonName</th>
-            <th>Lessontype</th>
-            <th>subject</th>
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Disease</th>
+            <th>Level</th>
             <th>Grade</th>
-            <th>File</th>
+            <th>Content</th>
             <th>Action</th>
-            
         </tr></thead>
 <tbody>
     @foreach($lesson as $Lesson)
@@ -187,8 +187,10 @@ background-size: cover;
     <td>{{$Lesson->Level}}</td>
     <td>{{$Lesson->Grade}}</td>
     <td>{{$Lesson->Content}}</td>
+
+
 <td>
-<a href="/deleteL/{{$Lesson->id}}" class="btn btn-warning">Delete</a>
+<a href="/deleteL/{{$Lesson->id}}" class="btn btn-danger">Delete</a>
 </td>
 
 

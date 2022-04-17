@@ -45,22 +45,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-    <style>
-
-body {
-
-background-image: url('/images-d/kids223.jpg');
-
-background-repeat: no-repeat;
-
-background-attachment: fixed;
-
-background-size: cover;
-
-}
-
-</style>
-
+	
 
 	</head>
 	<body  onload="myFunction()">
@@ -170,7 +155,7 @@ background-size: cover;
         <div class="col-md-12">
     <h4>Select Subject</h4>
                
-                <select class="form-select" name="Ctsubject" required>
+                <select class="form-select" name="csubject" required>
                     <option selected disabled value="">Choose...</option>
                     <option> Independent Study </option>
                     <option> Families and Professional Partnerships </option>

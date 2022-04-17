@@ -1,0 +1,15 @@
+DB_USERNAME=LVMT_DEV2
+DB_PASSWORD=638793AE2C9407E0CAAB94D6B04CFC59//password
+DB_DRIVER=oracle.jdbc.driver.OracleDriver
+DB_URL=jdbc:oracle:thin:@epictechdev.com:65531:ceft
+
+
+192.168.1.1=IPV4
+127.0.0.1=localhost
+
+
+
+DB_USERNAME=euser
+DB_PASSWORD=E018AEFFDD6D98341F04F310C240B049//euser
+DB_DRIVER=com.mysql.cj.jdbc.Driver
+DB_URL=jdbc:mysql://124.43.16.185:50110/RDBMMS_DEV01?sessionVariables=wait_timeout=604800&interactive_timeout=604800

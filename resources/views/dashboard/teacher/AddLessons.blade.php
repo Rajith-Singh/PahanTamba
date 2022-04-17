@@ -87,7 +87,7 @@ background-size: cover;
         <div class="nav-menu">
           <ul>
             <li><a href="#"><span class="icon-search2 mr-3"></span> </a></li>
-            <li><a href="/dashboard.teacher.edit-lesson"><span class="icon-notifications mr-3"></span>Manage Lessons</a></li>
+            <li><a href="/edit-lesson"><span class="icon-notifications mr-3"></span>Manage Lessons</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>View Profile</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
@@ -133,7 +133,7 @@ background-size: cover;
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Class</a></li>
+				<li class="nav-item active"><a href="/add-lessons" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
@@ -158,9 +158,10 @@ background-size: cover;
 
 <div class="container mt-5 m-auto">  
 
-    <form action="/Lesson-store" method="POST"  enctype="multipart/form-data">
+    <form action="/dashboard.teacher.Lesson-store" method="POST"  enctype='multipart/form-data'>
         {{csrf_field()}}
 
+      
         @if(session('message'))
               <div class="alert alert-success">{{session('message')}} </div>
         @endif
@@ -172,15 +173,25 @@ background-size: cover;
 
 
      
-                    
-    <div class="form-group">
-    <h4>Subject</h4>
-    <input type="text" class="form-control py-2" name="csubject" placeholder="Enter the subject">
-    </div>
-    @error('classLtype')
+     <div class="col-md-12">
+    <h4>Select Subject</h4>
+               
+                <select class="form-select" name="csubject" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> Independent Study </option>
+                    <option> Families and Professional Partnerships </option>
+                    <option> Evid Based Prac in English </option>
+                    <option> Independent Study </option>
+                </select>
+                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
+
+            </div>
+
+            @error('csubject')
     <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
     @enderror
     <br>
+
 
 
     <div class="form-group">
@@ -194,6 +205,8 @@ background-size: cover;
                     <option> Hyperactive </option>
                    
                 </select>
+                <span style="color:red"> @error('Disease'){{$message}}@enderror</span>
+
             </div>
 
             @error('classLtype')
@@ -214,6 +227,8 @@ background-size: cover;
                     <option> 3 </option>
                     
                 </select>
+                <span style="color:red"> @error('level'){{$message}}@enderror</span>
+                
             </div>
     @error('classLSubject')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -223,6 +238,8 @@ background-size: cover;
     <h4>Enter Grade</h4>
     <div class="form-group">
     <input type="text"  class="form-control py-2" name="cgrade" placeholder="Enter the grade" id="file">
+    <span style="color:red"> @error('grade'){{$message}}@enderror</span>
+
     </div>
     @error('file')
    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
@@ -233,6 +250,7 @@ background-size: cover;
     <h4> Enter the content</h4>
     <div class="form-group">
     <input type="file"  class="form-control py-2" name="cfile" placeholder="Choose file" id="file">
+    <span style="color:red"> @error('file'){{$message}}@enderror</span>
 
     </div>
     @error('file')

@@ -86,7 +86,7 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="dashboard.teacher.add-lessons"><span class="icon-search2 mr-3"></span> Add Lessons</a></li>
+            <li><a href="/add-lessons"><span class="icon-search2 mr-3"></span> Add Lessons</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
@@ -157,10 +157,10 @@ background-size: cover;
         <div class="jumbotorn">
     <h1>Manage Lessons</h1>
     <br>
-    <a href="/teacher/Ladd" class="btn btn-primary">Add new Lessons</a>
+    <a href="/teacher/add-lessons" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
-    @if(session('status'))
-    <div class="alert alert-success">{{session('status')}}</div>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
     @endif
     
 </div><br>
@@ -169,13 +169,13 @@ background-size: cover;
         <thead class="thead-dark">
         <tr>
             
-            <th>LessonName</th>
-            <th>Lessontype</th>
-            <th>subject</th>
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Disease</th>
+            <th>Level</th>
             <th>Grade</th>
-            <th>File</th>
+            <th>Content</th>
             <th>Action</th>
-            
         </tr></thead>
 <tbody>
     @foreach($lesson as $Lesson)
@@ -187,8 +187,10 @@ background-size: cover;
     <td>{{$Lesson->Level}}</td>
     <td>{{$Lesson->Grade}}</td>
     <td>{{$Lesson->Content}}</td>
+
+
 <td>
-<a href="/deleteL/{{$Lesson->id}}" class="btn btn-warning">Delete</a>
+<a href="/deleteL/{{$Lesson->id}}" class="btn btn-danger">Delete</a>
 </td>
 
 

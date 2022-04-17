@@ -45,7 +45,21 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+    <style>
+
+body {
+
+background-image: url('/../images-d/kids223.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
 
 	</head>
 	<body  onload="myFunction()">
@@ -121,8 +135,8 @@
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item active"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item active"><a href="/create-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -152,31 +166,49 @@
         @endif
 
 
-        <div class="mb-12">
-            <label for="exampleInputEmail1" class="form-label fs-5">Subject</label>   
+        <div class="col-md-12">
+    <h4>Select Subject</h4>
+               
+                <select class="form-select" name="Ctsubject" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> Independent Study </option>
+                    <option> Families and Professional Partnerships </option>
+                    <option> Evid Based Prac in English </option>
+                    <option> Independent Study </option>
+                </select>
+                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
+
+            </div>
+
+            @error('Ctsubject')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+    @enderror
+    <br>
+
+
         
-            <select class="form-select py-2 shadow p-3 mb-3 bg-body rounded" name ="Ctsubject" aria-label="Default select example">
-            <span class="text-danger">@error('subject'){{$message}}@enderror</span>
-            <option selected>Select your subject</option>
-            <option value="Mathematics">Mathematics</option>
-            <option value="Sinhala">Sinhala</option>
-            <option value="History">History</option>
-            <option value="English">English</option>
-            <option value="Science">Science</option>
-           
-        </select>
-        <span style="color:red"> @error('subject'){{$message}}@enderror</span>
 
-        </div>
+       
+    <div class="col-md-12">
+    <h4>Select topic</h4>
+               
+                <select class="form-select" name="cttopic" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> 01 </option>
+                    <option> 02 </option>
+                    <option> 03 </option>
+                    <option> 04 </option>
+                    <option> 05 </option>
+                    <option> 06</option>
+                </select>
+                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
 
-        
+            </div>
 
-        <div class="mb-12">
-            <label for="exampleInputEmail1" class="form-label fs-5">Topic</label>
-            <input type="text" placeholder="Enter the topic" class="form-control py-2 shadow p-3 mb-3 bg-body rounded" name="cttopic" aria-describedby="emailHelp">
-            <span class="text-danger">@error('topic'){{$message}}@enderror</span>    
-        </div>
-
+            @error('csubject')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+    @enderror
+    <br>
         <div class="mb-12 >
             <label for="exampleInputEmail1" class="form-label fs-5">Start Date</label>   
         

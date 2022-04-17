@@ -19,10 +19,6 @@
 
     <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
     
@@ -45,11 +41,13 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <style>
 
 body {
 
-background-image: url('/images-d/kids223.jpg');
+background-image: url('/images-d/kids11.jpg');
 
 background-repeat: no-repeat;
 
@@ -62,10 +60,9 @@ background-size: cover;
 </style>
 
 
-	</head>
-	<body  onload="myFunction()">
 
-  <div id="loading"></div>
+	</head>
+	<body>
 
 
 	<section>
@@ -80,7 +77,7 @@ background-size: cover;
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -89,7 +86,7 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="/manage-timetable"><span class="icon-search2 mr-3"></span>Manage Timetable</a></li>
+            <li><a href="/add-lessons"><span class="icon-search2 mr-3"></span> Add Lessons</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
@@ -136,8 +133,8 @@ background-size: cover;
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
-	        	<li class="nav-item active"><a href="/create-timetable" class="nav-link">Timetable</a></li>
+				<li class="nav-item active"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/create-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -150,155 +147,59 @@ background-size: cover;
 	</section>
 	<!-- END header -->
 
-    
+
+
+
+<br><br>
+<center>
 <section class="container">
-
-
-<br><br>
-  <center><h1 class="topic1">Create Timetable</h1></center>
     
-        
-      <form method= "POST" action="/timetable-store">
-            {{csrf_field()}}
-
-    
-            @if(session('message'))
-              <div class="alert alert-success">{{session('message')}} </div>
-        @endif
-
-
-        <div class="col-md-12">
-    <h4>Select Subject</h4>
-               
-                <select class="form-select" name="Ctsubject" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option> Independent Study </option>
-                    <option> Families and Professional Partnerships </option>
-                    <option> Evid Based Prac in English </option>
-                    <option> Independent Study </option>
-                </select>
-                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
-
-            </div>
-
-            @error('csubject')
-    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
-    @enderror
-    <br>
-    
-    <div class="col-md-12">
-    <h4>Select topic</h4>
-               
-                <select class="form-select" name="cttopic" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option> 01 </option>
-                    <option> 02 </option>
-                    <option> 03 </option>
-                    <option> 04 </option>
-                    <option> 05 </option>
-                    <option> 06</option>
-                </select>
-                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
-
-            </div>
-
-            @error('csubject')
-    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
-    @enderror
-    <br>
-        <div class="mb-12 >
-            <label for="exampleInputEmail1" class="form-label fs-5">Start Date</label>   
-        
-            <select class="form-select py-2 shadow p-3 mb-3 bg-body rounded" name ="sDate" aria-label="Default select example">
-            <span class="text-danger">@error('start_date'){{$message}}@enderror</span> 
-            <option selected>Select Date</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-        </select>
-        <span style="color:red"> @error('startdate'){{$message}}@enderror</span>
-
-        </div>
-
-        <div class="mb-12 ">
-                <label class="form-label">Select Level</label>
-                <select class="form-select" name="clevel" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option> 1 </option>
-                    <option> 2 </option>
-                    <option> 3 </option>
-                    
-                </select>
-                <span style="color:red"> @error('level'){{$message}}@enderror</span>
-
-            </div>
-    @error('classLSubject')
-   <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
-     @enderror
+        <div class="jumbotorn">
+    <h1>View Lessons</h1>
     <br>
 
-<br>
-        
-        <div class="mb-12 ">
-            <label for="exampleInputEmail1" class="form-label fs-5">Start Time</label>
-            <input type="time" id="stime" name="ctSTime" class = "form-control py-2 shadow p-3 mb-3 bg-body rounded">
-            <span class="text-danger">@error('starttime'){{$message}}@enderror</span> 
-        </div>
-
-        <div class="mb-12 ">
-            <label for="exampleInputEmail1" class="form-label fs-5">End Date</label>   
-        
-            <select class="form-select py-2 shadow p-3 mb-3 bg-body rounded" name ="eDate" aria-label="Default select example">
-            <span class="text-danger">@error('endDate'){{$message}}@enderror</span> 
-            <option selected>Select Date</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-        </select>
-        <span style="color:red"> @error('endDate'){{$message}}@enderror</span>
-
-        </div>
-
-        <div class="mb-3 ">
-            <label for="exampleInputEmail1" class="form-label fs-5">End Time</label>
-            <input type="time" id="etime" name="ceTime" class = "form-control py-2 shadow p-3 mb-3 bg-body rounded">
+    <div class="line" style="text-align:right;">
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
+    @endif
+    
+</div><br>
+    
+<table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
             
-            <span class="text-danger">@error('end time'){{$message}}@enderror</span> 
-        </div>
-
-        <div class="mb-12">
-            <label for="exampleInputEmail1" class="form-label fs-5">Link</label>
-            <input type="text" class="form-control py-2 shadow p-3 mb-3 bg-body rounded" name="Ctlink" aria-describedby="emailHelp"> 
-            <span class="text-danger">@error('link'){{$message}}@enderror</span>   
-        </div>
-
-        <div class="mb-12">
-            <label for="exampleInputEmail1" class="form-label fs-5">Description</label>
-            <input type="text" class="form-control py-5 shadow p-3 mb-3 bg-body rounded" name="ctdescription" aria-describedby="emailHelp">  
-            <span class="text-danger">@error('description'){{$message}}@enderror</span>  
-        </div>
-        
-        <center>
-            <button type="submit" class="btn btn-primary fs-5">Create</button>
-        </center>  
-        
-        
-    </form>
-     
+         
+            <th>Subject</th>
+            <th>Disease</th>
+            <th>Level</th>
+            <th>Grade</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr></thead>
+<tbody>
+    @foreach($lesson as $Lesson)
+    <tr style="background:white;">
     
+  
+    <td>{{$Lesson->Subject}}</td>
+    <td>{{$Lesson->Disease}}</td>
+    <td>{{$Lesson->Level}}</td>
+    <td>{{$Lesson->Grade}}</td>
+    <td>{{$Lesson->Content}}</td>
 
-</section>
+    <td><a href="/file/download/{{$Lesson->Content}}" class="btn btn-danger">Download</a></td>
 
 
-<br><br>
+</tr>
+@endforeach
+</tbody>
+
+</table>
+</center>
+</div>
+
+
     	<!-- Start Footer -->
 	    <footer class="footer-32892 pb-0">
       <div class="site-section">
@@ -387,14 +288,9 @@ background-size: cover;
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script>
-		var preloader = document.getElementById("loading");
-
-		function myFunction(){
-			preloader.style.display = 'none';
-		};
-	</script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+ 
+
+</body>
 </html>

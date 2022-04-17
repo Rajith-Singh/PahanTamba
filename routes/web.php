@@ -22,18 +22,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//added
 Route::get('/add-lessons', function () {
     return view('AddLessons');
 });
-
+//added
 Route::get('/create-timetable', function () {
     return view('create-timetable');
 });
 
+
+//***added */
 //insert timetable
 Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
 
+
+//*****added */
 //manage timetable
 Route::get('/manage-timetable', function () {
     $time=App\Models\CTimetable::all();
@@ -47,6 +51,8 @@ Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
 Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
 
 
+
+//***added */
 //delete timetable
 Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
 
@@ -55,25 +61,69 @@ Route::get('/common-class', function () {
 });
 
 
-
-
-Route::get('/edit-lessons', function () {
-    return view('TeacherTimetable');
+//added
+//update lesson view pGE Route
+Route::get('/updateLessons', function () {
+    return view('Finalupdate-lessons');
 });
 
+//update - lessons 
+Route::get('/updateLessons/{id}', [LessonController::class,'updateL']);
+Route::post('/updateL', [LessonController::class,'updateshowLessons'])->name('updateshowLessons');
+
+
+//****added */
 //insert lessons
 Route::post('/Lesson-store', [LessonController::class, 'LessonStore']);
 
 
 
-
-//edit lessons
+//******88added */
+//edit / delete view page route 
 Route::get('/edit-lesson', function(){
 
-    $data=App\Models\Lessons::all();
+   $data=App\Models\Lessons::all();
     return view('updateLessons')->with('lesson', $data);
-   });
+});
 
+
+
+//student view lessons route
+//Route::get('/view-lessons', function () {
+ //   return view('viewLessons');
+//});
+
+
+
+//student view lessons route
+Route::get('/view-lessons', function(){
+
+    $data=App\Models\Lessons::all();
+     return view('viewLessons')->with('lesson', $data);
+ });
+ 
+
+
+
+        //file seen all
+        Route::get('/file', [LessonController::class, 'index'])->name('index');
+        Route::get('/view/{id}', [LessonController::class, 'show'])->name('show');
+        Route::get('/file/download/{file}', [LessonController::class, 'downloadf'])->name('downloadf');          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//****added */
    //delete lessons
    Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
 Auth::routes([

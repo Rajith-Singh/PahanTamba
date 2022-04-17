@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 
+
  //Teacher//
 
 
@@ -55,7 +56,7 @@ use App\Http\Controllers\Teacher\TeacherController;
         
         //timetable adding form view
         Route::get('/create-timetable', function () {
-            return view('create-timetable');
+            return view('dashboard.teacher.create-timetable');
         });
 
         //insert timetable
@@ -64,12 +65,33 @@ use App\Http\Controllers\Teacher\TeacherController;
         //manage timetable
         Route::get('/manage-timetable', function () {
         $time=App\Models\CTimetable::all();
-        return view('manage-timetable')->with('time', $time);
+        return view('dashboard.teacher.manage-timetable')->with('time', $time);
         });
 
         
+        //update timetable
+        Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+        Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+
+
         //delete timetable
         Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
+
+
+        //update lesson view pGE Route
+        Route::get('/updateLessons', function () {
+        return view('dashboard.teacher.Finalupdate-lessons');
+        });
+
+
+        //edit / delete view page route 
+        Route::get('/edit-lesson', function(){
+
+         $data=App\Models\Lessons::all();
+        return view('dashboard.teacher.updateLessons')->with('lesson', $data);
+        });
+
 
         });
 });

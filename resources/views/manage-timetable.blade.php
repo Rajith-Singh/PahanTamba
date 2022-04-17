@@ -43,7 +43,21 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+    <style>
+
+body {
+
+background-image: url('/../images-d/kids223.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
 
 	</head>
 	<body>
@@ -117,7 +131,7 @@
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
+				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
 	        	<li class="nav-item active"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
@@ -139,9 +153,9 @@
 <section class="container">
     
         <div class="jumbotorn">
-    <h1>Manage Lessons</h1>
+    <h1>Manage Timetable</h1>
     <br>
-    <a href="/" class="btn btn-primary">Add new Lessons</a>
+    <a href="/add-lessons" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
     @if(session('message'))
     <div class="alert alert-success">{{session('message')}}</div>

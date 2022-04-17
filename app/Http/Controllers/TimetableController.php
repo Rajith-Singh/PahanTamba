@@ -10,7 +10,7 @@ class TimetableController extends Controller
 {
     public function Timetablestore(Request $request){
 
-
+//dd($request->all());
         $request->validate([
             'Ctsubject' => 'required',
             'cttopic' => 'required',
@@ -27,10 +27,6 @@ class TimetableController extends Controller
 
 
         $time = new CTimetable;
-
-       // $time->id= $request-> id;
-       // $time->increments('id');
-        //$time->increments('TeacherId');
         $time->Subject= $request-> Ctsubject;
         $time->Topic= $request-> cttopic;
         $time->StartDate= $request-> sDate;
@@ -45,7 +41,7 @@ class TimetableController extends Controller
 
        //return view('manage-timetable')->with('time', $time);
        session()->flash('message','Timetable created successfully!');
-        return back()->with('message', 'The Timetable was successfully created.');
+       return redirect()->back()->with('message', 'The Timetable details were added successfully to the system.');
     }
 
 public function manageTime($id){
@@ -73,6 +69,7 @@ public function manageTime($id){
      //  CTimetable::update('update  c_timetables set Ctsubject=?, cttopic=?,sDate=?, clevel=?, ctSTime=?, eDate=?, ceTime=?, Ctlink=?, ctdescription=? where id=? '
    // [ " $time->Subject, $time->Topic, $time->StartDate,  $time->Level,  $time->StartTime,  $time->EndDate,  $time->EndTime,   $time->Link,        $time->Description " ]);
    session()->flash('message','Timetable updated successfully!');
+   return redirect()->back()->with('message', 'The lesson was updated successfully.');
    return redirect('/manage-timetable');
 }
 
@@ -80,8 +77,14 @@ public function delete($id){
     $time=CTimetable::find($id);
     $time->delete();
     session()->flash('message','Timetable deleted successfully!');
-    return redirect()->back();
+    return redirect()->back()->with('message', 'The Timetable was deleted successfully from the system.');
 }
+
+
+
+
+
+
 
 
 }

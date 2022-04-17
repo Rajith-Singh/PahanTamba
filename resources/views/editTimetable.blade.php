@@ -43,7 +43,21 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+	  <style>
+
+body {
+
+background-image: url('/../images-d/kids11.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
 
 	</head>
 	<body>
@@ -143,7 +157,7 @@
      <form  method="post"  action="/updateT">
               {{ @csrf_field() }}
 <h5>Subject</h5>
-    <input type="text" class="form-control" name="Ctsubject" value="{{  $time->Subject}}">
+    <input type="text" class="form-control" name="Ctsubject" value="{{ $time->Subject}}">
     <br><br>
     <h5>Topic</h5>      
      <input type="text" class="form-control" name="cttopic" value="{{$time->Topic}}" >

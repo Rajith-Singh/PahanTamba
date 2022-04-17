@@ -134,7 +134,7 @@ background-size: cover;
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item active"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item"><a href="/create-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -158,7 +158,7 @@ background-size: cover;
 
 <div class="container mt-5 m-auto">  
 
-    <form action="/Lesson-store" method="POST"  enctype="multipart/form-data">
+    <form action="/Lesson-store" method="POST"  enctype='multipart/form-data'>
         {{csrf_field()}}
 
       
@@ -175,10 +175,24 @@ background-size: cover;
      
                     
     <div class="form-group">
-    <h4>Subject</h4>
-    <input type="text" class="form-control py-2" name="csubject" placeholder="Enter the subject">
-    </div>
-    <span style="color:red"> @error('subject'){{$message}}@enderror</span>
+    
+    <div class="col-md-12">
+    <h4>Select Subject</h4>
+               
+                <select class="form-select" name="csubject" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> Independent Study </option>
+                    <option> Families and Professional Partnerships </option>
+                    <option> Evid Based Prac in English </option>
+                    <option> Independent Study </option>
+                </select>
+                <span style="color:red"> @error('Subject'){{$message}}@enderror</span>
+
+            </div>
+
+            @error('csubject')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+    @enderror
     <br>
 
 
