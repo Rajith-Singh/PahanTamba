@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes([
     'verify' => true
 ]);
@@ -171,6 +172,10 @@ Route::get('ftf-activity', function () {
 });
 
 Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+Route::get('contact-us', function () {
+    return view('contact-us');
+});
 
 
 

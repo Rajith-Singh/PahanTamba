@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Select-login-type</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -122,25 +122,21 @@
 	<!-- END header -->
 
 
-    <section class="container">
-    <div class="py-3">
-<div class="card text-center">
-    <div class="card-header py-1 h3">
-        Select Your Login Type
-    </div>
-    <div class="card-body">
-        <!-- <h5 class="card-title p-1">Special title treatment</h5> -->
+<section class="container">
+<div class="py-3">
+  <div class="card text-center">
+    <div class="card-header py-1 h3">Select Your Login Type</div>
+        <div class="card-body">
         <p class="card-text py-2"> <font color="black" size="5px"> Select whether you are a student, teacher, administrator, librarian or accountant </font> </p>
         <a href="{{route ('student.login')}}" class="btn btn-primary mb-5 py-1">Student</a>
         <a href="{{route ('teacher.login')}}" class="btn btn-primary mb-5 py-1">Teacher</a>
         <a href="{{route ('user.login')}}" class="btn btn-primary mb-5 py-1">Admin</a>
 
-    </div>
-    <div class="card-footer text-muted py-1">
-    </div>
-    </div>
-    </div>
-
+</div>
+  <div class="card-footer text-muted py-1">
+      </div>
+  </div>
+</div>
 </section>
 
     

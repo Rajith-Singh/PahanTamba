@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Reset-Password/Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -168,7 +168,7 @@
                           <button type="submit" class="btn btn-primary">Reset password</button>
                       </div>
                       <br>
-                      <a href="{{ route('user.login') }}">Login</a>
+                      <a href="{{ route('admin.login') }}">Login</a>
                   </form>
             </div>
         </div>

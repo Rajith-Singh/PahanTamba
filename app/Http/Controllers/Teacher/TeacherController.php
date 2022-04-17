@@ -125,7 +125,7 @@ class TeacherController extends Controller
 
 public function sendResetLink(Request $request){
     $request->validate([
-        'email'=>'required|email|exists:users,email'
+        'email'=>'required|email|exists:teachers,email'
     ]);
 
     

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Password-Reset/Teacher</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -160,7 +160,7 @@
                       </div>
                       <div class="form-group">
                         <label for="password">Confirm password</label>
-                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter password" value="{{ old('password_confirmation') }}">
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter canfirm password" value="{{ old('password_confirmation') }}">
                         <span class="text-danger">@error('password_confirmation'){{ $message }}@enderror</span>
                     </div>
           

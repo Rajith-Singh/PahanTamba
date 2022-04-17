@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Home</title>
+  	<title>Admin-Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -265,6 +265,26 @@
             </div>
          </div>
       </div>
+
+
+
+
+<section class="container">
+<div class="py-3">
+  <div class="card text-center">
+    <div class="card-header py-1 h3"></div>
+        <div class="card-body">
+        <!-- <p class="card-text py-2"> <font color="black" size="5px"> Select whether you are a student, teacher, administrator, librarian or accountant </font> </p> -->
+        <a href="{{route ('student.register')}}" class="btn btn-primary mb-5 py-1">Student Register</a>
+        <a href="{{route ('teacher.register')}}" class="btn btn-primary mb-5 py-1">Teacher Register</a>
+        <a href="{{route ('user.register')}}" class="btn btn-primary mb-5 py-1">Admin Register</a>
+
+</div>
+  <div class="card-footer text-muted py-1">
+      </div>
+  </div>
+</div>
+</section>
 
       <!--  contact -->
       <div id="contact" class="contact">
