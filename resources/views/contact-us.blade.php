@@ -58,8 +58,24 @@
         <div class="card bg-dark text-white">
   <img src="https://media.istockphoto.com/photos/web-contact-us-icons-on-blue-background-contact-us-cutomer-support-picture-id1338907882?b=1&k=20&m=1338907882&s=170667a&w=0&h=p_43GQzYXk9GWkK-TiiNNPSnFgIOAF6B8k0BTKQgs7g=" class="card-img" alt="...">
   <div class="card-img-overlay">
-    <h5 class="card-title">We Are Here To Help</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h2 class="card-title"><b>We Are Here To Help</b></h2>
+    <p class="card-text"></p>
+    <div class="col-md mb-4 mb-md-0">
+              <h3>Contact Us</h3>
+              <ul class="list-unstyled tweets">
+                <li class="d-flex">
+                  <div class="mr-4"><i class="fa fa-home" style="font-size:24px"></i></div>
+                  <div>No 165/F <br> Aluthgama - Bogamuwa <br> Yakkala </div>
+                </li>
+                <li class="d-flex">
+                  <div class="mr-4"><i class="fa fa-phone" style="font-size:24px"></i></div>
+                  <div>+(94) 719726803</div>
+                </li>
+                <li class="d-flex">
+                  <div class="mr-4"><i class="fa fa-envelope" style="font-size:24px"></i></div>
+                  <div>pahantamba[at]gmail.com</div>
+                </li>
+              </ul>
   </div>
 </div>
 </div>
