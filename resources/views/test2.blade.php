@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -41,7 +41,31 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+	      <!-- basic -->
+        <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>blueneek</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/css/home/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/css/home/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/css/home/responsive.css">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
 	</head>
 	<body>
@@ -130,9 +154,149 @@
 	<!-- END header -->
 
 
-    <h1> Sample Test </h1> 
+  <body class="main-layout">
 
 
+      <!-- banner -->
+      <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img class="first-slide" src="/images/banner1.png" alt="First slide">
+               <div class="container">
+                  <div class="carousel-caption relative">
+                     <h1> PahanTamba </h1>
+                     <a href="#contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="second-slide" src="/images/banner2.jpg" alt="Second slide">
+               <div class="container">
+                  <div class="carousel-caption relative">
+                     <h1>  පහන් ටැඹ  </h1>
+                     <a href="#contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="third-slide" src="/images/banner3.jpg" alt="Third slide">
+               <div class="container">
+                  <div class="carousel-caption relative">
+                     <h1> PahanTamba </h1> <br>
+                     <a href="#contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="third-slide" src="/images/banner4.jpg" alt="four slide">
+               <div class="container">
+                  <div class="carousel-caption relative">
+                     <h1> පහන් ටැඹ </h1>
+                     <a href="#contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="third-slide" src="/images/banner5.png" alt="five slide">
+               <div class="container">
+                  <div class="carousel-caption relative">
+                     <h1> PahanTamba </h1>
+                     <a href="#contact">Contact Us</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+      <!-- end banner -->
+      <!-- about -->
+      <div id="about"  class="about">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>OUR VISION</h2>
+                     <span></span>
+                     <p>To provide excellent care and education to children from birth to five years of age with a wide range of needs including children with complex needs, speech and language delays, physical delays, autistic spectrum disorders, visual and hearing impairments, undiagnosed conditions and rare conditions. </p>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img src="/images/about_img.png" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- mobile -->
+      <div id="mobile"  class="mobile">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="mobile_img">
+                     <figure><img src="/images/mobile.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>OUR MISSION</h2>
+                     <span></span>
+                     <p>To support parents, carers and other family members. We offer courses for parents/carers such as Makaton, first aid covering emergency paediatric issues such as choking and resuscitation, behaviour management, introduction to PECS system and oral health. We also offer emotional support on an informal basis as and when required. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!--  contact -->
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Request A call back</h2>
+                  </div>
+               </div>
+               <div class="col-md-6 offset-md-3">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="contactus" placeholder="Message" type="type" Message="Name">Message </textarea>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
 
     	<!-- Start Footer -->
 	    <footer class="footer-32892 pb-0">
@@ -224,4 +388,11 @@
 
     
 </body>
-</html>
+</html>      
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+.u-section-1 {
+    background-image: none;
+  }
+  
+  .u-section-1 .u-sheet-1 {
+    min-height: 1226px;
+  }
+  
+  .u-section-1 .u-shape-1 {
+    width: 306px;
+    height: 306px;
+    margin: 60px 198px 0 auto;
+  }
+  
+  .u-section-1 .u-image-1 {
+    width: 791px;
+    height: 791px;
+    background-image: url("/../images/autism-child.jpg");
+    background-position: 69.25% 50%;
+    margin: -263px auto 0 31px;
+  }
+
+  .u-section-1 .u-image-2 {
+    width: 791px;
+    height: 791px;
+    background-image: url("/../images/down-syndrome-child.jpg");
+    background-position: 69.25% 50%;
+    margin: -263px auto 0 31px;
+  }
+
+  .u-section-1 .u-image-3 {
+    width: 791px;
+    height: 791px;
+    background-image: url("/../images/hyperactive-child.jpg");
+    background-position: 69.25% 50%;
+    margin: -263px auto 0 31px;
+  }
+  
+  .u-section-1 .u-shape-2 {
+    width: 245px;
+    height: 245px;
+    background-image: none;
+    margin: -181px auto 0 13px;
+  }
+  
+  .u-section-1 .u-group-1 {
+    width: 531px;
+    min-height: 250px;
+    background-image: none;
+    height: auto;
+    margin: -271px 103px 0 auto;
+  }
+  
+  .u-section-1 .u-container-layout-1 {
+    padding: 50px 50px 48px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    font-size: 3.4375rem;
+    margin: 0;
+  }
+  
+  .u-section-1 .u-btn-1 {
+    letter-spacing: 2px;
+    background-image: none;
+    border-style: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 20px auto 0 0;
+    padding: 12px 54px 14px;
+  }
+  
+  .u-section-1 .u-shape-3 {
+    width: 146px;
+    height: 146px;
+    margin: 103px auto 40px 424px;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 1267px;
+    }
+  
+    .u-section-1 .u-shape-1 {
+      width: 275px;
+      height: 275px;
+      margin-right: 102px;
+    }
+  
+    .u-section-1 .u-image-1 {
+      width: 747px;
+      height: 747px;
+    }
+  
+    .u-section-1 .u-shape-2 {
+      width: 248px;
+      height: 248px;
+      margin-left: 0;
+    }
+  
+    .u-section-1 .u-group-1 {
+      width: 547px;
+      height: auto;
+    }
+  
+    .u-section-1 .u-shape-3 {
+      margin-left: 187px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 1339px;
+    }
+  
+    .u-section-1 .u-shape-1 {
+      margin-right: 0;
+    }
+  
+    .u-section-1 .u-image-1 {
+      width: 676px;
+      height: 676px;
+      margin-left: auto;
+    }
+  
+    .u-section-1 .u-shape-2 {
+      width: 231px;
+      height: 231px;
+      margin-top: -110px;
+    }
+  
+    .u-section-1 .u-group-1 {
+      width: 436px;
+    }
+  
+    .u-section-1 .u-container-layout-1 {
+      padding: 30px;
+    }
+  
+    .u-section-1 .u-shape-3 {
+      width: 125px;
+      height: 125px;
+      margin-left: 125px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 1419px;
+    }
+  
+    .u-section-1 .u-shape-1 {
+      width: 190px;
+      height: 196px;
+      margin-right: 20px;
+    }
+  
+    .u-section-1 .u-image-1 {
+      width: 484px;
+      height: 484px;
+      margin-left: 0;
+    }
+  
+    .u-section-1 .u-shape-2 {
+      width: 182px;
+      height: 182px;
+      margin-top: 70px;
+      margin-left: 20px;
+    }
+  
+    .u-section-1 .u-group-1 {
+      margin-right: 9px;
+    }
+  
+    .u-section-1 .u-container-layout-1 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  
+    .u-section-1 .u-shape-3 {
+      margin-left: auto;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 1102px;
+    }
+  
+    .u-section-1 .u-shape-1 {
+      width: 124px;
+      height: 124px;
+    }
+  
+    .u-section-1 .u-image-1 {
+      width: 310px;
+      height: 310px;
+    }
+  
+    .u-section-1 .u-shape-2 {
+      width: 107px;
+      height: 107px;
+      margin-left: 27px;
+    }
+  
+    .u-section-1 .u-group-1 {
+      margin-right: initial;
+      margin-left: initial;
+      width: auto;
+    }
+  
+    .u-section-1 .u-text-1 {
+      font-size: 1.5rem;
+    }
+  
+    .u-section-1 .u-shape-3 {
+      width: 66px;
+      height: 66px;
+    }
+  }

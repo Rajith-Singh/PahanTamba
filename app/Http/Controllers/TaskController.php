@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -29,59 +30,125 @@ class TaskController extends Controller
     public function autismTasksLevel1(Request $request) {
         $data=Task::all()->where('class', '=', 'Autism')
                         ->where('level', '=', 'Level 1');
-        return view('manage-autism-tasks-level1')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-autism-tasks-level1')->with('viewTasks',$data);
     }
 
     public function autismTasksLevel2(Request $request) {
         $data=Task::all()->where('class', '=', 'Autism')
                         ->where('level', '=', 'Level 2');
-        return view('manage-autism-tasks-level2')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-autism-tasks-level2')->with('viewTasks',$data);
     }
 
     public function autismTasksLevel3(Request $request) {
         $data=Task::all()->where('class', '=', 'Autism')
                         ->where('level', '=', 'Level 3');
-        return view('manage-autism-tasks-level2')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-autism-tasks-level2')->with('viewTasks',$data);
     }
 
 
     public function downSyndromeTasksLevel1(Request $request) {
         $data=Task::all()->where('class', '=', 'Down syndrome')
                         ->where('level', '=', 'Level 1');
-        return view('manage-down-syndrome-tasks-level1')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-down-syndrome-tasks-level1')->with('viewTasks',$data);
     }
 
 
     public function downSyndromeTasksLevel2(Request $request) {
         $data=Task::all()->where('class', '=', 'Down syndrome')
                         ->where('level', '=', 'Level 2');
-        return view('manage-down-syndrome-tasks-level2')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-down-syndrome-tasks-level2')->with('viewTasks',$data);
     }
     
 
     public function downSyndromeTasksLevel3(Request $request) {
         $data=Task::all()->where('class', '=', 'Down syndrome')
                         ->where('level', '=', 'Level 3');
-        return view('manage-down-syndrome-tasks-level3')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-down-syndrome-tasks-level3')->with('viewTasks',$data);
     }
 
 
     public function hyperactiveTasksLevel1(Request $request) {
         $data=Task::all()->where('class', '=', 'Hyperactive')
                         ->where('level', '=', 'Level 1');
-        return view('manage-hyperactive-tasks-level1')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-hyperactive-tasks-level1')->with('viewTasks',$data);
     }
 
 
     public function hyperactiveTasksLevel2(Request $request) {
         $data=Task::all()->where('class', '=', 'Hyperactive')
                         ->where('level', '=', 'Level 2');
-        return view('manage-hyperactive-tasks-level2')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-hyperactive-tasks-level2')->with('viewTasks',$data);
     }
     
     public function hyperactiveTasksLevel3(Request $request) {
         $data=Task::all()->where('class', '=', 'Hyperactive')
                         ->where('level', '=', 'Level 3');
-        return view('manage-hyperactive-tasks-level3')->with('viewTasks',$data);
+        return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
     }
+
+    public function deleteTask($id){
+        DB::table('tasks')->where('id',$id)->delete();
+        return back()->with('deleteTask')->with('message', 'The task was successfully deleted.');
+    }
+
+    
+    public function editTask($id){
+        $data = DB::table('tasks')->where('id',$id)->first();
+        return view('dashboard.teacher.edit-task', compact('data'));
+    }
+
+
+    public function updateTask(Request $request){
+
+        $request->validate([
+            'taskClass' => 'required',
+            'taskLevel' => 'required',
+            'task' => 'required|min:10',
+        ]);
+
+        DB::table('tasks')->where('id', $request->id)->update([
+            'class'=>$request->taskClass,
+            'level'=>$request->taskLevel,
+            'task'=>$request->task,
+        ]);
+        return redirect()->to('/teacher/view-category')->with('message', 'The task was successfully updated.');
+    }
+
+    public function viewAct($diseasestype) {
+
+        $data = DB::table('tasks')
+        ->select('class')
+        ->where('class', '=', $diseasestype)
+        ->pluck('class')
+        ->first(); 
+
+        if($data == 'Autism'){
+            return view('dashboard.student.autism-activities-home');
+        } else if($data == 'Down syndrome'){
+            return view('dashboard.student.down-syndrome-activities-home');
+        } else {
+            return view('dashboard.student.hyperactive-activities-home');
+        }
+    }
+
+    public function viewActivities($diseasestype, $diseaseslevel) {
+        $data=Task::all()->where('class', '=', $diseasestype)
+                        ->where('level', '=', $diseaseslevel);
+        return view('dashboard.student.view-activities')->with('activities',$data);
+    }    
+
+
+    public function viewdactivities($ddiseasestype, $ddiseaseslevel) {
+        $data=Task::all()->where('class', '=', $ddiseasestype)
+                        ->where('level', '=', $ddiseaseslevel);
+        return view('dashboard.student.view-d-activities')->with('activities',$data);
+    }    
+
+    public function viewaactivities($adiseasestype, $adiseaseslevel) {
+        $data=Task::all()->where('class', '=', $adiseasestype)
+                        ->where('level', '=', $adiseaseslevel);
+        return view('dashboard.student.view-a-activities')->with('activities',$data);
+    }   
+
+    
 }

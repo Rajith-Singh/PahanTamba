@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
+use App\Http\Controllers\TaskController;
+
 
 
 
@@ -28,4 +30,30 @@ Route::prefix('student')->name('student.')->group(function(){
         Route::post('/logout',[StudentController::class,'logout'])->name('logout');
 
     });
+
+    Route::get('autism-activities-home', function () {
+        return view('dashboard.student.autism-activities-home');
+    });
+
+    Route::get('down-syndrome-activities-home', function () {
+        return view('dashboard.student.down-syndrome-activities-home');
+    });
+
+    Route::get('hyperactive-activities-home', function () {
+        return view('dashboard.student.hyperactive-activities-home');
+    });
+
+    Route::get('/viewAct/{diseasestype}', [TaskController::class, 'viewAct']);
+
+    Route::get('/viewActivities/{diseasestype}/{diseaseslevel}', [TaskController::class, 'viewActivities']);
+
+    Route::get('/viewdactivities/{ddiseasestype}/{ddiseaseslevel}', [TaskController::class, 'viewdactivities']);
+
+    Route::get('/viewaactivities/{adiseasestype}/{adiseaseslevel}', [TaskController::class, 'viewaactivities']);
+
+    Route::get('instructions', function () {
+        return view('dashboard.student.instructions');
+    });
+
+    
 });

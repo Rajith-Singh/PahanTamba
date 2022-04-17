@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Manage Tasks</title>
+    <title>View Activities</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -25,13 +25,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -42,12 +42,12 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
 
 
 
@@ -122,15 +122,17 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item  active"><a href="/student/instructions" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+                <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b style="color:black"> Hi {{ Auth::guard('student')->user()->fullname }} </b> 
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('student.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
+            <form action="{{ route('student.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+            </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -139,7 +141,7 @@
 	<!-- END header -->
 
     <br>
-  <center> <h3> Manage Tasks - Autism - Level 1 </h3> </center>
+  <center> <h3> View Activities </h3> </center>
   <br>
 
   <table class="table table-striped">
@@ -150,18 +152,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($viewTasks as $data)
+                @foreach($activities as $data)
                     <tr>
                         <td>{!!$data->task!!}</td>
                         <td><center>
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
-                                    </td> 
-
-                                    <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
+                                        <a href="#" class="btn btn-success"> View </a>
                                     </td> 
                                 </tr>    
                             </table></center>
@@ -254,10 +252,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");

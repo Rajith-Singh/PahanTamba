@@ -15,9 +15,9 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -25,13 +25,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -42,12 +42,12 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
 
 
 
@@ -127,8 +127,8 @@
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
 	        </ul>
@@ -139,10 +139,14 @@
 	<!-- END header -->
 
     <br>
-  <center> <h3> Manage Tasks - Hyperactive - Level 1 </h3> </center>
+  <center> <h3> Manage Tasks - Autism - Level 1 </h3> </center>
   <br>
 
-    <table class="table table-striped">
+  @if(session('message'))
+      <div class="alert alert-danger">{{session('message')}} </div>
+  @endif
+
+  <table class="table table-striped">
             <thead>
                 <tr>
                     <th><center>Tasks</center></th>
@@ -157,11 +161,11 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
+                                        <a href="/teacher/editTask/{{$data->id}}" class="btn btn-success"> Update </a>
                                     </td> 
 
                                     <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
+                                        <a href="/teacher/deleteTask/{{$data->id}}" class="btn btn-danger"> Delete </a>
                                     </td> 
                                 </tr>    
                             </table></center>
@@ -169,7 +173,7 @@
                     </tr>
                     @endforeach
             </tbody>
-            </table>
+          </table>
 
     <!-- Start Footer -->
       <footer class="footer-32892 pb-0">
@@ -254,10 +258,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");

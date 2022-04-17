@@ -1,60 +1,51 @@
-<!DOCTYPE html>
-<html style="font-size: 16px;">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Test</title>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Manage Tasks</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="/css/header/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/css/header/style.css">
+	
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/sidebar/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
-  
-  <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/css/footer/style.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+	</head>
+	<body>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
-
-
-
-  </head>
-	<body  onload="myFunction()">
-
-  <div id="loading"></div>
 
 	<section>
 
@@ -122,15 +113,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+	        	<li class="nav-item"><a href="#" class="nav-link">Join with us</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -138,41 +121,31 @@
 	</section>
 	<!-- END header -->
 
-    <br>
-  <center> <h3> Manage Tasks - Hyperactive - Level 3 </h3> </center>
-  <br>
 
-    <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th><center>Tasks</center></th>
-                    <th><center>Action</center></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($viewTasks as $data)
-                    <tr>
-                        <td>{!!$data->task!!}</td>
-                        <td><center>
-                            <table>
-                                <tr>
-                                    <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
-                                    </td> 
+    <section class="container">
+    <div class="py-3">
+<div class="card text-center">
+    <div class="card-header py-1 h3">
+        Select Your Login Type
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title p-1">Special title treatment</h5> -->
+        <p class="card-text py-2"> <font color="black" size="5px"> Select whether you are a student, teacher, administrator, librarian or accountant </font> </p>
+        <a href="{{route ('student.login')}}" class="btn btn-primary mb-5 py-1">Student</a>
+        <a href="{{route ('teacher.login')}}" class="btn btn-primary mb-5 py-1">Teacher</a>
+        <a href="{{route ('user.login')}}" class="btn btn-primary mb-5 py-1">Admin</a>
 
-                                    <td> 
-                                        <a href="#" class="btn btn-danger"> Delete </a>
-                                    </td> 
-                                </tr>    
-                            </table></center>
-                        </td>        
-                    </tr>
-                    @endforeach
-            </tbody>
-            </table>
+    </div>
+    <div class="card-footer text-muted py-1">
+    </div>
+    </div>
+    </div>
 
-    <!-- Start Footer -->
-      <footer class="footer-32892 pb-0">
+</section>
+
+    
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -232,12 +205,7 @@
             <div class="col-12">
               <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
                 <ul class="list-unstyled footer-menu mr-auto">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Class</a></li>
-                  <li><a href="#">Timetable</a></li>
-                  <li><a href="#">Notices</a></li>
-                  <li><a href="#">Gallery</a></li>
+                  <li><a href="#">JOIN WITH US</a></li>
                 </ul>
                 <div class="site-logo-wrap ml-auto">
                   <a href="#" class="site-logo">
@@ -259,12 +227,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script>
-		var preloader = document.getElementById("loading");
-
-		function myFunction(){
-			preloader.style.display = 'none';
-		};
-	</script>	
-
+    
 </body>
+</html>    
