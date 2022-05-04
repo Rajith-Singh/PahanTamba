@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\CkeditorController;
+use App\Http\Controllers\GameController;
 
  //Teacher//
 
@@ -99,6 +101,13 @@ use App\Http\Controllers\TaskController;
 
         Route::post('/updateTask', [TaskController::class, 'updateTask']);
 
+        Route::get('game-handler', function () {
+            return view('dashboard.teacher.game-handler');
+        });
+
+
+
+        // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
 
     });

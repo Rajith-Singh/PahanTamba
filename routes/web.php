@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\GameController;
+
 
 
 /*
@@ -101,6 +103,8 @@ Route::get('/add-result', function () {
 });
 
 Route::post('/saveTask',[TaskController::class,'storeTask']);
+
+Route::post('/saveGame',[GameController::class,'storeGame']);
 
 Route::get('view-category', function () {
     return view('view-category');

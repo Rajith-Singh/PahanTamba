@@ -10,54 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Autism</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="/../css/nicepage.css" media="screen">
-<link rel="stylesheet" href="About.css" media="screen">
-    <script class="u-script" type="text/javascript" src="/../js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="/../js/nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/pahan_tamba_logo.png",
-		"sameAs": [
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://www.instagram.com/name"
-		]
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About">
-    <meta name="twitter:description" content="">
-    <meta property="og:title" content="About">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="/../css/rajith5.css" media="screen">
-<link rel="stylesheet" href="/../css/rajith4.css" media="screen">
+    <title>Handle Games</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -71,7 +25,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
@@ -95,11 +49,20 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
+  <style>
+    body {
+    background-image: url('/../images/children-background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
 
   </head>
-  <body class="u-body u-palette-1-base u-xl-mode" onload="myFunction()">
+	<body  onload="myFunction()">
 
   <div id="loading"></div>
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -184,52 +147,69 @@
 	</section>
 	<!-- END header -->
 
+    <div class="container mt-5 m-auto">  
+    <br>
+    <h2 style="font-size:35px;"> Add Games </h2> <br>
+        <form class="row g-3" method="post" action="/saveGame">
+        {{csrf_field()}}
 
-    <section class="u-clearfix u-palette-5-light-2 u-section-1" id="carousel_5d2d">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-left-cell u-size-32 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <img class="u-expand-resize u-expanded-width u-image u-image-1" src="/../images/Autistic-Child-In-276473392-removebg-preview.png" data-image-width="613" data-image-height="407">
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-28 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <h1 class="u-custom-font u-font-oswald u-text u-text-palette-3-base u-text-1"> Autism</h1>
-                </div>
-              </div>
+        @if(session('msg'))
+              <div class="alert alert-success">{{session('msg')}} </div>
+        @endif
+
+          <div class="col-md-12">
+                <label class="form-label"> <b> Game Type </b> </label>
+                <select class="form-select" name="gameType" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option> HappyBud </option>
+                    <option> YummyFood </option>
+                </select>
             </div>
-          </div>
-        </div>
-        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-2">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-palette-3-base u-size-20 u-layout-cell-3">
-              <a href="/teacher/manage-autism-tasks-level1"><div class="u-container-layout u-container-layout-3"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-1"><img src="/../images/3564180.png" alt=""></span></a>
-                  <a href="/teacher/manage-autism-tasks-level1"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-white u-text-2">Level 1</h2></a>
-                </div>
+
+            <div class="form-group">
+                <label class="form-label"> <b> Game </b> </label>
+                <textarea class="form-control rounded-0" rows="10" name="game" id='editor'></textarea>
               </div>
-              <div class="u-align-center u-container-style u-layout-cell u-palette-2-base u-size-20 u-layout-cell-4">
-              <a href="/teacher/manage-autism-tasks-level2"><div class="u-container-layout u-container-layout-4"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-2"><img src="/../images/3564186.png" alt=""></span></a>
-                <a href="/teacher/manage-autism-tasks-level2"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-3">level 2</h2></a>
-                </div>
-              </div>
-              <div class="u-align-center u-container-style u-layout-cell u-palette-4-base u-right-cell u-size-20 u-layout-cell-5">
-              <a href="/teacher/manage-autism-tasks-level3"><div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-icon-circle u-spacing-20 u-white u-icon-3"><img src="/../images/3564189.png" alt=""></span></a>
-                <a href="/teacher/manage-autism-tasks-level3"><h2 class="u-custom-font u-font-roboto-condensed u-text u-text-body-alt-color u-text-4">level 3</h2></a>
-                </div>
-              </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label> <b> Answer A </b> </label>
+                <input type="text" class="form-control" name="answerA" required>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
+            <div class="form-group">
+                <label><b> Answer B </b></label>
+                <input type="text" class="form-control" name="answerB" required>
+            </div>
 
-    	<!-- Start Footer -->
-	    <footer class="footer-32892 pb-0">
+            <div class="form-group">
+                <label> <b> Answer C </b></label>
+                <input type="text" class="form-control" name="answerC">
+            </div>
+
+            <div class="form-group">
+                <label> <b> Answer D </b></label>
+                <input type="text" class="form-control" name="answerD">
+            </div>
+
+            <div class="form-group">
+                <label> <b> Correct Answer </b> </label>
+                <input type="text" class="form-control" name="correctAnswer" required>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Add Game</button>
+                <button class="btn btn-warning" type="reset">Clear</button>
+            </div>  
+            <br> 
+        </div>        
+        </form>
+
+        <br>
+
+        	<!-- Start Footer -->
+            <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -276,12 +256,12 @@
               <h3>Gallery</h3>
               <div class="row gallery">
                 <div class="col-6">
-                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/images/img_1.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/images/img_2.png" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-6">
-                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/images/img_3.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/images/img_4.png" alt="Image" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -325,4 +305,23 @@
 	</script>	
 
 </body>
+
+<script src="/js/ckeditor.js"> </script>
+<script src="/js/ckfinder/ckfinder.js"> </script>
+
+  <script>
+    var editor=CKEDITOR.replace('editor',
+    {
+      extraPlugins : 'html5video, videoembed',
+    });
+    CKFinder.setupCKEditor(editor);
+  </script>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
 </html>
