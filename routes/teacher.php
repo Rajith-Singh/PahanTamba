@@ -95,6 +95,12 @@ use App\Http\Controllers\GameController;
             return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
         });
 
+        Route::get('manage-games', function () {
+            $data=App\Models\Game::all();
+            return view('dashboard.teacher.manage-games')->with('game',$data);
+        });
+        
+
         Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
         Route::get('/editTask/{id}', [TaskController::class, 'editTask']);
@@ -105,6 +111,11 @@ use App\Http\Controllers\GameController;
             return view('dashboard.teacher.game-handler');
         });
 
+        Route::get('/editGame/{id}', [GameController::class, 'editGames']);
+
+        Route::post('/updateGame', [GameController::class, 'updateGame']);
+
+        Route::get('/deleteGame/{id}', [GameController::class, 'deleteGame']);
 
 
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');

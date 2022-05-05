@@ -177,6 +177,8 @@ Route::get('ftf-activity', function () {
 
 Route::post('/updateTask', [TaskController::class, 'updateTask']);
 
+Route::post('/updateGame', [GameController::class, 'updateGame']);
+
 Route::get('contact-us', function () {
     return view('contact-us');
 });

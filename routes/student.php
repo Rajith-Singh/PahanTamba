@@ -55,5 +55,9 @@ Route::prefix('student')->name('student.')->group(function(){
         return view('dashboard.student.instructions');
     });
 
+    Route::get('view-games', function () {
+        return view('dashboard.student.view-games');
+    });
+
     
 });
