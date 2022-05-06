@@ -58,6 +58,12 @@ Route::prefix('student')->name('student.')->group(function(){
 
     Route::get('/view-games', [GameController::class, 'viewGames']);
 
+    Route::post('/saveanswer', [GameController::class, 'addanswer']);
+
+    Route::get('my-result', function () {
+        return view('dashboard.student.my-result');
+    });
+
 
     // Route::get('view-games', function () {
     //     return view('dashboard.student.view-games');

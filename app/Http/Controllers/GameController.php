@@ -72,6 +72,7 @@ class GameController extends Controller
 
         $game = DB::table('games')
         ->select('games.id',
+                'games.gametype',
                 'games.game', 
                 'games.answerA', 
                 'games.answerB',
@@ -85,4 +86,50 @@ class GameController extends Controller
 
     } 
 
+    public function addanswer(Request $request){
+
+        $q_id = $request->q_id;
+        $game_type = $request->game_type;
+        $auth_id = $request->auth_id;
+        $q_answer = $request->q_answer;
+
+
+        for($i=0; $i<count($q_id);$i++){
+
+            $datasave = [
+                'question_id'=>$q_id[$i],
+                'game_type'=>$game_type[$i],
+                'student_id'=>$auth_id[$i],
+                'student_answer'=>$q_answer[$i],
+            ];
+
+            DB::table('student_answers')->insert($datasave);
+
+            $ans = DB::table('games')
+            ->select('games.correctAnswer')
+            ->where('id', '=', $q_id[$i]) 
+            ->where('correctAnswer', '=', $q_answer[$i])    
+            ->first();
+
+            if(!$ans){
+                DB::table('student_answers')
+                ->where('question_id', $q_id[$i])
+                ->where('student_id', $auth_id[$i])
+                ->update([
+                    'mark' => 0,
+                ]);
+            } else {
+                DB::table('student_answers')
+                ->where('question_id', $q_id[$i])
+                ->where('student_id', $auth_id[$i])
+                ->update([
+                    'mark' => 1,
+                ]);
+            }
+
+        }
+        return redirect()->to('/student/my-result'); 
+    }
+
 }
+

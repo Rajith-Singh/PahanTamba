@@ -150,6 +150,9 @@
     <br>
   <br>
 
+  <form method="post"  action="saveanswer">
+      @csrf
+
   @foreach($game as $row)
     <div class="container pt-3">
             <div class="modal-content">
@@ -159,15 +162,36 @@
                 <div class="modal-body">
                     <div class="col-xs-3 5"> </div>
                     <div class="quiz" id="quiz" data-toggle="buttons"> 
-                    <label class="element-animation1 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1"> {{$row->answerA}} </label> 
-                    <label class="element-animation2 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2"> {{$row->answerB}} </label> 
-                    <label class="element-animation3 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3"> {{$row->answerC}} </label> 
-                    <label class="element-animation4 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4"> {{$row->answerD}}  </label> </div>
-                </div>
+                    <label class="element-animation1 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerA}}"> {{$row->answerA}} </label> 
+                    <label class="element-animation2 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerB}}"> {{$row->answerB}} </label> 
+                    <label class="element-animation3 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerC}}"> {{$row->answerC}} </label> 
+                    <label class="element-animation4 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerD}}"> {{$row->answerD}}  </label> </div>
+                  </div>
             </div>
         </div>
     </div>
+
+    <input type="text" value="{{$row->id}}" name="q_id[]">
+    <input type="text" value="{{$row->gametype}}" name="game_type[]">
+    <input type="text" value="{{ Auth::guard('student')->user()->id }}" name="auth_id[]">
     @endforeach
+
+
+    <br> 
+    <table align="right">
+      <tr>
+        <td>
+          <button class="btn btn-danger btn-lg" type="submit">Submit</button>
+          &nbsp&nbsp&nbsp
+        </td>
+
+        <td>
+          <button class="btn btn-warning btn-lg" type="reset">Clear</button>
+        </td>
+      </tr>
+    </table>
+    <br> <br>    <br> <br>
+
 
 
     <!-- Start Footer -->
