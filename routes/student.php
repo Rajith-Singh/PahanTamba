@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\GameController;
 
 
 
@@ -55,9 +56,17 @@ Route::prefix('student')->name('student.')->group(function(){
         return view('dashboard.student.instructions');
     });
 
-    Route::get('view-games', function () {
-        return view('dashboard.student.view-games');
-    });
+    Route::get('/view-games', [GameController::class, 'viewGames']);
+
+
+    // Route::get('view-games', function () {
+    //     return view('dashboard.student.view-games');
+    // });
+
+    // Route::get('view-games', function () {
+    //     $data=App\Models\Game::all();
+    //     return view('dashboard.student.view-games')->with('game',$data);
+    // });
 
     
 });

@@ -150,23 +150,24 @@
     <br>
   <br>
 
-    <div class="container-fluid">
-        <div class="modal-dialog">
+  @foreach($game as $row)
+    <div class="container pt-3">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Q. How awesome am I?</h3>
+                    <h3>{!!$row->game!!}</h3>
                 </div>
                 <div class="modal-body">
                     <div class="col-xs-3 5"> </div>
                     <div class="quiz" id="quiz" data-toggle="buttons"> 
-                    <label class="element-animation1 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1"> Extremely</label> 
-                    <label class="element-animation2 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2"> Mostly</label> 
-                    <label class="element-animation3 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3"> Partially</label> 
-                    <label class="element-animation4 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4"> Barely </label> </div>
+                    <label class="element-animation1 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1"> {{$row->answerA}} </label> 
+                    <label class="element-animation2 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2"> {{$row->answerB}} </label> 
+                    <label class="element-animation3 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3"> {{$row->answerC}} </label> 
+                    <label class="element-animation4 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4"> {{$row->answerD}}  </label> </div>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 
 
     <!-- Start Footer -->

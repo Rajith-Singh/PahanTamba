@@ -78,7 +78,7 @@ label .glyphicon {
 .element-animation4 {
     animation: animationFrames ease 1.4s;
     animation-iteration-count: 1;
-    transform-origin: 50% 50%;
+    transform-origin: 100% 100%;
     -webkit-animation: animationFrames ease 1.4s;
     -webkit-animation-iteration-count: 1;
     -webkit-transform-origin: 50% 50%;

@@ -64,8 +64,25 @@ class GameController extends Controller
     }
 
     public function viewGames(Request $request) {
-        $data=Game::all();
-        return view('dashboard.student.manage-games')->with('game',$data);
+        // $data=Game::all()->inRandomOrder()    
+        //                 ->limit(5) 
+        //                 ->get();
+        // return view("dashboard.student.view-games",compact('game'));
+
+
+        $game = DB::table('games')
+        ->select('games.id',
+                'games.game', 
+                'games.answerA', 
+                'games.answerB',
+                'games.answerC',
+                'games.answerD')
+        ->inRandomOrder()    
+        ->limit(5) 
+        ->get();
+
+        return view("dashboard.student.view-games",compact('game'));
+
     } 
 
 }
