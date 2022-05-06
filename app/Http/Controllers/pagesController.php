@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Salary;
 
@@ -37,12 +38,40 @@ class pagesController extends Controller
           }
 
 
-public function deleteSal($id){
-    $data = Salary::find($id);
-    $data->delete();
-    return redirect()->back();
-}
+            public function deleteSal($id){
+                DB::table('salaries')->where('id',$id)->delete();
+                return back()->with('message', 'The salary was successfully deleted.');;
+                // $data = Salary::find($id);
+                // $data->delete();
+                //return redirect()->back();
+            }
 
 
+            public function editSal($id){
+                $data = DB::table('salaries')->where('id',$id)->first();
+                return view('dashboard.user.editsal', compact('data'));
+            }
+
+            public function updateSal(Request $request){
+                $request->validate([
+                    'teacherName' => 'required',
+                    'teacherClass' => 'required',
+                    'classLevel' => 'required',
+                    'salaryMonth' => 'required',
+                    'salary' => 'required',
+                ]);
+
+                DB::table('salaries')->where('id', $request->id)->update([
+                    'name'=>$request->teacherName,
+                    'class'=>$request->teacherClass,
+                    'level'=>$request->classLevel,
+                    'month'=>$request->salaryMonth,
+                    'salary'=>$request->salary,
+                    'note'=>$request->note,
+                ]);
+                return redirect()->to('/user/managesal')->with('message', 'The salary details was successfully updated.');
+            }
+            
+            
 
 }

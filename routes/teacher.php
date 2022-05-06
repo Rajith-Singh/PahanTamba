@@ -92,8 +92,5 @@ use App\Http\Controllers\TaskController;
             $data=App\Models\Task::all()->where('class', '=', 'Hyperactive')->where('level', '=', 'Level 3');
             return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
         });
-
-        Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
-
     });
 });

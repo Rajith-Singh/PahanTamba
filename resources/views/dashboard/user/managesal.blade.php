@@ -137,10 +137,11 @@
 
     <br>
   <center> 
-  <form method="POST" action="/view-mangesalPage "> 
   <h3> Manage Salary </h3> </center>
   <br>
-
+  @if(session('message'))
+      <div class="alert alert-danger">{{session('message')}} </div>
+  @endif
   <table class="table table-striped">
             <thead>
                 <tr>
@@ -166,104 +167,23 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
+                                        <a href="/user/editSal/{{$row->id}}" class="btn btn-success"> Update </a>
                                     </td> 
 
                                     <td> 
-                                        <a href="/deleteSal/{id}" class="btn btn-danger"> Delete </a>
+                                        <a href="/user/deleteSal/{{$row->id}}" class="btn btn-danger"> Delete </a>
                                     </td> 
                                 </tr> 
-                                @endforeach   
+                                 
                             </table></center>
                         </td>        
                     </tr>
-                  
+                    @endforeach  
             </tbody>
-              
-</form>
-
-<!-- Start Footer -->
-<footer class="footer-32892 pb-0">
-      <div class="site-section">
-        <div class="container">
-
-          
-          <div class="row">
-
-            <div class="col-md pr-md-5 mb-4 mb-md-0">
-              <h3>About Us</h3>
-              <p class="mb-4">
-			  PahanTamba Special Needs empowers families with special needs to PahanTamba in their local and faith communities.
-			   </p>
-			   
-			   <p class="mb-4">
-			Families who have children with special needs face major challenges. PahanTamba is determined to walk beside them so that those challenges will not prevent them from obtaining a bright future.
-			<a href="#"> See more...</a>
-				</p>
+               
+</table>
 
 
-            </div>
-            <div class="col-md mb-4 mb-md-0">
-              <h3>Contact Us</h3>
-              <ul class="list-unstyled tweets">
-                <li class="d-flex">
-                  <div class="mr-4"><i class="fa fa-home" style="font-size:24px"></i></div>
-                  <div>No 165/F <br> Aluthgama - Bogamuwa <br> Yakkala </div>
-                </li>
-                <li class="d-flex">
-                  <div class="mr-4"><i class="fa fa-phone" style="font-size:24px"></i></div>
-                  <div>+(94) 719726803</div>
-                </li>
-                <li class="d-flex">
-                  <div class="mr-4"><i class="fa fa-envelope" style="font-size:24px"></i></div>
-                  <div>pahantamba[at]gmail.com</div>
-                </li>
-              </ul>
-			   <form action="#" class="subscribe">
-                <input type="text" class="form-control" placeholder="Enter your e-mail">
-                <input type="submit" class="btn btn-submit" value="Send" style="margin-top:-4px; margin-right:-5px;">
-              </form>
-            </div>
-
-
-            <div class="col-md-3 mb-4 mb-md-0">
-              <h3>Gallery</h3>
-              <div class="row gallery">
-                <div class="col-6">
-                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-6">
-                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-12">
-              <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
-                <ul class="list-unstyled footer-menu mr-auto">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Class</a></li>
-                  <li><a href="#">Timetable</a></li>
-                  <li><a href="#">Notices</a></li>
-                  <li><a href="#">Gallery</a></li>
-                </ul>
-                <div class="site-logo-wrap ml-auto">
-                  <a href="#" class="site-logo">
-                    PahanTamba
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </footer>
-	
-	<!-- End Footer -->
 	
 	<script src="/../js/jquery-3.3.1.min.js"></script>
     <script src="/../js/popper.min.js"></script>

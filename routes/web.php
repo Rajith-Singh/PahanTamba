@@ -39,6 +39,9 @@ Route::get('/Addpaymentdetails', function () {
 
 Route::post('/saveSalary',[pagesController::class,'storeSalary']);
 
+Route::post('/updateSal', [pagesController::class, 'updateSal']);
+
+
 //Route::get('/view-mangesalPage', function(){
 //      $times=App\Models\Salary::all(); 
 //    return view('managesal')->with('times', $times);

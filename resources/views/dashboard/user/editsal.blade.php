@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Add Salary</title>
+  	<title>Update Salary</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -137,7 +137,7 @@
   <div class="container mt-5 m-auto">
   
     <h2> Add Salary </h2>
-        <form class="row g-3" method="post" action="/saveSalary">
+        <form class="row g-3" method="post" action="/updateSal">
 
             @csrf
 
@@ -145,10 +145,11 @@
               <div class="alert alert-success">{{session('msg')}} </div>
         @endif
 
+            <input type="hidden" name="id" value="{{$data->id}}">
 
             <div class="col-md-12">
                 <label class="form-label">Name</label>     
-                <input type="text" class="form-control py-2" name="teacherName">
+                <input type="text" class="form-control py-2" name="teacherName" value="{{$data->name}}"> 
                 <span style="color:red"> @error('teacherName'){{$message}}@enderror</span>
                <br></br>
             </div>
@@ -157,7 +158,7 @@
 
             <div class="col-md-6">
                 <label class="form-label">Class</label>
-                <select class="form-select py-2" name="teacherClass">
+                <select class="form-select py-2" name="teacherClass" value="{{$data->class}}">
                     <option> Autism </option>
                     <option> Down syndrome </option>
                     <option> Hyperactive </option>
@@ -170,7 +171,7 @@
 
             <div class="col-md-6">
                 <label class="form-label">Level</label>
-                <select class="form-select py-2" name="classLevel">
+                <select class="form-select py-2" name="classLevel" value="{{$data->level}}"> 
                     <option>Level 1</option>
                     <option>Level 2</option>
                     <option>Level 3</option>
@@ -185,14 +186,14 @@
 
             <div class="col-md-6">
                 <label class="form-label">Month</label>
-                <input type="month" class="form-control py-2" name="salaryMonth">
+                <input type="month" class="form-control py-2" name="salaryMonth" value="{{$data->month}}">
                 <span style="color:red"> @error('salaryMonth'){{$message}}@enderror</span>
             </div>
 
             <br>
             <div class="col-md-6">
                 <label class="form-label">Salary</label>
-                <input type="text" class="form-control py-2" name="salary">
+                <input type="text" class="form-control py-2" name="salary" value="{{$data->salary}}">
                 <span style="color:red"> @error('salary'){{$message}}@enderror</span>
                 <br></br>
             </div>
@@ -203,7 +204,7 @@
 <br>
 <div class="col-md-12">
                 <label class="form-label">Note</label>
-                <textarea class="form-control rounded-0" rows="10" name="note">
+                <textarea class="form-control rounded-0" rows="10" name="note"> {{$data->note}}
 </textarea>
 <br></br>
             </div>
@@ -216,7 +217,7 @@
             <br>
 
             <div class="col-12">
-                <button class="btn btn-primary" type="Submit">Submit</button>
+                <button class="btn btn-success" type="Submit">Update</button>
                 
             </div>  
             <br> 

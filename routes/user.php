@@ -40,4 +40,10 @@ Route::prefix('user')->name('user.')->group(function(){
         return view('dashboard.user.managesal')->with('viewSalary',$data);
     });
 
+    Route::get('/deleteSal/{id}', [pagesController::class, 'deleteSal']);
+
+    Route::get('/editSal/{id}', [pagesController::class, 'editSal']);
+
+
+
 });
