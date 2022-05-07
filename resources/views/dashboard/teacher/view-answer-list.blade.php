@@ -153,6 +153,7 @@
                 <tr>
                     <th><center>Student's Name</center></th>
                     <th><center>Student's Class</center></th>
+                    <th> <center> Task Title </center> </th>
                     <th><center>Action</center></th>
                 </tr>
             </thead>
@@ -161,6 +162,7 @@
                     <tr>
                         <td>{{$data->fullname}}</td>
                         <td>{{$data->diseasestype}} - {{$data->diseaseslevel}}</td>
+                        <td>{{$data->title}}</td>
                         <td> 
                             <a href="/teacher/getAnswers/{{$data->student_id}}/{{$data->task_id}}" class="btn btn-warning"> View </a>
                         </td>

@@ -189,9 +189,11 @@ class TaskController extends Controller
     public function getStdAns(Request $request) {
 
         $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
                     ->select('students.fullname',
                             'students.diseasestype', 
-                            'students.diseaseslevel', 
+                            'students.diseaseslevel',
+                            'tasks.title', 
                             'std_task_answers.student_answer',
                             'std_task_answers.task_id',
                             'std_task_answers.student_id',
@@ -237,4 +239,20 @@ class TaskController extends Controller
         return view('dashboard.teacher.submit-results');
     }
 
+
+    public function viewProgressReport($std_id) {
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+                        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+                        ->select('students.fullname',
+                                'students.diseasestype',
+                                'students.diseaseslevel',
+                                'tasks.title',
+                                'tasks.task',
+                                'final_results.mark',
+                                'final_results.feedback')
+                        ->where('final_results.student_id', '=', $std_id)
+                        ->get();
+        return view('dashboard.student.std-progress-report')->with('data',$progress);
+    }  
+    
 }

@@ -81,6 +81,14 @@ Route::prefix('student')->name('student.')->group(function(){
         return view('dashboard.student.submit-message');
     });
 
+    Route::get('std-progress-report', function () {
+        return view('dashboard.student.std-progress-report');
+    });
+
+    Route::get('/viewProgressReport/{id}', [TaskController::class, 'viewProgressReport']);
+
+
+
     
     
 

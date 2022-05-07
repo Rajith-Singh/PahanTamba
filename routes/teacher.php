@@ -133,7 +133,6 @@ use App\Http\Controllers\GameController;
             return view('dashboard.teacher.submit-results');
         });
         
-        
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
 

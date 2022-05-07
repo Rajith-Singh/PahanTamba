@@ -80,7 +80,7 @@
 <ul>
 <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
 <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
-<li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
+<li><a href="viewProgressReport/{{ Auth::guard('student')->user()->id }}"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
 </ul>
 </div>
 </div>
