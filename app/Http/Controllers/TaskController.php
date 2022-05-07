@@ -6,6 +6,7 @@ use DB;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\StdTaskAnswer;
+use App\Models\FinalResult;
 
 class TaskController extends Controller
 {
@@ -14,6 +15,7 @@ class TaskController extends Controller
         $request->validate([
             'taskClass' => 'required',
             'taskLevel' => 'required',
+            'taskTitle' => 'required',
             'task' => 'required|min:10',
         ]);
 
@@ -21,6 +23,7 @@ class TaskController extends Controller
 
         $task->class=$request->taskClass;
         $task->level=$request->taskLevel;
+        $task->title=$request->taskTitle;
         $task->task=$request->task;
         $task->save();
 
@@ -183,5 +186,55 @@ class TaskController extends Controller
         //dd($request->all());
     }
     
+    public function getStdAns(Request $request) {
+
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->select('students.fullname',
+                            'students.diseasestype', 
+                            'students.diseaseslevel', 
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->get();
+
+        return view("dashboard.teacher.view-answer-list",compact('student'));                      
+
+    }
+
+
+    public function getAnswers($std_id,$task_id) {
+
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+                    ->select('students.fullname',
+                            'students.id',
+                            'students.diseasestype', 
+                            'students.diseaseslevel', 
+                            'tasks.task',
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->where('std_task_answers.student_id', '=', $std_id)     
+                    ->where('std_task_answers.task_id', '=', $task_id)        
+                    ->get();
+
+        return view("dashboard.teacher.add-result",compact('student'));                      
+
+    }
+
+    public function storeFinalMarks(Request $request) {
+
+        $final = new FinalResult;
+
+        $final->student_id=$request->std_id;
+        $final->task_id=$request->task_id;
+        $final->mark=$request->stdMarks;
+        $final->feedback=$request->stdFeedback;
+        $final->save();
+
+        return view('dashboard.teacher.submit-results');
+    }
 
 }

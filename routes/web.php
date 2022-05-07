@@ -183,6 +183,10 @@ Route::post('/saveanswer', [GameController::class, 'addanswer']);
 
 Route::post('/storeAnswer',[TaskController::class,'storeAnswer']);
 
+Route::post('/storeFinalMarks',[TaskController::class,'storeFinalMarks']);
+
+
+
 
 
 Route::get('contact-us', function () {

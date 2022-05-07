@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Upload Answers</title>
+    <title>Submit Answers</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,6 +49,11 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
+  <link rel="stylesheet" href="/../css/rajith11.css">
+
+  <link rel="stylesheet" href="/../css/rajith12.css">
+
+
   <style>
     body {
     background-image: url('/../images/pngwing3.png');
@@ -56,6 +61,49 @@
     background-attachment: fixed;
     background-size: cover;
     }
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+  </head>
+    <style>
+      body {
+        text-align: center;
+        padding: 40px 0;
+        background: #EBF0F5;
+      }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+        }
+      i {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      .button3 {
+            background-color: #47E307;
+            color: #ffffff;
+            border-radius: 15px 0 15px;
+        }
+
     </style>
 
 
@@ -147,49 +195,20 @@
 	</section>
 	<!-- END header -->
 
-    <br>
-    <div class="container mt-5 m-auto">  
-    <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th><center>Tasks</center></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($activities as $data)
-                    <tr>
-                        <td>{!!$data->task!!}</td>
-                    </tr>
-            </tbody>
-            </table>
-    
-  <br>
+    <br>    <br>
 
-  <form class="row g-3" method="post" action="/storeAnswer">
-        {{csrf_field()}}
+     <center> <div class="card">
+      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+        <h1>Success</h1> 
+        <p>{{ Auth::guard('student')->user()->fullname }}, Your answers have been submitted successfully</p>
+        <button class="pure-button button3 btn-lg">Progress Report</button>
+      </div>
+    </center> 
 
-        <div class="form-group">
-                <label class="form-label"> <b> Answer </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="answer" id='editor'></textarea>
-        </div>
+      <br><br>
 
-        <input type="hidden" value="{{ Auth::guard('student')->user()->id }}" name="std_id">
-
-        <input type="hidden" value="{{$data->id}}" name="task_id">
-
-        @endforeach
-
-
-
-        <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit</button>
-                <button class="btn btn-warning" type="reset">Clear</button>
-            </div>  
-            <br> 
-    </form> 
-    <br>   
-    </div>    
-    <br><br>
     <!-- Start Footer -->
       <footer class="footer-32892 pb-0">
       <div class="site-section">

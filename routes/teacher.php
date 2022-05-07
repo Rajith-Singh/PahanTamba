@@ -117,7 +117,23 @@ use App\Http\Controllers\GameController;
 
         Route::get('/deleteGame/{id}', [GameController::class, 'deleteGame']);
 
+        Route::get('view-answer-list', function () {
+            return view('dashboard.teacher.view-answer-list');
+        });
 
+        Route::get('/getStdAns', [TaskController::class, 'getStdAns']);
+
+        Route::get('/getAnswers/{std_id}/{task_id}', [TaskController::class, 'getAnswers']);
+
+        Route::get('add-result', function () {
+            return view('dashboard.teacher.add-result');
+        });
+
+        Route::get('add-result', function () {
+            return view('dashboard.teacher.submit-results');
+        });
+        
+        
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
 

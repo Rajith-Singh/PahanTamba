@@ -155,7 +155,7 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> View </a>
+                                        <a href="/student/getStudentTask/{{$data->id}}" class="btn btn-success"> View </a>
                                     </td> 
                                 </tr>    
                             </table></center>

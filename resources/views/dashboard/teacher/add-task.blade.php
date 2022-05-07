@@ -88,7 +88,6 @@
             <li><a href="/teacher/view-category"><span class="icon-notifications mr-3"></span>Manage Tasks</a></li>
             <li><a href="/ftf-activity"><span class="icon-location-arrow mr-3"></span>Face to face Activities</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Add Results</a></li>
           </ul>
         </div>
       </div>
@@ -129,12 +128,12 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li> 
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li> 
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item active"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="/teacher/getStdAns" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
             <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('teacher')->user()->fullname }} </b> 
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('teacher.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
@@ -177,6 +176,12 @@
                     <option> Level 3 </option>
                 </select>
                 <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control py-2" name="taskTitle">
+                <span style="color:red"> @error('taskTitle'){{$message}}@enderror</span>
             </div>
 
             <div class="form-group">

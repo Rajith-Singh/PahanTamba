@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Update Task</title>
+    <title>Add Result</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/../css/header/style.css">
+<link rel="stylesheet" href="/css/header/style.css">
 
-<link rel="stylesheet" href="/../css/nicepage.css">
+<link rel="stylesheet" href="/css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -28,10 +28,10 @@
   <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/../css/sidebar/style.css">
+  <link rel="stylesheet" href="/css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -42,16 +42,16 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/../css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/../css/footer/style.css">
+  <link rel="stylesheet" href="/css/footer/style.css">
 
   <style>
     body {
-    background-image: url('/../images/children-background.png');
+    background-image: url('/images/SeekPng.com_mickey-mouse.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -84,7 +84,7 @@
         
         <div class="nav-menu">
           <ul>
-          <li><a href="/teacher/add-task"><span class="icon-search2 mr-3"></span>Add Tasks</a></li>
+            <li><a href="/teacher/add-task"><span class="icon-search2 mr-3"></span>Add Tasks</a></li>
             <li><a href="/teacher/view-category"><span class="icon-notifications mr-3"></span>Manage Tasks</a></li>
             <li><a href="/ftf-activity"><span class="icon-location-arrow mr-3"></span>Face to face Activities</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
@@ -120,7 +120,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,7 +138,7 @@
             <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('teacher')->user()->fullname }} </b> 
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('teacher.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
         <form action="{{ route('teacher.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
-        </li>	
+        </li>				
 	        </ul>
 	      </div>
 	    </div>
@@ -146,43 +146,79 @@
 	</section>
 	<!-- END header -->
 
-  <div class="container mt-5 m-auto">  
+  <div class="container mt-5 m-auto">
+    <br> <br>    
+    <h2> Add Result </h2>
     <br>
-    <h2 style="font-size:35px;"> Update Task </h2> <br>
-        <form class="row g-3" method="post" action="/updateTask">
-        {{csrf_field()}}
+        <form class="row g-3" method="post" action="/storeFinalMarks">
 
-        <input type="hidden" name="id" value="{{$data->id}}">
+            @csrf
 
-        <div class="col-md-12">
-                <label class="form-label"> <h5> <b> Class </b> </h5> </label>
-                <input type="text" class="form-control py-2" name="taskClass" value="{{$data->class}}" readonly>
-                <span style="color:red"> @error('taskClass'){{$message}}@enderror</span>
+
+            @foreach($student as $data)
+            <div class="col-md-12">
+                <label class="form-label"> <h5> <b> Name </b> </h5> </label>
+                <input type="text" class="form-control py-2" name="stdName"  value="{{$data->fullname}}" readonly>
             </div>
 
-            <div class="col-md-12">
-            <label class="form-label"> <h5> <b> Level </b> </h5> </label>
-                <input type="text" class="form-control py-2" name="taskLevel" value="{{$data->level}}" readonly>
-                <span style="color:red"> @error('taskLevel'){{$message}}@enderror</span>
+
+            <div class="col-md-6">
+                <label class="form-label"> <h5> <b> Class </h5> </b> </label>
+                <input type="text" class="form-control py-2" name="stdClass" value="{{$data->diseasestype}}" readonly>
             </div>
 
-            <div class="col-md-12">
-                <label class="form-label">Title</label>
-                <input type="text" class="form-control py-2" value="{{$data->title}}" readonly>
-                <span style="color:red"> @error('taskTitle'){{$message}}@enderror</span>
+
+            <div class="col-md-6">
+                <label class="form-label"> <h5> <b> Level </h5> </b> </label>
+                <input type="text" class="form-control py-2" name="stdLevel" value="{{$data->diseaseslevel}}" readonly>
+            </div>
+
+
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><center>Tasks</center></th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>{!!$data->task!!}</td>
+                    </tr>
+            </tbody>
+            </table>
+
+
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><center>Answer</center></th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>{!!$data->student_answer!!}</td>
+                    </tr>
+            </tbody>
+            </table>
+            
+            <input type="hidden" name="std_id" value="{{$data->student_id}}">
+            <input type="hidden" name="task_id" value="{{$data->task_id}}">
+            @endforeach
+
+            <div class="col-md-6">
+                <label class="form-label"> <h5> <b> Marks </h5> </b> </label>
+                <input type="text" class="form-control py-2" name="stdMarks" required>
             </div>
 
             <div class="form-group">
-                <label class="form-label"> <b> Task </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="task" id='editor'> {{$data->task}} </textarea>
-                <span style="color:red"> @error('task'){{$message}}@enderror</span>            
-              </div>
-            
-            <br>
+                <label class="form-label"> <h5> <b> Feedback </h5> </b> </label>
+                <textarea class="form-control rounded-0" rows="10" name="stdFeedback" id='editor3'></textarea>
+            </div>
+
+
 
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Update Task</button>
-                <button class="btn btn-warning" type="reset">Clear</button>
+                <button class="btn btn-primary" type="submit">Add</button>
             </div>  
             <br> 
         </div>        
@@ -274,10 +310,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/../js/jquery-3.3.1.min.js"></script>
-    <script src="/../js/popper.min.js"></script>
-    <script src="/../js/bootstrap.min.js"></script>
-    <script src="/../js/main.js"></script>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");
@@ -297,11 +333,24 @@
     });
   </script>
 
+    <script>
+        CKEDITOR.replace('editor2',
+        {
+        extraPlugins : 'html5video, videoembed',
+        });
+    </script>
+
+<script>
+        CKEDITOR.replace('editor3',
+        {
+        extraPlugins : 'html5video, videoembed',
+        });
+    </script>
+
   <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
 
 </html>
