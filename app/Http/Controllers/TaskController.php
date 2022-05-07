@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\StdTaskAnswer;
 
 class TaskController extends Controller
 {
@@ -163,4 +164,24 @@ class TaskController extends Controller
             return response()->json(['fileName' => $fileName, 'uploaded'=>1, 'url' => $url]);
         }
     }
+
+    public function getStudentTask($task_id) {
+        $data=Task::all()->where('id', '=', $task_id);
+        return view('dashboard.student.upload-std-answer')->with('activities',$data);
+    }   
+
+    public function storeAnswer(Request $request) {
+
+        $answer = new StdTaskAnswer;
+
+        $answer->student_id=$request->std_id;
+        $answer->task_id=$request->task_id;
+        $answer->student_answer=$request->answer;
+        $answer->save();
+
+        return view('dashboard.student.submit-message');
+        //dd($request->all());
+    }
+    
+
 }

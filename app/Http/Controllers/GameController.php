@@ -131,5 +131,21 @@ class GameController extends Controller
         return redirect()->to('/student/my-result'); 
     }
 
+    public function gameScore($std_id)
+    {
+        $student = Game::join('student_answers', 'student_answers.question_id', '=', 'games.id')
+                    ->join('students', 'students.id', '=', 'student_answers.student_id')
+                    ->select('students.fullname', 
+                            'student_answers.student_id',
+                            DB::raw('SUM(student_answers.mark) as sum'),
+                        )    
+                    ->where('student_answers.student_id', '=', $std_id)
+                    ->groupBy('student_answers.student_id')
+                    ->get();
+
+        return view("dashboard.student.view-result",compact('student'));                      
+
+    }
+
 }
 

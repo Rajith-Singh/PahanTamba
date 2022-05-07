@@ -64,6 +64,25 @@ Route::prefix('student')->name('student.')->group(function(){
         return view('dashboard.student.my-result');
     });
 
+    Route::get('view-result', function () {
+        return view('dashboard.student.view-result');
+    });
+    
+
+    Route::get('/viewResults/{id}', [GameController::class, 'gameScore']);
+
+    Route::get('/getStudentTask/{id}', [TaskController::class, 'getStudentTask']);
+
+    Route::get('view-result', function () {
+        return view('dashboard.student.upload-std-answer');
+    });
+
+    Route::get('submit-message', function () {
+        return view('dashboard.student.submit-message');
+    });
+
+    
+    
 
     // Route::get('view-games', function () {
     //     return view('dashboard.student.view-games');

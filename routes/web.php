@@ -181,6 +181,9 @@ Route::post('/updateGame', [GameController::class, 'updateGame']);
 
 Route::post('/saveanswer', [GameController::class, 'addanswer']);
 
+Route::post('/storeAnswer',[TaskController::class,'storeAnswer']);
+
+
 
 Route::get('contact-us', function () {
     return view('contact-us');
