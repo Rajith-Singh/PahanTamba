@@ -132,6 +132,8 @@ use App\Http\Controllers\GameController;
         Route::get('add-result', function () {
             return view('dashboard.teacher.submit-results');
         });
+
+        Route::get('/search', [TaskController::class, 'searchTasks']);
         
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 

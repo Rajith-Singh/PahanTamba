@@ -87,7 +87,9 @@ Route::prefix('student')->name('student.')->group(function(){
 
     Route::get('/viewProgressReport/{id}', [TaskController::class, 'viewProgressReport']);
 
+    Route::get('/Progress-report-pdf/{id}', [TaskController::class, 'downloadProgressReport']);
 
+    Route::get('/search/{id}', [TaskController::class, 'searchResult']);
 
     
     

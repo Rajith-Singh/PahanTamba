@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
+use PDF;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\StdTaskAnswer;
@@ -253,6 +254,86 @@ class TaskController extends Controller
                         ->where('final_results.student_id', '=', $std_id)
                         ->get();
         return view('dashboard.student.std-progress-report')->with('data',$progress);
+    }  
+
+    public function downloadProgressReport($std_id) {
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+                        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+                        ->select('students.fullname',
+                                'students.diseasestype',
+                                'students.diseaseslevel',
+                                'tasks.title',
+                                'tasks.task',
+                                'final_results.mark',
+                                'final_results.feedback',
+                                'final_results.student_id')
+                        ->where('student_id', '=', $std_id)
+                        ->get();
+                        
+        // return view('dashboard.student.std-progress-report-pdf')->with('data',$progress);                
+        // $pdf = PDF::loadView('dashboard.student.std-progress-report-pdf')->with('data',$progress)->setOptions(['defaultFont' => 'sans-serif']);
+        // $pdf = PDF::loadView('dashboard.student.std-progress-report-pdf',compact('data'))->setOptions(['defaultFont' => 'sans-serif']); 
+        $pdf=PDF::loadView('dashboard.student.std-progress-report-pdf',$data);
+        return $pdf->download('MyProgressReport.pdf');
+
+    } 
+
+
+    public function searchStdAns(Request $request) {
+
+        $search = $request->get('search');
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+                    ->select('students.fullname',
+                            'students.diseasestype', 
+                            'students.diseaseslevel',
+                            'tasks.title', 
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->where('students.fullname', 'LIKE', '%'.$search.'%' );
+
+        // return view("dashboard.teacher.view-answer-list-search",compact('student'));                      
+        return redirect()->route('/getStdAns', ['student' => $student]);
+
+    }
+
+    // public function searchResult(Request $request) {
+
+    //     $search = $request->get('search');
+    //     $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+    //                 ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+    //                 ->select('students.fullname',
+    //                         'students.diseasestype', 
+    //                         'students.diseaseslevel',
+    //                         'tasks.title', 
+    //                         'std_task_answers.student_answer',
+    //                         'std_task_answers.task_id',
+    //                         'std_task_answers.student_id',
+    //                         )
+    //                 ->where('students.fullname', 'LIKE', '%'.$search.'%' );
+
+    //     // return view("dashboard.teacher.view-answer-list-search",compact('student'));                      
+    //     return redirect()->route('/getStdAns', ['student' => $student]);
+
+    // }
+
+    public function searchResult(Request $request) {
+        $search = $request->get('search');
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+        ->select('students.fullname',
+                'students.diseasestype',
+                'students.diseaseslevel',
+                'tasks.title',
+                'tasks.task',
+                'final_results.mark',
+                'final_results.feedback')
+        // ->where('final_results.student_id', '=', $std_id)
+        ->where('tasks.title', 'LIKE', '%'.$search.'%' )
+        ->get();
+    return view('dashboard.student.std-progress-report',['data' => $progress]);
     }  
     
 }
