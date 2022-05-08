@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\GameController;
+
 
 
 /*
@@ -131,6 +133,8 @@ Route::get('/add-result', function () {
 
 Route::post('/saveTask',[TaskController::class,'storeTask']);
 
+Route::post('/saveGame',[GameController::class,'storeGame']);
+
 Route::get('view-category', function () {
     return view('view-category');
 });
@@ -195,6 +199,26 @@ Route::get('manage-hyperactive-tasks-level3', function () {
 Route::get('select-login-type', function () {
     return view('select-login-type');
 });
+
+Route::get('ftf-activity', function () {
+    return view('face-to-face-activities');
+});
+
+Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+Route::post('/updateGame', [GameController::class, 'updateGame']);
+
+Route::post('/saveanswer', [GameController::class, 'addanswer']);
+
+Route::post('/storeAnswer',[TaskController::class,'storeAnswer']);
+
+Route::post('/storeFinalMarks',[TaskController::class,'storeFinalMarks']);
+
+Route::get('/getStdAns', [TaskController::class, 'getStdAns'])->name('getStdAns');
+
+Route::get('/search', [TaskController::class, 'searchStdAns']);
+
+
 
 Route::get('contact-us', function () {
     return view('contact-us');

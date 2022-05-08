@@ -141,7 +141,7 @@
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="/student/view-notice" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="/student/instructions" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
             <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('student')->user()->fullname }} </b> 

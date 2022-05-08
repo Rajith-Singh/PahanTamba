@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\Student\NoticeController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\GameController;
+
+
 
 
                 //Student//
@@ -35,4 +39,88 @@ Route::prefix('student')->name('student.')->group(function(){
         $notice=App\Models\Notice::all();
         return view('dashboard.student.view-notice')->with('notice', $notice);
         });
+    //View activities
+    Route::get('autism-activities-home', function () {
+        return view('dashboard.student.autism-activities-home');
+    });
+
+    Route::get('down-syndrome-activities-home', function () {
+        return view('dashboard.student.down-syndrome-activities-home');
+    });
+
+    Route::get('hyperactive-activities-home', function () {
+        return view('dashboard.student.hyperactive-activities-home');
+    });
+
+    Route::get('/viewAct/{diseasestype}', [TaskController::class, 'viewAct']);
+
+    Route::get('/viewActivities/{diseasestype}/{diseaseslevel}', [TaskController::class, 'viewActivities']);
+
+    Route::get('/viewdactivities/{ddiseasestype}/{ddiseaseslevel}', [TaskController::class, 'viewdactivities']);
+
+    Route::get('/viewaactivities/{adiseasestype}/{adiseaseslevel}', [TaskController::class, 'viewaactivities']);
+
+    Route::get('instructions', function () {
+        return view('dashboard.student.instructions');
+    });
+
+    //View games
+    Route::get('/view-games', [GameController::class, 'viewGames']);
+
+    //Store games
+    Route::post('/saveanswer', [GameController::class, 'addanswer']);
+
+    //View students 
+    Route::get('my-result', function () {
+        return view('dashboard.student.my-result');
+    });
+
+    //View students results
+    Route::get('view-result', function () {
+        return view('dashboard.student.view-result');
+    });
+    
+    //View students results
+    Route::get('/viewResults/{id}', [GameController::class, 'gameScore']);
+
+    //Get tasks from relevant students
+    Route::get('/getStudentTask/{id}', [TaskController::class, 'getStudentTask']);
+
+    //Get students results
+    Route::get('view-result', function () {
+        return view('dashboard.student.upload-std-answer');
+    });
+
+    //View success message
+    Route::get('submit-message', function () {
+        return view('dashboard.student.submit-message');
+    });
+
+    //View relevent student's progress report 
+    Route::get('std-progress-report', function () {
+        return view('dashboard.student.std-progress-report');
+    });
+
+    Route::get('/viewProgressReport/{id}', [TaskController::class, 'viewProgressReport']);
+
+    Route::get('/search', [TaskController::class, 'searchResult']);
+    Route::get('/Progress-report-pdf/{id}', [TaskController::class, 'downloadProgressReport']);
+
+    Route::get('songs-games', function () {
+        return view('dashboard.student.songs-games');
+    });
+
+    //View songs
+    Route::get('/view-songs', [GameController::class, 'viewSongs']);
+    
+    // Route::get('view-games', function () {
+    //     return view('dashboard.student.view-games');
+    // });
+
+    // Route::get('view-games', function () {
+    //     $data=App\Models\Game::all();
+    //     return view('dashboard.student.view-games')->with('game',$data);
+    // });
+
+    
 });
