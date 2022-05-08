@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>View Student Tasks</title>
+    <title>View Songs</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -85,8 +85,8 @@
         <div class="nav-menu">
           <ul>
           <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
-          <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
-          <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
+          <li><a href="/student/songs-games"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
+          <li><a href="/student/viewProgressReport/{{ Auth::guard('student')->user()->id }}"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
           </ul>
         </div>
       </div>

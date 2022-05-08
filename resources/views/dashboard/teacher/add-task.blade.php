@@ -87,7 +87,7 @@
             <li><a href="/teacher/add-task"><span class="icon-search2 mr-3"></span>Add Tasks</a></li>
             <li><a href="/teacher/view-category"><span class="icon-notifications mr-3"></span>Manage Tasks</a></li>
             <li><a href="/ftf-activity"><span class="icon-location-arrow mr-3"></span>Face to face Activities</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
+            <li><a href="/teacher/add-songs-and-games"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
           </ul>
         </div>
       </div>

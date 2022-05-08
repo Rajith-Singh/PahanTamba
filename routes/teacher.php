@@ -143,6 +143,9 @@ use App\Http\Controllers\GameController;
             return view('dashboard.teacher.add-songs');
         });
 
+        Route::get('add-songs-and-games', function () {
+            return view('dashboard.teacher.add-songs-and-games');
+        });
 
     });
 });
