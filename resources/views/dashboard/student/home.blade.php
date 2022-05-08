@@ -92,7 +92,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="/common-lessons"><span class="icon-search2 mr-3"></span>Lesson Interface</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>

@@ -92,11 +92,7 @@
         
         <div class="nav-menu">
           <ul>
-<<<<<<< HEAD
             <li><a href="/teacher/view-timetable"><span class="icon-search2 mr-3"></span>View Timetable</a></li>
-=======
-            <li><a href="/view-timetable"><span class="icon-search2 mr-3"></span>View Timetable</a></li>
->>>>>>> 64a6be28f893c7929267eb5000ea9abf20a3ad56
             <li><a href="/teacher/ClassReport-view"><span class="icon-notifications mr-3"></span>Student Report</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\GameController;
 
 
 
@@ -55,6 +56,54 @@ Route::prefix('student')->name('student.')->group(function(){
     Route::get('instructions', function () {
         return view('dashboard.student.instructions');
     });
+
+    Route::get('/view-games', [GameController::class, 'viewGames']);
+
+    Route::post('/saveanswer', [GameController::class, 'addanswer']);
+
+    Route::get('my-result', function () {
+        return view('dashboard.student.my-result');
+    });
+
+    Route::get('view-result', function () {
+        return view('dashboard.student.view-result');
+    });
+    
+
+    Route::get('/viewResults/{id}', [GameController::class, 'gameScore']);
+
+    Route::get('/getStudentTask/{id}', [TaskController::class, 'getStudentTask']);
+
+    Route::get('view-result', function () {
+        return view('dashboard.student.upload-std-answer');
+    });
+
+    Route::get('submit-message', function () {
+        return view('dashboard.student.submit-message');
+    });
+
+    Route::get('std-progress-report', function () {
+        return view('dashboard.student.std-progress-report');
+    });
+
+    Route::get('/viewProgressReport/{id}', [TaskController::class, 'viewProgressReport']);
+
+    Route::get('/search', [TaskController::class, 'searchResult']);
+    Route::get('/Progress-report-pdf/{id}', [TaskController::class, 'downloadProgressReport']);
+
+    Route::get('/search/{id}', [TaskController::class, 'searchResult']);
+
+    
+    
+
+    // Route::get('view-games', function () {
+    //     return view('dashboard.student.view-games');
+    // });
+
+    // Route::get('view-games', function () {
+    //     $data=App\Models\Game::all();
+    //     return view('dashboard.student.view-games')->with('game',$data);
+    // });
 
     
 

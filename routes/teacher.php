@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\CkeditorController;
+use App\Http\Controllers\GameController;
 
  //Teacher//
 
@@ -94,12 +96,47 @@ use App\Http\Controllers\LessonController;
             return view('dashboard.teacher.manage-hyperactive-tasks-level3')->with('viewTasks',$data);
         });
 
+        Route::get('manage-games', function () {
+            $data=App\Models\Game::all();
+            return view('dashboard.teacher.manage-games')->with('game',$data);
+        });
+        
+
         Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
         Route::get('/editTask/{id}', [TaskController::class, 'editTask']);
 
         Route::post('/updateTask', [TaskController::class, 'updateTask']);
 
+        Route::get('game-handler', function () {
+            return view('dashboard.teacher.game-handler');
+        });
+
+        Route::get('/editGame/{id}', [GameController::class, 'editGames']);
+
+        Route::post('/updateGame', [GameController::class, 'updateGame']);
+
+        Route::get('/deleteGame/{id}', [GameController::class, 'deleteGame']);
+
+        Route::get('view-answer-list', function () {
+            return view('dashboard.teacher.view-answer-list');
+        });
+
+        Route::get('/getStdAns', [TaskController::class, 'getStdAns']);
+
+        Route::get('/getAnswers/{std_id}/{task_id}', [TaskController::class, 'getAnswers']);
+
+        Route::get('add-result', function () {
+            return view('dashboard.teacher.add-result');
+        });
+
+        Route::get('add-result', function () {
+            return view('dashboard.teacher.submit-results');
+        });
+
+        Route::get('/search', [TaskController::class, 'searchTasks']);
+        
+        // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
 
 

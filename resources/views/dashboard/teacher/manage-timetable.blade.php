@@ -84,9 +84,9 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
+            <li><a href="/teacher/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
-            <li><a href="/ClassReport-view"><span class="icon-location-arrow mr-3"></span>Class Report</a></li>
+            <li><a href="/teacher/ClassReport-view"><span class="icon-location-arrow mr-3"></span>Class Report</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
@@ -155,7 +155,7 @@ background-size: cover;
         <div class="jumbotorn">
     <h1>Manage Timetable</h1>
     <br>
-    <a href="/add-lessons" class="btn btn-primary">Add new Lessons</a>
+    <a href="/teacher/add-lessons" class="btn btn-primary">Add new Lessons</a>
     <div class="line" style="text-align:right;">
     @if(session('message'))
     <div class="alert alert-success">{{session('message')}}</div>

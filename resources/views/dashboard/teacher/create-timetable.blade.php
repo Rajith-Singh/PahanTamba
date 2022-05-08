@@ -88,7 +88,7 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="/manage-timetable"><span class="icon-search2 mr-3"></span>Manage Timetable</a></li>
+            <li><a href="/teacher/manage-timetable"><span class="icon-search2 mr-3"></span>Manage Timetable</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>

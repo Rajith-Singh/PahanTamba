@@ -68,10 +68,10 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="/view-timetable"><span class="icon-search2 mr-3"></span> View Timetable</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
+            <li><a href="/student/view-timetable"><span class="icon-search2 mr-3"></span> View Timetable</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
           </ul>
         </div>
@@ -202,7 +202,7 @@ body {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <img src="images-d/Autisam.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+    <img src="/images-d/Autisam.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
      <h4><b>Autisam </b></h4>
      <h5><b></b></h5>
     </div>

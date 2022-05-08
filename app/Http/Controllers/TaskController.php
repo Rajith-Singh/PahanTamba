@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use DB;
+use PDF;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\StdTaskAnswer;
+use App\Models\FinalResult;
 
 class TaskController extends Controller
 {
@@ -13,6 +16,7 @@ class TaskController extends Controller
         $request->validate([
             'taskClass' => 'required',
             'taskLevel' => 'required',
+            'taskTitle' => 'required',
             'task' => 'required|min:10',
         ]);
 
@@ -20,6 +24,7 @@ class TaskController extends Controller
 
         $task->class=$request->taskClass;
         $task->level=$request->taskLevel;
+        $task->title=$request->taskTitle;
         $task->task=$request->task;
         $task->save();
 
@@ -150,5 +155,201 @@ class TaskController extends Controller
         return view('dashboard.student.view-a-activities')->with('activities',$data);
     }   
 
+    public function storeGame(Request $request){
+        if($request->hasFile('upload')) {
+            $originName = $request->file('upload')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('upload')->getClientOriginalExtension();
+            $fileName = $fileName . '_'. time() . '.' . $extension;
+
+            $request->file('upload')->move(public_path('media'), $fileName);
+
+            $url = asset('media/' . $fileName);
+            return response()->json(['fileName' => $fileName, 'uploaded'=>1, 'url' => $url]);
+        }
+    }
+
+    public function getStudentTask($task_id) {
+        $data=Task::all()->where('id', '=', $task_id);
+        return view('dashboard.student.upload-std-answer')->with('activities',$data);
+    }   
+
+    public function storeAnswer(Request $request) {
+
+        $answer = new StdTaskAnswer;
+
+        $answer->student_id=$request->std_id;
+        $answer->task_id=$request->task_id;
+        $answer->student_answer=$request->answer;
+        $answer->save();
+
+        return view('dashboard.student.submit-message');
+        //dd($request->all());
+    }
     
+    public function getStdAns(Request $request) {
+
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+                    ->select('students.fullname',
+                            'students.diseasestype', 
+                            'students.diseaseslevel',
+                            'tasks.title', 
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->get();
+
+        return view("dashboard.teacher.view-answer-list",compact('student'));                      
+
+    }
+
+
+    public function getAnswers($std_id,$task_id) {
+
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+                    ->select('students.fullname',
+                            'students.id',
+                            'students.diseasestype', 
+                            'students.diseaseslevel', 
+                            'tasks.task',
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->where('std_task_answers.student_id', '=', $std_id)     
+                    ->where('std_task_answers.task_id', '=', $task_id)        
+                    ->get();
+
+        return view("dashboard.teacher.add-result",compact('student'));                      
+
+    }
+
+    public function storeFinalMarks(Request $request) {
+
+        $final = new FinalResult;
+
+        $final->student_id=$request->std_id;
+        $final->task_id=$request->task_id;
+        $final->mark=$request->stdMarks;
+        $final->feedback=$request->stdFeedback;
+        $final->save();
+
+        return view('dashboard.teacher.submit-results');
+    }
+
+
+    public function viewProgressReport($std_id) {
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+                        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+                        ->select('students.fullname',
+                                'students.diseasestype',
+                                'students.diseaseslevel',
+                                'tasks.title',
+                                'tasks.task',
+                                'final_results.mark',
+                                'final_results.feedback')
+                        ->where('final_results.student_id', '=', $std_id)
+                        ->get();
+        return view('dashboard.student.std-progress-report')->with('data',$progress);
+    }  
+
+    public function downloadProgressReport($std_id) {
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+                        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+                        ->select('students.fullname',
+                                'students.diseasestype',
+                                'students.diseaseslevel',
+                                'tasks.title',
+                                'tasks.task',
+                                'final_results.mark',
+                                'final_results.feedback',
+                                'final_results.student_id')
+                        ->where('student_id', '=', $std_id)
+                        ->get();
+                        
+        // return view('dashboard.student.std-progress-report-pdf')->with('data',$progress);                
+        // $pdf = PDF::loadView('dashboard.student.std-progress-report-pdf')->with('data',$progress)->setOptions(['defaultFont' => 'sans-serif']);
+        // $pdf = PDF::loadView('dashboard.student.std-progress-report-pdf',compact('data'))->setOptions(['defaultFont' => 'sans-serif']); 
+        $pdf=PDF::loadView('dashboard.student.std-progress-report-pdf',$data);
+        return $pdf->download('MyProgressReport.pdf');
+
+    } 
+
+
+    public function searchStdAns(Request $request) {
+
+        $search = $request->get('search');
+        $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+                    ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+                    ->select('students.fullname',
+                            'students.diseasestype', 
+                            'students.diseaseslevel',
+                            'tasks.title', 
+                            'std_task_answers.student_answer',
+                            'std_task_answers.task_id',
+                            'std_task_answers.student_id',
+                            )
+                    ->where('students.fullname', 'LIKE', '%'.$search.'%' );
+
+        // return view("dashboard.teacher.view-answer-list-search",compact('student'));                      
+        return redirect()->route('/getStdAns', ['student' => $student]);
+
+    }
+
+    // public function searchResult(Request $request) {
+
+    //     $search = $request->get('search');
+    //     $student = StdTaskAnswer::join('students', 'students.id', '=', 'std_task_answers.student_id')
+    //                 ->join('tasks', 'tasks.id', '=', 'std_task_answers.task_id')
+    //                 ->select('students.fullname',
+    //                         'students.diseasestype', 
+    //                         'students.diseaseslevel',
+    //                         'tasks.title', 
+    //                         'std_task_answers.student_answer',
+    //                         'std_task_answers.task_id',
+    //                         'std_task_answers.student_id',
+    //                         )
+    //                 ->where('students.fullname', 'LIKE', '%'.$search.'%' );
+
+    //     // return view("dashboard.teacher.view-answer-list-search",compact('student'));                      
+    //     return redirect()->route('/getStdAns', ['student' => $student]);
+
+    // }
+
+    public function searchResult(Request $request) {
+        $search = $request->get('search');
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+        ->select('students.fullname',
+                'students.diseasestype',
+                'students.diseaseslevel',
+                'tasks.title',
+                'tasks.task',
+                'final_results.mark',
+                'final_results.feedback')
+        // ->where('final_results.student_id', '=', $std_id)
+        ->where('tasks.title', 'LIKE', '%'.$search.'%' )
+        ->get();
+    return view('dashboard.student.std-progress-report',['data' => $progress]);
+    }  
+    
+    public function searchResult(Request $request) {
+        $search = $request->get('search');
+        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
+        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
+        ->select('students.fullname',
+                'students.diseasestype',
+                'students.diseaseslevel',
+                'tasks.title',
+                'tasks.task',
+                'final_results.mark',
+                'final_results.feedback')
+        ->where('tasks.title', 'LIKE', '%'.$search.'%' )
+        ->get();
+    return view('dashboard.student.std-progress-report',['data' => $progress]);
+    }  
+
 }

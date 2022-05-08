@@ -134,7 +134,7 @@ background-size: cover;
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item active"><a href="/add-lessons" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item"><a href="/create-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>

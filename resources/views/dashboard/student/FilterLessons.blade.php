@@ -154,7 +154,7 @@ background-size: cover;
 <center>
 <section class="container">
     
-<form  action="/search-Level" method="post">
+<form  action="/student/search-Level" method="post">
 {{@csrf_field()}}
 
 <div class="input-group">

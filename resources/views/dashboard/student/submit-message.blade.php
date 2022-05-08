@@ -10,14 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>Add Result</title>
+    <title>Submit Answers</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/header/style.css">
+<link rel="stylesheet" href="/../css/header/style.css">
 
-<link rel="stylesheet" href="/css/nicepage.css">
+<link rel="stylesheet" href="/../css/nicepage.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -25,13 +25,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/owl.carousel.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/sidebar/bootstrap.min.css">
   
   <!-- Style -->
-  <link rel="stylesheet" href="/css/sidebar/style.css">
+  <link rel="stylesheet" href="/../css/sidebar/style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -42,21 +42,71 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/footer/style.css">
+  <link rel="stylesheet" href="/../css/footer/style.css">
+
+  <link rel="stylesheet" href="/../css/rajith11.css">
+
+  <link rel="stylesheet" href="/../css/rajith12.css">
+
 
   <style>
     body {
-    background-image: url('/images/pngwing.png');
+    background-image: url('/../images/pngwing3.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     }
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+  </head>
+    <style>
+      body {
+        text-align: center;
+        padding: 40px 0;
+        background: #EBF0F5;
+      }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+        }
+      i {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      .button3 {
+            background-color: #47E307;
+            color: #ffffff;
+            border-radius: 15px 0 15px;
+        }
+
     </style>
+
+
 
   </head>
 	<body  onload="myFunction()">
@@ -84,11 +134,9 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+          <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
+          <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
+          <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
           </ul>
         </div>
       </div>
@@ -129,15 +177,17 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item  active"><a href="/student/instructions" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+                <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b style="color:black"> Hi {{ Auth::guard('student')->user()->fullname }} </b> 
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('student.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
+            <form action="{{ route('student.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+            </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -145,67 +195,22 @@
 	</section>
 	<!-- END header -->
 
-  <div class="container mt-5 m-auto">
-    <br> <br>    
-    <h2> Add Result </h2>
-    <br>
-        <form class="row g-3" method="post">
-        {{ method_field('POST') }}
-            @csrf
-            @method('PUT')
+    <br>    <br>
 
-            <div class="col-md-12">
-                <label class="form-label"> <h5> <b> Name </b> </h5> </label>
-                <input type="text" class="form-control py-2" name="stdName" required>
-            </div>
+     <center> <div class="card">
+      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+        <h1>Success</h1> 
+        <p>{{ Auth::guard('student')->user()->fullname }}, Your answers have been submitted successfully</p>
+        <a href="/student/viewProgressReport/{{ Auth::guard('student')->user()->id }}" class="pure-button button3 btn-lg">Progress Report</a>
+      </div>
+    </center> 
 
+      <br><br>
 
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Class </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdClass" required>
-            </div>
-
-
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Level </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdLevel" required>
-            </div>
-
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Task </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdTask" id='editor'></textarea>
-            </div>
-
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Answer </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdAns" id='editor2'></textarea>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label"> <h5> <b> Marks </h5> </b> </label>
-                <input type="text" class="form-control py-2" name="stdMarks" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label"> <h5> <b> Feedback </h5> </b> </label>
-                <textarea class="form-control rounded-0" rows="10" name="stdFeedback" id='editor3'></textarea>
-            </div>
-
-
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Add</button>
-            </div>  
-            <br> 
-        </div>        
-        </form>
-
-        <br>
-
-
-    	<!-- Start Footer -->
-	    <footer class="footer-32892 pb-0">
+    <!-- Start Footer -->
+      <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -287,10 +292,10 @@
 	
 	<!-- End Footer -->
 	
-	<script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+	<script src="/../js/jquery-3.3.1.min.js"></script>
+    <script src="/../js/popper.min.js"></script>
+    <script src="/../js/bootstrap.min.js"></script>
+    <script src="/../js/main.js"></script>
 
     <script>
 		var preloader = document.getElementById("loading");
@@ -310,24 +315,4 @@
     });
   </script>
 
-    <script>
-        CKEDITOR.replace('editor2',
-        {
-        extraPlugins : 'html5video, videoembed',
-        });
-    </script>
-
-<script>
-        CKEDITOR.replace('editor3',
-        {
-        extraPlugins : 'html5video, videoembed',
-        });
-    </script>
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-</html>
+  </html>

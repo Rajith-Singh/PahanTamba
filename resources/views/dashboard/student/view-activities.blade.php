@@ -49,8 +49,6 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
-
-
   </head>
 	<body  onload="myFunction()">
 
@@ -77,11 +75,9 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+          <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
           </ul>
         </div>
       </div>
@@ -159,7 +155,7 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> View </a>
+                                        <a href="/student/getStudentTask/{{$data->id}}" class="btn btn-success"> View </a>
                                     </td> 
                                 </tr>    
                             </table></center>
