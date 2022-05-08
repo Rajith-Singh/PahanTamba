@@ -82,6 +82,7 @@ class TimetableController extends Controller
 
 
 
+
 public function delete($id){
     $time=CTimetable::find($id);
     $time->delete();

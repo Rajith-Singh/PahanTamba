@@ -209,7 +209,7 @@ body {
     <div class="flip-card-back">
       
     <br><br><br>
-    <a href="/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
 
     </div>
   </div>
@@ -219,14 +219,14 @@ body {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <img src="images-d/down.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+    <img src="/images-d/down.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
      <h4><b>Down syndrome</b></h4>
      <h5><b></b></h5>
 
     </div>
     <div class="flip-card-back">
     <br><br><br><br>
-    <a href="/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
 
     </div>
   </div>
@@ -235,14 +235,14 @@ body {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <img src="images-d/Hyper.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+    <img src="/images-d/Hyper.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
      <h4><b>Hyperactive</b></h4>
      <h5><b></b></h5>
 
     </div>
     <div class="flip-card-back">
     <br><br><br><br>
-    <a href="/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
 
     </div>
   </div>

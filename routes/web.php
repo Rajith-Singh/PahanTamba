@@ -164,6 +164,18 @@ Route::get('/view-timetable', function(){
      return view('TimetableView')->with('lesson', $data);
  });
 
+
+
+
+//added
+//TimetableView Route
+
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('TimetableView')->with('lesson', $data);
+ });
+
 //added
         //file seen all
         Route::get('/file', [LessonController::class, 'index'])->name('index');

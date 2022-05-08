@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Test</title>
+  	<title>Forgot-Password/Teacher</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -150,7 +150,7 @@
                     <div class="alert alert-success">
                         {{ Session::get('success') }}
                     </div>
-                @endif
+                    @endif
                     @csrf
                     <p>
                         Enter your email address and we will send you a link to reset your password.

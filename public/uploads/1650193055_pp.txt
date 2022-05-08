@@ -1,0 +1,11 @@
+mvn install:install-file "-Dfile=securityAPI1.03.jar" "-DgroupId=com.epic" "-DartifactId=security" "-Dversion=1.03" "-Dpackaging=jar" "-DgeneratePom=true"
+
+<dependency>
+            <groupId>com.epic</groupId>
+            <artifactId>security</artifactId>
+            <version>1.03</version>
+        </dependency>
+
+
+
+P123

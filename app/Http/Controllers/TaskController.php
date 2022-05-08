@@ -124,7 +124,7 @@ class TaskController extends Controller
 
         if($data == 'Autism'){
             return view('dashboard.student.autism-activities-home');
-        } else if($data == 'Down syndrome'){
+        } else if($data == 'Downsyndrom'){
             return view('dashboard.student.down-syndrome-activities-home');
         } else {
             return view('dashboard.student.hyperactive-activities-home');

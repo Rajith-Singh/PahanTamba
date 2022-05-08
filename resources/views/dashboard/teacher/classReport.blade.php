@@ -60,7 +60,7 @@
 <section class="container">
 
 <div class="col-md-4" >
-
+<br>
 <form  action="/searchStID" method="GET">
 {{@csrf_field()}}
 <div class="input-group">
@@ -83,14 +83,13 @@
   <h2>Students Details</h2><br>
 <table id="tab2">
 <thead>
-        <tr>
+<tr>
             <th>student ID</th>
             <th>Full Name</th>
             <th>Address</th>
             <th>Age</th>
             <th>Gender</th>
-            <th>subject</th>
-            <th>grade</th>
+           
             <th>Email</th>
         </tr></thead>
 
@@ -105,10 +104,7 @@
     <td>{{ $data->address}}</td>
     <td>{{  $data->age }}</td>
     <td>{{ $data->gender}}</td>
-    <td>{{ $data->subject}}</td>
-    <td>{{ $data->grade}}</td>
     <td>{{ $data->email}}</td>
-
         </tr>
         @endforeach
 </tbody>
