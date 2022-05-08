@@ -8,7 +8,7 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
     <link rel="stylesheet" href="/css/index/nicepage.css" media="screen">
-<link rel="stylesheet" href="/css/index/Home.css" media="screen">
+    <link rel="stylesheet" href="/css/index/Home.css" media="screen">
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
@@ -23,7 +23,7 @@
       <div class="u-carousel-inner" role="listbox">
         <div class="skrollable skrollable-between u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-1" src="" data-image-width="1200" data-image-height="800">
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h1 class="u-custom-font u-font-lobster u-text u-text-1">PahanTamaba<br>පහන් ටැඹ&nbsp;
+            <h1 class="u-custom-font u-font-lobster u-text u-text-1">PahanTamba<br>පහන් ටැඹ&nbsp;
             </h1>
             <p class="u-large-text u-text u-text-variant u-text-2"> All kids need is a little help, a little hope, and someone who believes in them</p>
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">

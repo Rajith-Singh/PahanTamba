@@ -92,7 +92,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="/common-lessons"><span class="icon-search2 mr-3"></span>Lesson Interface</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
@@ -138,10 +138,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="/student/common-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/student/view-timetable" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item"><a href="/student/view-notice" class="nav-link">Notices</a></li>
+				<li class="nav-item"><a href="/student/instructions" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
             <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('student')->user()->fullname }} </b> 

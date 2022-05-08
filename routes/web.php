@@ -3,7 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\pagesController;
+use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\GameController;
 
+
+use App\Http\Controllers\LessonController; 
+
+use App\Http\Controllers\TimetableController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +85,157 @@ Route::post('/updateSal', [pagesController::class, 'updateSal']);
 
 
 
+//added
+Route::get('/add-lessons', function () {
+    return view('AddLessons');
+});
+//added
+Route::get('/create-timetable', function () {
+    return view('create-timetable');
+});
+
+
+//***added */
+//insert timetable
+Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
+
+
+//*****added */
+//manage timetable
+Route::get('/manage-timetable', function () {
+    $time=App\Models\CTimetable::all();
+    return view('manage-timetable')->with('time', $time);
+});
+
+// Route::get('/manage-timetable', function () {
+
+//     $time=App\Models\CTimetable::all();
+
+//     return view('manage-timetable')->with('time', $time);
+
+//     });
+
+
+//Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+Route::get('/updateT/{id}', [TimetableController::class,'manageTime']);
+
+//***added */
+//delete timetable
+Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
+
+Route::get('/common-class', function () {
+    return view('common-class');
+});
+
+
+//added
+//update lesson view pGE Route
+Route::get('/updateLessons', function () {
+    return view('Finalupdate-lessons');
+});
+
+//update - lessons 
+Route::get('/updateLessons/{id}', [LessonController::class,'updateL']);
+Route::post('/updateL', [LessonController::class,'updateshowLessons'])->name('updateshowLessons');
+
+
+//****added */
+//insert lessons
+Route::post('/Lesson-store', [LessonController::class, 'LessonStore']);
+
+
+
+//******88added */
+//edit / delete view page route 
+Route::get('/edit-lesson', function(){
+
+   $data=App\Models\Lessons::all();
+    return view('updateLessons')->with('lesson', $data);
+});
+
+
+
+//student view lessons route
+//Route::get('/view-lessons', function () {
+ //   return view('viewLessons');
+//});
+
+
+//**** Added */
+//student view-lesson common interface Route
+Route::get('/viewL-comInterface', function () {
+    return view('View-LessonCommonStudentnterface');
+});
+
+//*added
+//student view lessons route
+Route::get('/view-lessons', function(){
+
+    $data=App\Models\Lessons::all();
+     return view('viewLessons')->with('lesson', $data);
+ });
+ 
+
+ //addded
+ //view report
+ Route::get('/ClassReport-view', [LessonController::class, 'classRepo'])->name('classRepo');
+
+ Route::get('/download-classReportpdf', [LessonController::class, 'export_pdf']);
+
+ 
+ //***Added */
+  //search lessons
+  Route::post('/search-lessons',[LessonController::class, 'searchL'])->name('searchL');
+
+
+/// //report search
+Route::get('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
+
+
+
+
+
+
+
+
+
+//**added */
+//filter lessons
+Route::get('/filter-lessons ', function () {
+    return view('FilterLessons');
+});
+
+
+//added
+  //search lessons
+  Route::post('/search-Level',[LessonController::class, 'searchLevel'])->name('searchLevel');
+
+
+//comon diseases (in order to go to view lessons)
+Route::get('/common-lessons ', function () {
+    return view('commondiseasesInterface');
+});
+
+
+
+
+
+//added
+//TimetableView Route
+
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('TimetableView')->with('lesson', $data);
+ });
+
+//added
+        //file seen all
+        Route::get('/file', [LessonController::class, 'index'])->name('index');
+        Route::get('/view/{id}', [LessonController::class, 'show'])->name('show');
+        Route::get('/file/download/{file}', [LessonController::class, 'downloadf'])->name('downloadf');          
 
 
 
@@ -89,10 +246,45 @@ Route::post('/updateSal', [pagesController::class, 'updateSal']);
 
 
 
+
+
+
+
+//****added */
+   //delete lessons
+   Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
 
 Auth::routes([
     'verify' => true
 ]);
+
+
+
+Route::post('/saveNotice',[NoticeController::class,'storeNotice']);
+
+
+Route::post('/updateNotice1', [NoticeController::class,'updateshow']);
+
+
+//delete notice
+Route::get('/delete/{id}', [NoticeController::class, 'delete'])->name('delete');
+
+
+
+//  edit notices route
+Route::get('/edit-notice', function () {
+    return view('edit-notice');
+});
+
+
+
+
+
+
+// view-attendance route
+Route::get('/view-attendance', function () {
+    return view('view-attendance');
+});
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -171,6 +363,8 @@ Route::get('/add-result', function () {
 
 Route::post('/saveTask',[TaskController::class,'storeTask']);
 
+Route::post('/saveGame',[GameController::class,'storeGame']);
+
 Route::get('view-category', function () {
     return view('view-category');
 });
@@ -236,9 +430,31 @@ Route::get('select-login-type', function () {
     return view('select-login-type');
 });
 
+Route::get('ftf-activity', function () {
+    return view('face-to-face-activities');
+});
+
+Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+Route::post('/updateGame', [GameController::class, 'updateGame']);
+
+Route::post('/saveanswer', [GameController::class, 'addanswer']);
+
+Route::post('/storeAnswer',[TaskController::class,'storeAnswer']);
+
+Route::post('/storeFinalMarks',[TaskController::class,'storeFinalMarks']);
+
+Route::get('/getStdAns', [TaskController::class, 'getStdAns'])->name('getStdAns');
+
+Route::get('/search', [TaskController::class, 'searchStdAns']);
+
+
+
 Route::get('contact-us', function () {
     return view('contact-us');
 });
+
+Route::post('/storeAttendance', [NoticeController::class, 'storeAttendance']);
 
 
 
@@ -319,3 +535,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

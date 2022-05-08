@@ -17,7 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('class');
             $table->string('level');
-            $table->string('task');
+            $table->string('title');
+            $table->text('task');
             $table->timestamps();
         });
     }

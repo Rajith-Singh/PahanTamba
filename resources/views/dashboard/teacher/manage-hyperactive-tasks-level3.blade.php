@@ -77,11 +77,10 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="/teacher/add-task"><span class="icon-search2 mr-3"></span>Add Tasks</a></li>
+            <li><a href="/teacher/view-category"><span class="icon-notifications mr-3"></span>Manage Tasks</a></li>
+            <li><a href="/ftf-activity"><span class="icon-location-arrow mr-3"></span>Face to face Activities</a></li>
+            <li><a href="/teacher/add-songs-and-games"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
           </ul>
         </div>
       </div>
@@ -122,15 +121,17 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li> 
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item active"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="/teacher/getStdAns" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+            <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('teacher')->user()->fullname }} </b> 
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('teacher.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
+        <form action="{{ route('teacher.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+        </li>	
 	        </ul>
 	      </div>
 	    </div>
@@ -161,7 +162,7 @@
                             <table>
                                 <tr>
                                     <td> 
-                                        <a href="#" class="btn btn-success"> Update </a>
+                                        <a href="/teacher/editTask/{{$data->id}}" class="btn btn-success"> Update </a>
                                     </td> 
 
                                     <td> 

@@ -96,6 +96,8 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   </head>
   <body class="u-body u-xl-mode" onload="myFunction()">
 
@@ -122,11 +124,10 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="/teacher/add-task"><span class="icon-search2 mr-3"></span>Add Tasks</a></li>
+            <li><a href="/teacher/view-category"><span class="icon-notifications mr-3"></span>Manage Tasks</a></li>
+            <li><a href="/ftf-activity"><span class="icon-location-arrow mr-3"></span>Face to face Activities</a></li>
+            <li><a href="/teacher/add-songs-and-games"><span class="icon-pie-chart mr-3"></span>Songs and games</a></li>
           </ul>
         </div>
       </div>
@@ -167,15 +168,17 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li> 
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item active"><a href="#" class="nav-link">Tasks</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item active"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="/teacher/getStdAns" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
-				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
+            <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b> Hi {{ Auth::guard('teacher')->user()->fullname }} </b> 
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('teacher.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
+        <form action="{{ route('teacher.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+        </li>	
 	        </ul>
 	      </div>
 	    </div>
@@ -183,8 +186,11 @@
 	</section>
 	<!-- END header -->  
 
+
+
     <section class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-clearfix u-section-1" id="carousel_46de">
-      <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+    
+    <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
           <div class="u-container-layout u-valign-top-md u-container-layout-1">
             <div class="u-palette-1-light-2 u-shape u-shape-circle u-shape-1"></div>
