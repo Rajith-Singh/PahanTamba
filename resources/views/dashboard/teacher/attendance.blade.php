@@ -1,55 +1,99 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html style="font-size: 16px;">
   <head>
-  	<title>Teacher-register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <title> Mark Attendance</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="/css/header/style.css">
-	
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/header/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/nicepage.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="/css/sidebar/style.css">
-	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/sidebar/style.css">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/footer/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-   
-	
-	
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-	</head>
-  <body  onload="myFunction()">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/footer/style.css">
+
+  <style>
+    body {
+    background-image: url('/images-p/bg6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ 
+<script>
+$(document).ready(function(){
+$('#datepicker').val(moment().format('MM/DD/YYYY'));
+    $('#datepicker').datepicker();
+   $('.next-day').on('click', function () {
+       var date = $('#datepicker').datepicker('getDate');
+       date.setDate(date.getDate() +1)
+       $('#datepicker').datepicker('setDate', date);
+   });
+   $('.prev-day').on('click', function () {
+       var date = $('#datepicker').datepicker('getDate');
+       date.setDate(date.getDate() -1)
+       $('#datepicker').datepicker('setDate', date);
+   });
+   $('.today-date').on('click', function () {
+       var date = moment().format('MM/DD/YYYY');
+       $('#datepicker').datepicker('setDate', date);
+   });
+   });
+   </script>
+
+
+  </head>
+	<body  onload="myFunction()">
 
   <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -71,7 +115,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="getAttendance"><span class="icon-search2 mr-3"></span>Get Attendance(View)</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
@@ -116,12 +160,12 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item "><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
@@ -138,81 +182,52 @@
         <div class="row">
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
             <br>
-                 <center> <h4><b>Teacher Register</b></h4></center>
+                 <center> <h4><b>Mark Attendance</b></h4></center>
+
                  <br>
+                 <br>
+       
+       <center>     
+        <form method="post" action="/storeAttendance">
+        @csrf
 
-                  <form action="{{ route('teacher.create') }}" method="post" autocomplete="off">
-                    @if (Session::get('success'))
-                         <div class="alert alert-success">
-                             {{ Session::get('success') }}
-                         </div>
-                    @endif
-                    @if (Session::get('fail'))
-                    <div class="alert alert-danger">
-                        {{ Session::get('fail') }}
-                    </div>
-                    @endif
+        <button class="prev-day btn btn-outline-secondary"><i class="fa fa-angle-left" aria-hidden='true'></i></button>
+        <button class='today-date btn btn-outline-secondary'>Today</button>
+        <input type='text' id='datepicker'  name='datepicker'>
+        <button class='next-day btn btn-outline-secondary' ><i class='fa fa-angle-right' aria-hidden='true'></i></button>
 
-                    @csrf
-                      <div class="form-group">
-                          <label for="name">Full Name</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="fullname" placeholder="Enter full name" value="{{ old('fullname') }}">
-                          <span class="text-danger">@error('fullname'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Address</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="address" placeholder="Enter Address" value="{{ old('address') }}">
-                          <span class="text-danger">@error('address'){{ $message }} @enderror</span>
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <!-- <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ old('email') }}"> -->
-                        <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ old('email') }}">
-                        <span class="text-danger">@error('email'){{ $message }} @enderror</span>
-                    </div>
-                      <div class="form-group">
-                          <label for="password">Password</label>
-                          <!-- <input type="password" class="form-control" name="password" placeholder="Enter password" > -->
-                          <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ old('password') }}">
-                          <span class="text-danger">@error('password'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                        <label for="cpassword">Confirm Password</label>
-                        <!-- <input type="password" class="form-control" name="cpassword" placeholder="Enter confirm password" value="{{ old('cpassword') }}"> -->
-                        <input type="password" class="form-control" name="cpassword" placeholder="Enter confirm password" value="{{ old('cpassword') }}">
-                        <span class="text-danger">@error('cpassword'){{ $message }} @enderror</span>
-                    </div>
-                    <br>
-                    <h4>Educational Qualification</h4><br>
-                    
-                    <div class="form-group">
-                          <label for="name">Education</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="education" placeholder="Enter Your Educational Qualification" value="{{ old('education') }}">
-                          <span class="text-danger">@error('education'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Skills</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="skills" placeholder="Enter Your Skills" value="{{ old('skills') }}">
-                          <span class="text-danger">@error('skills'){{ $message }} @enderror</span>
-                      </div>
-                      <br>
-                      <div class="form-group">
-                          <button type="submit" class="btn btn-primary">Register</button>
-                      </div>
-                      <br>
-                      <a href="{{ route('teacher.login') }}">I already have an account</a>
-                  </form>
+        <br> <br>
+
+         @foreach($attendance as $data)    
+         
+
+        <div class="checkbox">
+        <label class="form-label"> <b> {{$data->fullname}} </b> </label>
+        <input type="hidden" value="{{$data->id}}" name="std_id[]">
+        <br>
+             <label>
+                <input type="checkbox" name="checkbox[]" value="Present"> Present
+                <input type="checkbox" name="checkbox[]" value="Absent"> Absent
+            </label>
+        </div>
+
+        @endforeach
+             
+        <br>
+          <div class="form-group mt-2">
+          <input type="submit" class="btn btn-primary" value="Submit">
+          </div>
+          <br>
+                 
             </div>
         </div>
     </div>
+    </form>
+    </center> 
 
-   <!-- Start Footer -->
-   <footer class="footer-32892 pb-0">
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -300,16 +315,43 @@
     <script src="/js/main.js"></script>
 
     <script>
+		var preloader = document.getElementById("loading");
 
-var preloader = document.getElementById("loading");
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>	
 
-function myFunction(){
-
-  preloader.style.display = 'none';
-
-};
-
-</script>
-    
 </body>
+
+<script>
+            function getDate(){
+            var todaydate = new Date();
+            var day = todaydate.getDate();
+            var month = todaydate.getMonth() + 1;
+            var year = todaydate.getFullYear();
+            var datestring = day + "/" + month + "/" + year;
+            document.getElementById("frmDate").value = datestring; //don't need ()
+            }
+
+            document.getElementById("frmDate").onload = getDate(); 
+        </script>
+
+<script src="/js/ckeditor.js"> </script>
+  <script>
+    CKEDITOR.replace('editor',
+    {
+      extraPlugins : 'html5video, videoembed',
+    });
+  </script>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+
 </html>

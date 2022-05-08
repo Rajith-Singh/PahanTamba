@@ -1,53 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html style="font-size: 16px;">
   <head>
-  	<title>Student-Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <title> Add-Notice</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="/css/header/style.css">
-	
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/header/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/nicepage.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="/css/sidebar/style.css">
-	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/sidebar/owl.carousel.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/sidebar/bootstrap.min.css">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/sidebar/style.css">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="/css/footer/style.css">
-	
-	
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
-	</head>
-  <body  onload="myFunction()">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/footer/style.css">
+
+  <style>
+    body {
+    background-image: url('/images-p/123.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
+
+  </head>
+	<body  onload="myFunction()">
 
   <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -69,7 +84,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href=""><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="manage-notice"><span class="icon-search2 mr-3"></span>Manage Notice</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
@@ -114,8 +129,15 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-          <li class="nav-item"><a href="#" class="nav-link">Join with us</a></li>
-					
+	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item active"><a href="#" class="nav-link">Notices</a></li>
+				<li class="nav-item "><a href="#" class="nav-link">Tasks</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
+				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="#" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a></li>				
 	        </ul>
 	      </div>
 	    </div>
@@ -123,57 +145,62 @@
 	</section>
 	<!-- END header -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
-            <br>
-            <br>
-                 <center> <h4><b>Student Login</b></h4></center>
-            <br>
-                  <form action="{{ route('student.check') }}" method="post" autocomplete="off">
-                    @if (Session::get('fail'))
-                        <div class="alert alert-danger">
-                            {{ Session::get('fail') }}
-                        </div>
-                    @endif
+  <div class="container mt-5 m-auto">  
+    <br>
+    <center><h2 style="font-size:35px;"> Add Notice </h2></center> <br>
+    <form class="row g-3" method="post" action="/saveNotice">
+        {{csrf_field()}}
 
-                    @if (Session::get('info'))
-                        <div class="alert alert-info">
-                            {{ Session::get('info') }}
-                        </div>
-                    @endif
+        @if(session('msg'))
+              <div class="alert alert-success">{{session('msg')}} </div>
+        @endif
 
-                    @csrf
-                      <div class="form-group">
-                          <label for="email">Email</label>
-                         
-                          <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ Session::get('verifiedEmail') ? Session::get('verifiedEmail') : old('email') }}">
-                          <span class="text-danger">@error('email'){{ $message }}@enderror</span>
-                          
-                      </div>
-                      <div class="form-group">
-                          <label for="password">Password</label>
-                          
-                          <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ old('password') }}">
-                          <span class="text-danger">@error('password'){{ $message }}@enderror</span>
-                      </div>
-                      <br>
-                      <a href="{{ route('student.forgot.password.form') }}">Forgot password</a>
-                      <br>
-                      <br>
-                      <div class="form-group">
-                          <button type="submit" class="btn btn-primary">Login</button>
-                      </div>
-                      <br>
-                      <!-- <a href="{{ route('student.register') }}"><b><i>Create new Account</i></b></a>
-                      <br>
-                      -->
-                  </form>
+           
+
+            <div class="col-md-6">
+                <label class="form-label"> <b> Diseases Level </b> </label>
+                <select class="form-select" name="diseasesLevel">
+                    <option selected disabled value="">Choose...</option>
+                    <option> Level 1 </option>
+                    <option> Level 2 </option>
+                    <option> Level 3 </option>
+                </select>
+                <span style="color:red"> @error('diseasesLevel'){{$message}}@enderror</span>
             </div>
-        </div>
-    </div>
-  <!-- Start Footer -->
-  <footer class="footer-32892 pb-0">
+            <br>
+            <div class="col-md-6">
+                <label class="form-label"> <b> Diseases Class </b> </label>     
+                <select class="form-select" name="diseasesClass">
+                    <option selected disabled value="">Choose...</option>
+                    <option> Autism </option>
+                    <option> Down syndrome </option>
+                    <option> Hyperactive </option>
+                </select>
+                <span style="color:red"> @error('diseasesClass'){{$message}}@enderror</span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label"> <b> Message </b> </label>
+                <textarea class="form-control rounded-0" rows="10" name="message" id='editor'></textarea>
+                <span style="color:red"> @error('message'){{$message}}@enderror</span>           
+              </div>
+            
+            <br>
+    
+
+    <div class="col-12">
+        <center><button class="btn btn-primary" type="submit">Submit</button></center>
+        
+            </div>  
+            <br> 
+        </div>        
+        </form>
+
+        <br>
+
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -261,19 +288,28 @@
     <script src="/js/main.js"></script>
 
     <script>
+		var preloader = document.getElementById("loading");
 
-var preloader = document.getElementById("loading");
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>	
 
-function myFunction(){
-
-  preloader.style.display = 'none';
-
-};
-
-</script>
-    
 </body>
-</html>
-    
-</body>
+
+<script src="/js/ckeditor.js"> </script>
+  <script>
+    CKEDITOR.replace('editor',
+    {
+      extraPlugins : 'html5video, videoembed',
+    });
+  </script>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+
 </html>

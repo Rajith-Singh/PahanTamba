@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
+use App\Http\Controllers\Student\NoticeController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\GameController;
 
@@ -32,6 +33,12 @@ Route::prefix('student')->name('student.')->group(function(){
 
     });
 
+
+    //view notice
+    Route::get('/view-notice', function () {
+        $notice=App\Models\Notice::all();
+        return view('dashboard.student.view-notice')->with('notice', $notice);
+        });
     //View activities
     Route::get('autism-activities-home', function () {
         return view('dashboard.student.autism-activities-home');

@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\AtReportController;
+
 use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\GameController;
 
@@ -107,6 +110,34 @@ use App\Http\Controllers\GameController;
         //delete tasks
         Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
+        Route::get('/notice', function () {
+            return view('dashboard.teacher.notice');
+        });
+
+        //manage notice
+        Route::get('/manage-notice', function () {
+        $notice=App\Models\Notice::all();
+        return view('dashboard.teacher.manage-notice')->with('notice', $notice);
+        });
+
+        //edit / delete view page route 
+        Route::get('/edit-notice', function(){
+        $notice=App\Models\Notice::all();
+        return view('dashboard.teacher.edit-notice')->with('notice', $notice);
+        });
+
+        Route::get('/updateNotice/{id}', [NoticeController::class,'manageNotice']);
+
+
+        //  attendance route
+        // Route::get('/attendance', function () {
+        //     return view('dashboard.teacher.attendance');
+        // });
+
+        Route::get('attendance', function () {
+            $data=App\Models\Student::all();
+            return view('dashboard.teacher.attendance')->with('attendance',$data);
+        });
         //edit tasks
         Route::get('/editTask/{id}', [TaskController::class, 'editTask']);
 
@@ -165,4 +196,25 @@ use App\Http\Controllers\GameController;
         });
 
     });
+
+        //view notice
+        // Route::get('/view-attendance', function () {
+        //     $notice=App\Models\Attendance::all();
+        //     return view('dashboard.teacher.view-attendance')->with('attendance', $attendance);
+        //     });
+
+
+        Route::get('/getAttendance', [NoticeController::class, 'getAttendance']);
+
+
+        // Route::post('/storeAttendance', [AttendanceController::class, 'storeAttendance']);
+
+        Route::get('/get-all-student', [AtReportController::class, 'getAllStudents']);
+
+
+        // Route::get('/search', [NoticeController::class, 'search']);
+
+    
 });
+
+ 
