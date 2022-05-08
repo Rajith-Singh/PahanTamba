@@ -281,8 +281,8 @@ body, table, input, select, textarea {
         <div class="nav-menu">
           <ul>
           <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
-          <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
-          <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
+          <li><a href="/student/songs-games"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
+          <li><a href="/student/viewProgressReport/{{ Auth::guard('student')->user()->id }}"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
           </ul>
         </div>
       </div>
@@ -341,28 +341,6 @@ body, table, input, select, textarea {
 	</section>
 	<!-- END header -->
 
-  <br> <br>
-  <div class="col-md-4"  style="margin-left:800px">
-      <form action="/student/search/{{ Auth::guard('student')->user()->id }}" method="get">
-        <div class="input-group">
-          <input type="search" name="search" class="form-control" placeholder="Search task">
-          <span class="input-group-prepend">
-            <button type="submit" class="btn btn-primary"> Search </button>
-          </span>
-        </div>
-      </form>
-    </div>
-
-    <div class="col-md-4"  style="margin-left:800px">
-      <form action="/student/search" method="get">
-        <div class="input-group">
-          <input type="search" name="search" class="form-control" placeholder="Search task">
-          <span class="input-group-prepend">
-            <button type="submit" class="btn btn-primary"> Search </button>
-          </span>
-        </div>
-      </form>
-    </div>
 
     <br> <br>
 

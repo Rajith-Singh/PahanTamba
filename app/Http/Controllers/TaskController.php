@@ -319,22 +319,7 @@ class TaskController extends Controller
 
     // }
 
-    public function searchResult(Request $request) {
-        $search = $request->get('search');
-        $progress=FinalResult::join('students', 'students.id', '=', 'final_results.student_id')
-        ->join('tasks', 'tasks.id', '=', 'final_results.task_id')
-        ->select('students.fullname',
-                'students.diseasestype',
-                'students.diseaseslevel',
-                'tasks.title',
-                'tasks.task',
-                'final_results.mark',
-                'final_results.feedback')
-        // ->where('final_results.student_id', '=', $std_id)
-        ->where('tasks.title', 'LIKE', '%'.$search.'%' )
-        ->get();
-    return view('dashboard.student.std-progress-report',['data' => $progress]);
-    }  
+
     
     public function searchResult(Request $request) {
         $search = $request->get('search');

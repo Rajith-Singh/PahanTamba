@@ -140,7 +140,8 @@
 	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li> 
 				<li class="nav-item"><a href="/teacher/add-lessons" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="/teacher/create-timetable" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
+	    
+	        	<li class="nav-item"><a href="/teacher/notice" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
@@ -265,6 +266,15 @@
          </div>
       </div>
 
+<br>
+<br>
+      <center>
+      <a href="/teacher/attendance" class="btn btn-primary" type="submit">Attendance</a>
+      </center>
+
+<br>
+<br>       
+      
       <!--  contact -->
       <div id="contact" class="contact">
          <div class="container">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\Song;
 
 class GameController extends Controller
 {
@@ -146,6 +147,26 @@ class GameController extends Controller
         return view("dashboard.student.view-result",compact('student'));                      
 
     }
+
+        public function storeSong(Request $request) {
+
+        $request->validate([
+            'song' => 'required|min:10',
+        ]);
+
+        $song = new Song;
+
+        $song->song=$request->song;
+        $song->save();
+
+        return back()->with('msg', 'The song was successfully added.');
+        //dd($request->all());
+    }
+
+    public function viewSongs(Request $request) {
+        $data=Song::all();
+        return view('dashboard.student.view-songs')->with('game',$data);
+    }  
 
 }
 
