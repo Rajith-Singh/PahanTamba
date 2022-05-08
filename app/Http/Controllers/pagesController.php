@@ -70,8 +70,7 @@ class pagesController extends Controller
                     'note'=>$request->note,
                 ]);
                 return redirect()->to('/user/managesal')->with('message', 'The salary details was successfully updated.');
-            }
-            
+            }  
             
 
 }

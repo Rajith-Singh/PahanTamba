@@ -154,7 +154,6 @@
                <br></br>
             </div>
 
-            
 
             <div class="col-md-6">
                 <label class="form-label">Class</label>
@@ -181,9 +180,8 @@
             </div>      
 
 
-<br><br>
+      <br><br>
             
-
             <div class="col-md-6">
                 <label class="form-label">Month</label>
                 <input type="month" class="form-control py-2" name="salaryMonth" value="{{$data->month}}">
@@ -201,13 +199,13 @@
 
         
         
-<br>
-<div class="col-md-12">
-                <label class="form-label">Note</label>
-                <textarea class="form-control rounded-0" rows="10" name="note"> {{$data->note}}
-</textarea>
-<br></br>
-            </div>
+      <br>
+      <div class="col-md-12">
+                      <label class="form-label">Note</label>
+                      <textarea class="form-control rounded-0" rows="10" name="note"> {{$data->note}}
+      </textarea>
+      <br></br>
+              </div>
 
 
 
