@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\LessonController;
 
 
 
@@ -56,4 +57,66 @@ Route::prefix('student')->name('student.')->group(function(){
     });
 
     
+
+
+
+    //---------------------------------Dulsara----------------------------------------------------------------------
+   //student view lessons route
+Route::get('/view-lessons', function(){
+
+    $data=App\Models\Lessons::all();
+     return view('dashboard.student.viewLessons')->with('lesson', $data);
+ });
+
+//student view-lesson common interface Route
+Route::get('/viewL-comInterface', function () {
+    return view('dashboard.student.View-LessonCommonStudentnterface');
+});
+
+
+
+//student view-lesson common interface Route
+Route::get('/viewL-comInterface', function () {
+    return view('dashboard.student.View-LessonCommonStudentnterface');
+});
+
+
+ 
+  //search lessons
+  Route::post('/search-lessons',[LessonController::class, 'searchL'])->name('searchL');
+
+
+//filter lessons
+Route::get('/filter-lessons ', function () {
+    return view('dashboard.student.FilterLessons');
+});
+
+
+//TimetableView Route
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('dashboard.student.TimetableView')->with('lesson', $data);
+ });
+
+
+        //file seen all
+        Route::get('/file', [LessonController::class, 'index'])->name('index');
+        Route::get('/view/{id}', [LessonController::class, 'show'])->name('show');
+        Route::get('/file/download/{file}', [LessonController::class, 'downloadf'])->name('downloadf');          
+
+
+
+
+
+  //search level
+  Route::post('/search-Level',[LessonController::class, 'searchLevel'])->name('searchLevel');
+
+
+//comon diseases (in order to go to view lessons)
+Route::get('/common-lessons ', function () {
+    return view('dashboard.student.commondiseasesInterface');
+});
+
+
 });

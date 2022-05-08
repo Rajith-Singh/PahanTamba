@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Reset-Password/Admin</title>
+  	<title>Test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -41,13 +41,30 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+
+body {
+
+background-image: url('/images-d/kids11.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
+
+
 
 	</head>
-  <body  onload="myFunction()">
+	<body>
 
-  <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -60,7 +77,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -69,11 +86,11 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="/add-lessons"><span class="icon-search2 mr-3"></span> Add Lessons</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
         </div>
       </div>
@@ -114,10 +131,10 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item active"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/view-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -130,52 +147,77 @@
 	</section>
 	<!-- END header -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
-                  <h4>Reset password</h4><hr>
-                  <form action="{{ route('user.reset.password') }}" method="post" autocomplete="off">
-                    @if (Session::get('fail'))
-                        <div class="alert alert-danger">
-                            {{ Session::get('fail') }}
-                        </div>
-                    @endif
 
-                    @if (Session::get('success'))
-                    <div class="alert alert-success">
-                        {{ Session::get('success') }}
-                    </div>
-                @endif
-                    @csrf
-                    <input type="hidden" name="token" value="{{ $token }}">
-                      <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ $email ?? old('email') }}">
-                          <span class="text-danger">@error('email'){{ $message }}@enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="password">Password</label>
-                          <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ old('password') }}">
-                          <span class="text-danger">@error('password'){{ $message }}@enderror</span>
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Confirm password</label>
-                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter password" value="{{ old('password_confirmation') }}">
-                        <span class="text-danger">@error('password_confirmation'){{ $message }}@enderror</span>
-                    </div>
-          
-                      <div class="form-group">
-                          <button type="submit" class="btn btn-primary">Reset password</button>
-                      </div>
-                      <br>
-                      <a href="{{ route('admin.login') }}">Login</a>
-                  </form>
-            </div>
-        </div>
-    </div>
+
+
+<br><br>
+<center>
+<section class="container">
     
-   <!-- Start Footer -->
-   <footer class="footer-32892 pb-0">
+<form  action="/search-Level" method="post">
+{{@csrf_field()}}
+
+<div class="input-group">
+  <input type="search" placeholder="Enter Level" name="search">
+  <span class="input-group-prepend">
+  <button  type="submit" class="btn btn-primary">Search</button>
+</span>
+@error('id')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+     @enderror
+</div>
+</form>
+</div>
+
+
+        <div class="jumbotorn">
+    <h1>View Lessons</h1>
+    <br>
+
+    <div class="line" style="text-align:right;">
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
+    @endif
+    
+</div><br>
+    
+<table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            
+         
+            <th>Subject</th>
+            <th>Disease</th>
+            <th>Level</th>
+            <th>Grade</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr></thead>
+<tbody>
+    @foreach($lesson as $Lesson)
+    <tr style="background:white;">
+    
+  
+    <td>{{$Lesson->Subject}}</td>
+    <td>{{$Lesson->Disease}}</td>
+    <td>{{$Lesson->Level}}</td>
+    <td>{{$Lesson->Grade}}</td>
+    <td>{{$Lesson->Content}}</td>
+
+    <td><a href="/file/download/{{$Lesson->Content}}" class="btn btn-danger">Download</a></td>
+
+
+</tr>
+@endforeach
+</tbody>
+
+</table>
+</center>
+</div>
+
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -262,17 +304,12 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script>
-
-var preloader = document.getElementById("loading");
-
-function myFunction(){
-
-  preloader.style.display = 'none';
-
-};
-
-</script>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+
 </body>
 </html>
+
+
+

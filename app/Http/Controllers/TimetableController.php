@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 
 use App\Models\CTimetable;
@@ -48,30 +48,38 @@ public function manageTime($id){
 
     $time= CTimetable::find($id);
     //session()->flash('message','Timetable updated successfully!');
-    return view('editTimetable',['time'=>$time]);
+    return view('dashboard.teacher.editTimetable',['time'=>$time]);
 }
+
+
 
  function updateshow(Request $request)
 {
-    $time=CTimetable::find($request->id);
-    $time->Subject= $request-> Ctsubject;
-        $time->Topic= $request-> cttopic;
-        $time->StartDate= $request-> sDate;
-       // $time->StartDate= $request-> ctgrade;
-        $time->Level= $request-> clevel;
-        $time->StartTime= $request-> ctSTime;
-        $time->EndDate= $request-> eDate;
-        $time->EndTime= $request-> ceTime;
-        $time->Link= $request-> Ctlink;
-        $time->Description= $request-> ctdescription;
-        $time->save();   
-       
-     //  CTimetable::update('update  c_timetables set Ctsubject=?, cttopic=?,sDate=?, clevel=?, ctSTime=?, eDate=?, ceTime=?, Ctlink=?, ctdescription=? where id=? '
-   // [ " $time->Subject, $time->Topic, $time->StartDate,  $time->Level,  $time->StartTime,  $time->EndDate,  $time->EndTime,   $time->Link,        $time->Description " ]);
-   session()->flash('message','Timetable updated successfully!');
-   return redirect()->back()->with('message', 'The lesson was updated successfully.');
-   return redirect('/manage-timetable');
+
+
+    {
+
+        DB::table('c_timetables')->where('id', $request->id)->update([
+
+           'Subject'=>$request->Ctsubject,
+
+           'Topic'=>$request->cttopic,
+
+           'StartDate'=>$request->sDate,
+           'Level'=>$request->clevel,
+           'StartTime'=>$request->ctSTime,
+           'EndDate'=>$request->eDate,
+           'Link'=>$request->Ctlink,
+           'Description'=>$request->ctdescription,
+           
+       ]);
+
+return redirect()->to('/manage-timetable')->with('message', 'The Timetable was successfully updated.');
+//    return redirect('/manage-timetable')->with('message', 'The lesson was updated successfully.');
 }
+}
+
+
 
 public function delete($id){
     $time=CTimetable::find($id);

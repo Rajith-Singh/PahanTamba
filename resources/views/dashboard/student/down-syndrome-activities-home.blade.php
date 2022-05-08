@@ -6,7 +6,7 @@
     <meta name="keywords" content="INTUITIVE">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Autism Activities</title>
+    <title>Downsyndrome Activities</title>
     <link rel="stylesheet" href="/../css/rajith7.css" media="screen">
 <link rel="stylesheet" href="/../css/rajith6.css" media="screen">
     <meta name="generator" content="Nicepage 4.7.1, nicepage.com">

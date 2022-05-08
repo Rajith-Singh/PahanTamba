@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Reset-Password/Admin</title>
+  	<title>Test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -44,10 +44,9 @@
 	
 
 	</head>
-  <body  onload="myFunction()">
+	<body>
 
-  <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -69,7 +68,7 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="/view-timetable"><span class="icon-search2 mr-3"></span> View Timetable</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
@@ -114,10 +113,10 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Class</a></li>
+	        	<li class="/view-timetable"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -130,52 +129,135 @@
 	</section>
 	<!-- END header -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
-                  <h4>Reset password</h4><hr>
-                  <form action="{{ route('user.reset.password') }}" method="post" autocomplete="off">
-                    @if (Session::get('fail'))
-                        <div class="alert alert-danger">
-                            {{ Session::get('fail') }}
-                        </div>
-                    @endif
 
-                    @if (Session::get('success'))
-                    <div class="alert alert-success">
-                        {{ Session::get('success') }}
-                    </div>
-                @endif
-                    @csrf
-                    <input type="hidden" name="token" value="{{ $token }}">
-                      <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ $email ?? old('email') }}">
-                          <span class="text-danger">@error('email'){{ $message }}@enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="password">Password</label>
-                          <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ old('password') }}">
-                          <span class="text-danger">@error('password'){{ $message }}@enderror</span>
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Confirm password</label>
-                        <input type="password" class="form-control" name="password_confirmation" placeholder="Enter password" value="{{ old('password_confirmation') }}">
-                        <span class="text-danger">@error('password_confirmation'){{ $message }}@enderror</span>
-                    </div>
-          
-                      <div class="form-group">
-                          <button type="submit" class="btn btn-primary">Reset password</button>
-                      </div>
-                      <br>
-                      <a href="{{ route('admin.login') }}">Login</a>
-                  </form>
-            </div>
-        </div>
+ 
+
+
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: grey;
+  width: 280px;
+  height: 400px;
+  perspective: 1000px;
+  padding: 50px 50px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-front h5{
+  color:#00008B;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.btn btn-primary{
+  background-color: Black;
+}
+</style>
+
+
+
+ 
+<center>
+  <br><br><br><br>
+  <h1>Categories</h1>
+  <br><br>
+<i>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="/images-d/Autisam.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+     <h4><b>Autisam </b></h4>
+     <h5><b></b></h5>
     </div>
-    
-   <!-- Start Footer -->
-   <footer class="footer-32892 pb-0">
+    <div class="flip-card-back">
+      
+    <br><br><br>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="/images-d/down.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+     <h4><b>Down syndrome</b></h4>
+     <h5><b></b></h5>
+
+    </div>
+    <div class="flip-card-back">
+    <br><br><br><br>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img src="/images-d/Hyper.jpg" alt="Avatar" style="width:200px;height:250px;"><br>
+     <h4><b>Hyperactive</b></h4>
+     <h5><b></b></h5>
+
+    </div>
+    <div class="flip-card-back">
+    <br><br><br><br>
+    <a href="/student/view-lessons" name="btn-1" class="btn btn-primary">See Lessons</a>
+
+    </div>
+  </div>
+</div>
+  
+
+
+</center>
+
+<br><br>
+
+
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -262,17 +344,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script>
-
-var preloader = document.getElementById("loading");
-
-function myFunction(){
-
-  preloader.style.display = 'none';
-
-};
-
-</script>
     
 </body>
 </html>

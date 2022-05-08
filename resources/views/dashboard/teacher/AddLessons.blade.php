@@ -158,7 +158,7 @@ background-size: cover;
 
 <div class="container mt-5 m-auto">  
 
-    <form action="/dashboard.teacher.Lesson-store" method="POST"  enctype='multipart/form-data'>
+    <form action="/Lesson-store" method="POST"  enctype='multipart/form-data'>
         {{csrf_field()}}
 
       

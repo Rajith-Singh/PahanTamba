@@ -134,7 +134,7 @@ class StudentController extends Controller
     
         public function sendResetLink(Request $request){
                $request->validate([
-                   'email'=>'required|email|exists:doctors,email'
+                   'email'=>'required|email|exists:students,email'
                ]);
     
                $token = \Str::random(64);

@@ -1,0 +1,4 @@
+cent os - VMnet2 - 62:CD
+
+hikari connection pool
+https://www.snaq.net/software/dbpool/

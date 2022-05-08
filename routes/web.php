@@ -44,13 +44,19 @@ Route::get('/manage-timetable', function () {
     return view('manage-timetable')->with('time', $time);
 });
 
+// Route::get('/manage-timetable', function () {
+
+//     $time=App\Models\CTimetable::all();
+
+//     return view('manage-timetable')->with('time', $time);
+
+//     });
 
 
-
-Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+//Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
 Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
 
-
+Route::get('/updateT/{id}', [TimetableController::class,'manageTime']);
 
 //***added */
 //delete timetable
@@ -94,7 +100,13 @@ Route::get('/edit-lesson', function(){
 //});
 
 
+//**** Added */
+//student view-lesson common interface Route
+Route::get('/viewL-comInterface', function () {
+    return view('View-LessonCommonStudentnterface');
+});
 
+//*added
 //student view lessons route
 Route::get('/view-lessons', function(){
 
@@ -103,8 +115,56 @@ Route::get('/view-lessons', function(){
  });
  
 
+ //addded
+ //view report
+ Route::get('/ClassReport-view', [LessonController::class, 'classRepo'])->name('classRepo');
+
+ Route::get('/download-classReportpdf', [LessonController::class, 'export_pdf']);
+
+ 
+ //***Added */
+  //search lessons
+  Route::post('/search-lessons',[LessonController::class, 'searchL'])->name('searchL');
 
 
+/// //report search
+Route::get('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
+
+
+
+
+
+//**added */
+//filter lessons
+Route::get('/filter-lessons ', function () {
+    return view('FilterLessons');
+});
+
+
+//added
+  //search lessons
+  Route::post('/search-Level',[LessonController::class, 'searchLevel'])->name('searchLevel');
+
+
+//comon diseases (in order to go to view lessons)
+Route::get('/common-lessons ', function () {
+    return view('commondiseasesInterface');
+});
+
+
+
+
+
+//added
+//TimetableView Route
+
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('TimetableView')->with('lesson', $data);
+ });
+
+//added
         //file seen all
         Route::get('/file', [LessonController::class, 'index'])->name('index');
         Route::get('/view/{id}', [LessonController::class, 'show'])->name('show');
@@ -126,6 +186,7 @@ Route::get('/view-lessons', function(){
 //****added */
    //delete lessons
    Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
+
 Auth::routes([
     'verify' => true
 ]);
@@ -277,6 +338,10 @@ Route::get('ftf-activity', function () {
 });
 
 Route::post('/updateTask', [TaskController::class, 'updateTask']);
+
+Route::get('contact-us', function () {
+    return view('contact-us');
+});
 
 
 

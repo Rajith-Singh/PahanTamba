@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 use App\Http\Controllers\TaskController;
-
+use App\Http\Controllers\LessonController;
 
  //Teacher//
 
@@ -146,9 +146,13 @@ use App\Http\Controllers\TaskController;
 
         
         //update timetable
-        Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+        // Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+        // Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+
         Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
 
+        Route::get('/updateT/{id}', [TimetableController::class,'manageTime']);
 
 
         //delete timetable
@@ -169,13 +173,31 @@ use App\Http\Controllers\TaskController;
         });
 
 
-       
+
+        Route::get('/common-class', function () {
+            return view('dashboard.teacher.common-class');
+        });
+        
+
+        //TimetableView Route
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('dashboard.teacher.TimetableView')->with('lesson', $data);
+ });
+
+
+       //get student report view route
+        Route::get('/view-classReport', function () {
+            return view('dashboard.teacher.classReport');
+        });
+
+
+        Route::get('/ClassReport-view', [LessonController::class, 'classRepo'])->name('classRepo');
 
 
 
-
-
-
+        Route::get('/download-classReportpdf', [LessonController::class, 'export_pdf']);
 
 
 

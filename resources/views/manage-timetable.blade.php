@@ -86,7 +86,7 @@ background-size: cover;
           <ul>
             <li><a href="/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
+            <li><a href="/ClassReport-view"><span class="icon-location-arrow mr-3"></span>Class Report</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
@@ -177,6 +177,7 @@ background-size: cover;
             <th>EndTime</th>
             <th>Link</th>
             <th>Description</th>
+            <th></th>
             <th>Action</th>
         </tr></thead>
 <tbody>
@@ -194,7 +195,8 @@ background-size: cover;
     <td>{{$time->Link}}</td>
     <td>{{$time->Description}}</td>
     <td>
-<a href="/updateTimetable/{{$time->id}}" class="btn btn-warning">Update</a>
+<!-- <a href="/updateT/{$time->id}" class="btn btn-warning">Update</a> -->
+<a href="/updateT/{{$time->id}}" class="btn btn-warning">Update</a>
 </td>
 <td>
 <a href="/delete/{{$time->id}}" class="btn btn-danger">Delete</a>
