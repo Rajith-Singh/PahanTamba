@@ -85,7 +85,7 @@
         <div class="nav-menu">
           <ul>
             <li><a href="manage-notice"><span class="icon-search2 mr-3"></span>Manage Notice</a></li>
-            <li><a href="edit-notice"><span class="icon-notifications mr-3"></span>Edit Notice</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
@@ -133,7 +133,7 @@
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item active"><a href="#" class="nav-link">Notices</a></li>
+	        	<li class="nav-item active"><a href="dashboard.teacher.notice" class="nav-link">Notices</a></li>
 				<li class="nav-item "><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>

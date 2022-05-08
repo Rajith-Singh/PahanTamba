@@ -140,7 +140,7 @@
 	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
+	        	<li class="nav-item"><a href="/student/view-notice" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>

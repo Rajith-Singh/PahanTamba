@@ -158,7 +158,7 @@ background-size: cover;
         <div class="jumbotorn">
     <h1>Attendance Report </h1>
     <br>
-    <section class="container">
+    <!-- <section class="container">
     <div class="col-md-4" >
     <form  action="/teacher/search-diseses level" method="post">
     {{@csrf_field()}}
@@ -166,7 +166,7 @@ background-size: cover;
     <input type="search" placeholder="Enter Diseses Level" name="Search">
 <span class="input-group-prepend">
     <button  type="submit"  class="btn btn-secondary">Search</button>
-</span>
+</span> -->
  
 </div>
 </form>

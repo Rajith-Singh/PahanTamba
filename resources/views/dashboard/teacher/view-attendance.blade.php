@@ -133,7 +133,7 @@ background-size: cover;
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
 	        	<li class="nav-item "><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item active"><a href="#" class="nav-link">Notices</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
@@ -159,7 +159,7 @@ background-size: cover;
         <h1>View Mark Attendance </h1>
         <br>
         </div>
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6">
     <form action="/search" method="get">
       <div class="form-group">
@@ -170,7 +170,7 @@ background-size: cover;
       </div>
     </form>
   </div>
-</div>
+</div> -->
 
 </form>
 </div>

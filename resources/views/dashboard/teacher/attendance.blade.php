@@ -115,7 +115,7 @@ $('#datepicker').val(moment().format('MM/DD/YYYY'));
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
+            <li><a href="getAttendance"><span class="icon-search2 mr-3"></span>Get Attendance(View)</a></li>
             <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
@@ -164,7 +164,7 @@ $('#datepicker').val(moment().format('MM/DD/YYYY'));
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item active"><a href="#" class="nav-link">Notices</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item "><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
@@ -182,7 +182,7 @@ $('#datepicker').val(moment().format('MM/DD/YYYY'));
         <div class="row">
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
             <br>
-                 <center> <h4><b>Attendance</b></h4></center>
+                 <center> <h4><b>Mark Attendance</b></h4></center>
 
                  <br>
                  <br>
