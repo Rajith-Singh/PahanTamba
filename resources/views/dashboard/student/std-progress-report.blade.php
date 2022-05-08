@@ -348,6 +348,19 @@ body, table, input, select, textarea {
 
     <br> <br>
 
+    <div class="col-md-4"  style="margin-left:800px">
+      <form action="/student/search" method="get">
+        <div class="input-group">
+          <input type="search" name="search" class="form-control" placeholder="Search task">
+          <span class="input-group-prepend">
+            <button type="submit" class="btn btn-primary"> Search </button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <br> <br>
+
     <div class="container mt-5 m-auto">
     <br> <br>    
     <h2> My Progress Report </h2>
