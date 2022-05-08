@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\NoticeController;
 
 
 /*
@@ -24,6 +25,34 @@ Route::get('/', function () {
 Auth::routes([
     'verify' => true
 ]);
+
+
+
+Route::post('/saveNotice',[NoticeController::class,'storeNotice']);
+
+
+Route::post('/updateNotice1', [NoticeController::class,'updateshow']);
+
+
+//delete notice
+Route::get('/delete/{id}', [NoticeController::class, 'delete'])->name('delete');
+
+
+
+//  edit notices route
+Route::get('/edit-notice', function () {
+    return view('edit-notice');
+});
+
+
+
+
+
+
+// view-attendance route
+Route::get('/view-attendance', function () {
+    return view('view-attendance');
+});
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -170,6 +199,8 @@ Route::get('select-login-type', function () {
 Route::get('contact-us', function () {
     return view('contact-us');
 });
+
+Route::post('/storeAttendance', [NoticeController::class, 'storeAttendance']);
 
 
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Teacher-register</title>
+  	<title>View Notice</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,21 +35,34 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
+	
+    <style>
 
-   
-	
-	
+body {
+
+background-image: url('/../images-p/bg4.jpg');
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-size: cover;
+
+}
+
+</style>
 
 	</head>
-  <body  onload="myFunction()">
+	<body>
 
-  <div id="loading"></div>
-  
+
 	<section>
 
         	<!-- Start Sudebar -->
@@ -71,11 +84,11 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
+            <li><a href="/create-timetable"><span class="icon-search2 mr-3"></span>Create Timetable</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
+            <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
+            <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
           </ul>
         </div>
       </div>
@@ -116,11 +129,11 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
+				<li class="nav-item"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item "><a href="#" class="nav-link">Timetable</a></li>
+	        	<li class="nav-item active"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
@@ -133,86 +146,62 @@
 	<!-- END header -->
 
 
+  
+<br><br>
+<center>
+  <form method="POST" action="">
+<section class="container">
+    
+        <div class="jumbotorn">
+    <h1>View Notice</h1>
+    <br>
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
+    @endif
+    
+</div><br>
+    
+<table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            
+            <th>id</th>
+            <th>DiseasesLevel</th>
+            <th>DiseasesClass</th>
+            <th>Message</th>
+            <th></th>
+        </tr></thead>
+<tbody>
+    @foreach($notice as $notice)
+    <tr style="background:white;">
+     
+    <td>{{$notice->id}}</td>
+    <td>{{$notice->DiseasesLevel}}</td>
+    <td>{{$notice->DiseasesClass}}</td>
+    <td>{!!$notice->Message!!}</td>
+    <td>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
-            <br>
-                 <center> <h4><b>Teacher Register</b></h4></center>
-                 <br>
+<!-- <a href="/updateNotice/{{$notice->id}}" class="btn btn-warning">Update</a>
+</td>
+<td>
+<a href="/delete/{{$notice->id}}" class="btn btn-danger">Delete</a>
+</td> -->
 
-                  <form action="{{ route('teacher.create') }}" method="post" autocomplete="off">
-                    @if (Session::get('success'))
-                         <div class="alert alert-success">
-                             {{ Session::get('success') }}
-                         </div>
-                    @endif
-                    @if (Session::get('fail'))
-                    <div class="alert alert-danger">
-                        {{ Session::get('fail') }}
-                    </div>
-                    @endif
 
-                    @csrf
-                      <div class="form-group">
-                          <label for="name">Full Name</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="fullname" placeholder="Enter full name" value="{{ old('fullname') }}">
-                          <span class="text-danger">@error('fullname'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Address</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="address" placeholder="Enter Address" value="{{ old('address') }}">
-                          <span class="text-danger">@error('address'){{ $message }} @enderror</span>
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <!-- <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ old('email') }}"> -->
-                        <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{ old('email') }}">
-                        <span class="text-danger">@error('email'){{ $message }} @enderror</span>
-                    </div>
-                      <div class="form-group">
-                          <label for="password">Password</label>
-                          <!-- <input type="password" class="form-control" name="password" placeholder="Enter password" > -->
-                          <input type="password" class="form-control" name="password" placeholder="Enter password" value="{{ old('password') }}">
-                          <span class="text-danger">@error('password'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                        <label for="cpassword">Confirm Password</label>
-                        <!-- <input type="password" class="form-control" name="cpassword" placeholder="Enter confirm password" value="{{ old('cpassword') }}"> -->
-                        <input type="password" class="form-control" name="cpassword" placeholder="Enter confirm password" value="{{ old('cpassword') }}">
-                        <span class="text-danger">@error('cpassword'){{ $message }} @enderror</span>
-                    </div>
-                    <br>
-                    <h4>Educational Qualification</h4><br>
-                    
-                    <div class="form-group">
-                          <label for="name">Education</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="education" placeholder="Enter Your Educational Qualification" value="{{ old('education') }}">
-                          <span class="text-danger">@error('education'){{ $message }} @enderror</span>
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Skills</label>
-                          <!-- <input type="text" class="form-control" name="name" placeholder="Enter full name"> -->
-                          <input type="text" class="form-control" name="skills" placeholder="Enter Your Skills" value="{{ old('skills') }}">
-                          <span class="text-danger">@error('skills'){{ $message }} @enderror</span>
-                      </div>
-                      <br>
-                      <div class="form-group">
-                          <button type="submit" class="btn btn-primary">Register</button>
-                      </div>
-                      <br>
-                      <a href="{{ route('teacher.login') }}">I already have an account</a>
-                  </form>
-            </div>
-        </div>
-    </div>
+</tr>
+@endforeach
+</tbody>
 
-   <!-- Start Footer -->
-   <footer class="footer-32892 pb-0">
+</table>
+</form>
+</center>
+</div>
+
+
+
+
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -299,17 +288,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 
-    <script>
-
-var preloader = document.getElementById("loading");
-
-function myFunction(){
-
-  preloader.style.display = 'none';
-
-};
-
-</script>
     
 </body>
 </html>

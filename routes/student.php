@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student\StudentController;
-
+use App\Http\Controllers\Student\NoticeController;
 
 
                 //Student//
@@ -28,4 +28,11 @@ Route::prefix('student')->name('student.')->group(function(){
         Route::post('/logout',[StudentController::class,'logout'])->name('logout');
 
     });
+
+
+    //view notice
+    Route::get('/view-notice', function () {
+        $notice=App\Models\Notice::all();
+        return view('dashboard.student.view-notice')->with('notice', $notice);
+        });
 });
