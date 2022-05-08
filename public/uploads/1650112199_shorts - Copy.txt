@@ -1,0 +1,12 @@
+alt+insert	--> create a new java class
+ctrl+j	--> see the list of live templates
+alt+4		--> go back in to running window
+shift+ctrl+alt+s  --> open the folder structure
+double shift	--> search something
+ctrl+1	--> Hide navBar
+ctrl+e	--> go to previous class
+ctrl+shift+backspace --> last edited location
+ctrl+alt+l 		--> format the code
+alt+enter	--> define missed variables
+ctrl+alt+o	--> delete unused imports
+ctrl+d	--> line space replicate

@@ -1,0 +1,13 @@
+package org.restapi.login.login.model;
+
+public class loginmodel {
+
+	private int id;
+	private String name;
+	private int nic;
+	private int telNo;
+	private String address;
+	
+	public loginmodel() {
+
+	}

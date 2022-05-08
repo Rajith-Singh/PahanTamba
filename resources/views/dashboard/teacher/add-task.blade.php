@@ -299,7 +299,7 @@
 		};
 	</script>	
 
-</body>
+
 
 <script src="/js/ckeditor.js"> </script>
   <script>
@@ -315,5 +315,5 @@
       crossorigin="anonymous"
     ></script>
 
-
+    </body>
 </html>

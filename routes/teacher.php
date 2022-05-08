@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher\TeacherController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\AtReportController;
 
@@ -194,6 +195,108 @@ use App\Http\Controllers\GameController;
         Route::get('add-songs-and-games', function () {
             return view('dashboard.teacher.add-songs-and-games');
         });
+
+
+
+        Route::get('/create-timetable', function () {
+            return view('dashboard.teacher.create-timetable');
+        });
+        
+        Route::get('/add-lessons', function () {
+            return view('dashboard.teacher.AddLessons');
+        });
+        //insert lessons
+        Route::post('/Lesson-store', [LessonController::class, 'LessonStore']);
+
+        //delete lessons
+        Route::get('/deleteL/{id}', [LessonController::class, 'delete'])->name('delete');
+
+        //timetable-----------
+        Route::get('/create-timetable', function () {
+         return view('dashboard.teacher.create-timetable');
+        });
+
+        
+        //insert timetable
+        Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
+ 
+        //delete timetable
+        Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
+
+        
+        //timetable adding form view
+        Route::get('/create-timetable', function () {
+            return view('dashboard.teacher.create-timetable');
+        });
+
+        //insert timetable
+        Route::post('/timetable-store', [TimetableController::class, 'Timetablestore']);
+
+        //manage timetable
+        Route::get('/manage-timetable', function () {
+        $time=App\Models\CTimetable::all();
+        return view('dashboard.teacher.manage-timetable')->with('time', $time);
+        });
+
+        
+        //update timetable
+        // Route::get('/updateTimetable/{id}', [TimetableController::class,'manageTime']);
+        // Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+
+        Route::post('/updateT', [TimetableController::class,'updateshow'])->name('updateshow');
+
+        Route::get('/updateT/{id}', [TimetableController::class,'manageTime']);
+
+
+        //delete timetable
+        Route::get('/delete/{id}', [TimetableController::class, 'delete'])->name('delete');
+
+
+        //update lesson view pGE Route
+        Route::get('/updateLessons', function () {
+        return view('dashboard.teacher.Finalupdate-lessons');
+        });
+
+
+        //edit / delete view page route 
+        Route::get('/edit-lesson', function(){
+
+         $data=App\Models\Lessons::all();
+        return view('dashboard.teacher.updateLessons')->with('lesson', $data);
+        });
+
+
+
+        Route::get('/common-class', function () {
+            return view('dashboard.teacher.common-class');
+        });
+        
+
+        //TimetableView Route
+Route::get('/view-timetable', function(){
+
+    $data=App\Models\CTimetable::all();
+     return view('dashboard.teacher.TimetableView')->with('lesson', $data);
+ });
+
+
+       //get student report view route
+        Route::get('/view-classReport', function () {
+            return view('dashboard.teacher.classReport');
+        });
+
+
+        Route::get('/ClassReport-view', [LessonController::class, 'classRepo'])->name('classRepo');
+
+
+
+        Route::get('/download-classReportpdf', [LessonController::class, 'export_pdf']);
+
+
+
+
+
 
     });
 

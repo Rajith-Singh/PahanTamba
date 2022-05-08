@@ -92,8 +92,8 @@
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span>Sample Link</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Sample Link</a></li>
+            <li><a href="/teacher/view-timetable"><span class="icon-search2 mr-3"></span>View Timetable</a></li>
+            <li><a href="/teacher/ClassReport-view"><span class="icon-notifications mr-3"></span>Student Report</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span>Sample Link</a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span>Logout</a></li>
@@ -138,8 +138,9 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li> 
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item"><a href="/teacher/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/teacher/create-timetable" class="nav-link">Timetable</a></li>
+	    
 	        	<li class="nav-item"><a href="/teacher/notice" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="/teacher/add-task" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
