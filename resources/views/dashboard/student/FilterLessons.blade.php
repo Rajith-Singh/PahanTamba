@@ -35,19 +35,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-	  <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
 
 body {
 
-background-image: url('/../images-d/kids11.jpg');
+background-image: url('/images-d/kids11.jpg');
 
 background-repeat: no-repeat;
 
@@ -58,6 +58,8 @@ background-size: cover;
 }
 
 </style>
+
+
 
 	</head>
 	<body>
@@ -75,7 +77,7 @@ background-size: cover;
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -84,8 +86,8 @@ background-size: cover;
         
         <div class="nav-menu">
           <ul>
-            <li><a href="#"><span class="icon-search2 mr-3"></span></a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span></a></li>
+            <li><a href="/add-lessons"><span class="icon-search2 mr-3"></span> Add Lessons</a></li>
+            <li><a href="#"><span class="icon-notifications mr-3"></span>View profile</a></li>
             <li><a href="#"><span class="icon-location-arrow mr-3"></span></a></li>
             <li><a href="#"><span class="icon-pie-chart mr-3"></span></a></li>
             <li><a href="#"><span class="icon-sign-out mr-3"></span></a></li>
@@ -131,8 +133,8 @@ background-size: cover;
 	        <ul class="navbar-nav m-auto">
 	        	<li class="nav-item "><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
-	        	<li class="nav-item active"><a href="#" class="nav-link">Timetable</a></li>
+				<li class="nav-item active"><a href="/add-lessons" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/view-timetable" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Tasks</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
@@ -146,57 +148,72 @@ background-size: cover;
 	<!-- END header -->
 
 
-  
+
+
 <br><br>
-
-
-<div class="container">
-        <div class="row">
-       <div class="col-md-12">
-            <h2>Update Timetable Details</h2><br> 
-     <form  method="post"  action="/updateT">
-
-
-              {{ @csrf_field() }}
-
-             <h5> <input type="hidden" name="id" value="{{$time->id}}"></h5>
-<br>
-<h5>Subject</h5>
-    <input type="text" class="form-control" name="Ctsubject" value="{{ $time->Subject}}">
-    <br><br>
-    <h5>Topic</h5>      
-     <input type="text" class="form-control" name="cttopic" value="{{$time->Topic}}" >
-     <br><br>
-     <h5>Start Date</h5>
-    <input type="text" class="form-control" name="sDate" value="{{$time->StartDate}}">
-
-    <br><br>
-    <h5>Level</h5>
-    <input type="text" class="form-control" name="clevel" value="{{  $time->Level}}">
-    <br><br>
-
-    <h5>Start Time</h5>
-    <input type="text" class="form-control" name="ctSTime" value="{{  $time->StartTime}}" >
-    <br><br>
-
-    <h5>End Date</h5>
-    <input type="text" class="form-control" name="eDate" value="{{ $time->EndDate}}" >
-    <br><br>
-    <h5>End Time</h5>
-    <input type="text" class="form-control" name="ceTime" value="{{ $time->EndTime}}" >
-    <br><br>
-    <h5>Link</h5>
-    <input type="text" class="form-control" name="Ctlink" value="{{$time->Link}}" >
-    <br><br>
-    <h5>Description</h5>
-    <input type="text" class="form-control" name="ctdescription" value="{{  $time->Description}}" >
-    <br><br>
-
-    <button class="btn btn-warning" type="submit">Update </button>
+<center>
+<section class="container">
     
-</div></div></div>
-</form>
+<form  action="/search-Level" method="post">
+{{@csrf_field()}}
 
+<div class="input-group">
+  <input type="search" placeholder="Enter Level" name="search">
+  <span class="input-group-prepend">
+  <button  type="submit" class="btn btn-primary">Search</button>
+</span>
+@error('id')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+     @enderror
+</div>
+</form>
+</div>
+
+
+        <div class="jumbotorn">
+    <h1>View Lessons</h1>
+    <br>
+
+    <div class="line" style="text-align:right;">
+    @if(session('message'))
+    <div class="alert alert-success">{{session('message')}}</div>
+    @endif
+    
+</div><br>
+    
+<table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            
+         
+            <th>Subject</th>
+            <th>Disease</th>
+            <th>Level</th>
+            <th>Grade</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr></thead>
+<tbody>
+    @foreach($lesson as $Lesson)
+    <tr style="background:white;">
+    
+  
+    <td>{{$Lesson->Subject}}</td>
+    <td>{{$Lesson->Disease}}</td>
+    <td>{{$Lesson->Level}}</td>
+    <td>{{$Lesson->Grade}}</td>
+    <td>{{$Lesson->Content}}</td>
+
+    <td><a href="/file/download/{{$Lesson->Content}}" class="btn btn-danger">Download</a></td>
+
+
+</tr>
+@endforeach
+</tbody>
+
+</table>
+</center>
+</div>
 
 
     	<!-- Start Footer -->
@@ -288,5 +305,11 @@ background-size: cover;
     <script src="/js/main.js"></script>
 
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+
 </body>
 </html>
+
+
+

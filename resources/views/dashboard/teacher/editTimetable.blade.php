@@ -43,11 +43,11 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/css/footer/style.css">
 	
-    <style>
+	  <style>
 
 body {
 
-background-image: url('/../images-d/kids223.jpg');
+background-image: url('/../images-d/kids11.jpg');
 
 background-repeat: no-repeat;
 
@@ -154,8 +154,13 @@ background-size: cover;
         <div class="row">
        <div class="col-md-12">
             <h2>Update Timetable Details</h2><br> 
-     <form  method="POST"  action="/updateT">
+     <form  method="post"  action="/updateT">
+
+
               {{ @csrf_field() }}
+
+             <h5> <input type="hidden" name="id" value="{{$time->id}}"></h5>
+<br>
 <h5>Subject</h5>
     <input type="text" class="form-control" name="Ctsubject" value="{{ $time->Subject}}">
     <br><br>
@@ -187,12 +192,10 @@ background-size: cover;
     <input type="text" class="form-control" name="ctdescription" value="{{  $time->Description}}" >
     <br><br>
 
-    <a href="/updateT" class="btn btn-warning">update</a>
+    <button class="btn btn-warning" type="submit">Update </button>
     
 </div></div></div>
 </form>
-
-
 
 
 

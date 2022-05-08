@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+use PDF;
 use Illuminate\Http\Request;
 
 use App\Models\Lessons;
 use App\Models\Timetables;
+use App\Models\Student;
+
 class LessonController extends Controller
 {
     //
@@ -51,7 +54,7 @@ class LessonController extends Controller
        return redirect()->back()->with('message', 'The lesson was added successfully to the system.');
        session()->flash('message',' lessons Added successfully!');
    // return view('updateLessons')->with('fileModel', $data);
-   return view('viewLessons')->with('lesson', $data);
+   return view('dashboard.teacher.viewLessons')->with('lesson', $data);
 //return view('studentLessonview', compact('file'));
 
 
@@ -67,7 +70,7 @@ class LessonController extends Controller
     }
 
 
-    
+
     public function updateL($id)
     {
         $fileModel= Lessons::find($id);
@@ -122,7 +125,85 @@ class LessonController extends Controller
 
 
 
+    public function searchL(Request $request)
+    {
+        if($request ->isMethod('post'))
+        {
+            $name=$request->get('search');
+            $lesson=Lessons::where('Disease', 'LIKE', '%'. $name .'%')->paginate(10);
+            //->where('subject','Math');
+            //$file=Lesson::where( 'grade','LIKE', '%', '$name', '%')->paginate(5);
+           
+        }
+        return view('FilterLessons', compact('lesson'));  
+    }
 
 
+
+
+    public function classRepo(Request $request) {
+        $data=Student::all();
+        return view('dashboard.teacher.classReport')->with('student',$data);
+    }
+
+    // public function classRepo(){
+    //     $students= DB::select("select * from students");
+     
+         
+    //      return view('classReport',['students'=>$students]);
+     
+    //  }
+
+
+    //  public function downloadRep(){
+
+    //     /*$pdfclass=\App::make('dompdf.wrapper');
+    //     $pdfclass -> loadHTML($this->
+    //     convert_userR_to_html());
+    //     $pdfclass->stream();*/
+    
+    //     $data = Student::all();
+    //     $pdfclass=PDF::loadview('classReport', compact('data'))->setOptions(['defaultFont' => 'sans-serif']);
+    //     //$pdfclass->stream();
+        
+    //     return $pdfclass->download('classReport.pdf');
+    // }
+    
+
+public function export_pdf(){
+    $pdf = PDF::loadView('classReport');
+    return $pdf->download('classReport.pdf');
+}
+
+
+
+    public function searchStID(Request $request)
+    {
+        if($request ->isMethod('post'))
+        {
+            $name=$request->get('search');
+            $students=Student::where('id', 'LIKE', '%'. $name .'%')->paginate(10);
+            //->where('subject','Math');
+            //$file=Lesson::where( 'grade','LIKE', '%', '$name', '%')->paginate(5);  
+        }
+
+        return view('dashboard.teacher.classReport', compact('students'));
+    }
+
+
+     public function searchLevel(Request $request)
+     {
+         if($request ->isMethod('post'))
+         {
+             $name=$request->get('search');
+             $lesson=Lessons::where('Level', 'LIKE', '%'. $name .'%')->paginate(10);
+             //->where('subject','Math');
+             //$file=Lesson::where( 'grade','LIKE', '%', '$name', '%')->paginate(5);
+            
+         }
+         return view('FilterLessons', compact('lesson'));  
+     }
+ 
+    
     
 }
