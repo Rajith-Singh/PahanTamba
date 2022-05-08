@@ -30,10 +30,13 @@ use App\Http\Controllers\GameController;
         Route::post('/logout',[TeacherController::class,'logout'])->name('logout');
 
         /////// Rajith's routes
+
+        //add tasks
         Route::get('/add-task', function () {
             return view('dashboard.teacher.add-task');
         });
 
+        //view category
         Route::get('view-category', function () {
             return view('dashboard.teacher.view-category');
         });
@@ -101,30 +104,40 @@ use App\Http\Controllers\GameController;
         });
         
 
+        //delete tasks
         Route::get('/deleteTask/{id}', [TaskController::class, 'deleteTask']);
 
+        //edit tasks
         Route::get('/editTask/{id}', [TaskController::class, 'editTask']);
 
+        //update tasks
         Route::post('/updateTask', [TaskController::class, 'updateTask']);
 
+        //add games
         Route::get('game-handler', function () {
             return view('dashboard.teacher.game-handler');
         });
 
+        //edit games
         Route::get('/editGame/{id}', [GameController::class, 'editGames']);
 
+        //update games
         Route::post('/updateGame', [GameController::class, 'updateGame']);
 
+        //delete games
         Route::get('/deleteGame/{id}', [GameController::class, 'deleteGame']);
 
+        //view student's answers
         Route::get('view-answer-list', function () {
             return view('dashboard.teacher.view-answer-list');
         });
 
         Route::get('/getStdAns', [TaskController::class, 'getStdAns']);
 
+        //Get relevant student's answers
         Route::get('/getAnswers/{std_id}/{task_id}', [TaskController::class, 'getAnswers']);
 
+        //Add students results
         Route::get('add-result', function () {
             return view('dashboard.teacher.add-result');
         });
@@ -133,16 +146,20 @@ use App\Http\Controllers\GameController;
             return view('dashboard.teacher.submit-results');
         });
 
+        //Search student's progress
         Route::get('/search', [TaskController::class, 'searchTasks']);
         
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
+        //Save songs
         Route::post('/storeSong', [GameController::class, 'storeSong']);
 
+        //Add songs
         Route::get('add-songs', function () {
             return view('dashboard.teacher.add-songs');
         });
 
+        //View category
         Route::get('add-songs-and-games', function () {
             return view('dashboard.teacher.add-songs-and-games');
         });
