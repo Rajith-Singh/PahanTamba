@@ -90,11 +90,12 @@ Route::prefix('student')->name('student.')->group(function(){
     Route::get('/search', [TaskController::class, 'searchResult']);
     Route::get('/Progress-report-pdf/{id}', [TaskController::class, 'downloadProgressReport']);
 
-    Route::get('/search/{id}', [TaskController::class, 'searchResult']);
+    Route::get('songs-games', function () {
+        return view('dashboard.student.songs-games');
+    });
 
+    Route::get('/view-songs', [GameController::class, 'viewSongs']);
     
-    
-
     // Route::get('view-games', function () {
     //     return view('dashboard.student.view-games');
     // });

@@ -10,13 +10,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <title>View Games</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <title>View Category</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+<link rel="stylesheet" href="About.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/..js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/../js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.7.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/pahan_tamba_logo.png",
+		"sameAs": [
+				"https://facebook.com/name",
+				"https://twitter.com/name",
+				"https://www.instagram.com/name"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="About">
+    <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/../css/rajith13.css" media="screen">
+    <link rel="stylesheet" href="/../css/rajith14.css" media="screen">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="/../css/header/style.css">
 
@@ -45,26 +89,20 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <!-- Bootstrap CSS -->
-
-
   <link rel="stylesheet" href="/../css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
   
   <!-- Style CSS -->
   <link rel="stylesheet" href="/../css/footer/style.css">
 
-  <link rel="stylesheet" href="/../css/rajith10.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   </head>
-	<body  onload="myFunction()">
+  <body class="u-body u-xl-mode" onload="myFunction()">
 
   <div id="loading"></div>
-
+  
 	<section>
 
         	<!-- Start Sudebar -->
@@ -77,7 +115,7 @@
       <div class="side-inner">
 
         <div>
-          <center> <img src="/images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
+          <center> <img src="/../images/pahan_tamba_logo.png" height="100px" width="130px" alt="Image" class="img-fluid"> </center>
         </div>
 
         <div class="counter d-flex justify-content-center">
@@ -87,8 +125,8 @@
         <div class="nav-menu">
           <ul>
           <li><a href="/student/instructions"><span class="icon-search2 mr-3"></span>Instructions</a></li>
-            <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
-            <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
+          <li><a href="#"><span class="icon-notifications mr-3"></span>Songs & games</a></li>
+          <li><a href="#"><span class="icon-location-arrow mr-3"></span>Student Progress Report</a></li>
           </ul>
         </div>
       </div>
@@ -121,7 +159,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-	    	<a class="navbar-brand" href="#"> <img src = "/images/pahan_tamba_logo.png" height = "100px" width = "130px"  style="margin-top:-40px"> </a>
+	    	<a class="navbar-brand" href="#"> <img src = "/../images/pahan_tamba_logo.png" height = "100px" width = "130px"> </a>
 			
 
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,12 +167,12 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item  active"><a href="/student/instructions" class="nav-link">Tasks</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item "><a href="/student/instructions" class="nav-link">Tasks</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
                 <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b style="color:black"> Hi {{ Auth::guard('student')->user()->fullname }} </b> 
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('student.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
@@ -145,57 +183,42 @@
 	    </div>
 	  </nav>
 	</section>
-	<!-- END header -->
+	<!-- END header -->  
 
-    <br>
-  <br>
 
-  <form method="post"  action="saveanswer">
-      @csrf
 
-  @foreach($game as $row)
-    <div class="container pt-3">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>{!!$row->game!!}</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="col-xs-3 5"> </div>
-                    <div class="quiz" id="quiz" data-toggle="buttons"> 
-                    <label class="element-animation1 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerA}}"> {{$row->answerA}} </label> 
-                    <label class="element-animation2 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerB}}"> {{$row->answerB}} </label> 
-                    <label class="element-animation3 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerC}}"> {{$row->answerC}} </label> 
-                    <label class="element-animation4 btn btn-lg btn-danger btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="checkbox" name="q_answer[]" value="{{$row->answerD}}"> {{$row->answerD}}  </label> </div>
+
+    <section class="u-clearfix u-image u-section-1" id="carousel_0a87" data-image-width="2873" data-image-height="1753">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-container-style u-custom-item u-group u-palette-2-base u-shape-circle u-group-1">
+                  <div class="u-container-layout u-valign-middle u-container-layout-2"><span class="u-file-icon u-icon u-icon-1"> <a href="/student/view-songs"> <img src="/../images/651717.png" alt="" href=""> </a> </span>
                   </div>
+                </div>
+                <h6 class="u-text u-text-1">Songs</h6>
+              </div>
             </div>
+            <div class="u-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="u-container-style u-custom-item u-group u-palette-3-base u-shape-circle u-group-2">
+                  <div class="u-container-layout u-valign-middle u-container-layout-4"><span class="u-file-icon u-icon u-icon-2"> <a href="/student/view-games"> <img src="/../images/3260289.png" alt=""> </a> </span>
+                  </div>
+                </div>
+                <h6 class="u-text u-text-2">Games</h6>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <input type="hidden" value="{{$row->id}}" name="q_id[]">
-    <input type="hidden" value="{{$row->gametype}}" name="game_type[]">
-    <input type="hidden" value="{{ Auth::guard('student')->user()->id }}" name="auth_id[]">
-    @endforeach
-
-
-    <br> 
-    <table align="right">
-      <tr>
-        <td>
-          <button class="btn btn-danger btn-lg" type="submit">Submit</button>
-          &nbsp&nbsp&nbsp
-        </td>
-
-        <td>
-          <button class="btn btn-warning btn-lg" type="reset">Clear</button>
-        </td>
-      </tr>
-    </table>
-    <br> <br>    <br> <br>
+      </div>
+    </section>
 
 
 
-    <!-- Start Footer -->
-      <footer class="footer-32892 pb-0">
+    	<!-- Start Footer -->
+	    <footer class="footer-32892 pb-0">
       <div class="site-section">
         <div class="container">
 
@@ -242,12 +265,12 @@
               <h3>Gallery</h3>
               <div class="row gallery">
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_1.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_2.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_1.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_2.png" alt="Image" class="img-fluid"></a>
                 </div>
                 <div class="col-6">
-                  <a href="#"><img src="/images/img_3.png" alt="Image" class="img-fluid"></a>
-                  <a href="#"><img src="/images/img_4.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_3.png" alt="Image" class="img-fluid"></a>
+                  <a href="#"><img src="/../images/img_4.png" alt="Image" class="img-fluid"></a>
                 </div>
               </div>
             </div>
@@ -291,3 +314,5 @@
 	</script>	
 
 </body>
+
+</html>

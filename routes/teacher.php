@@ -137,6 +137,12 @@ use App\Http\Controllers\GameController;
         
         // Route::resource('dashboard.teacher.game-handler','CkeditorController');
 
+        Route::post('/storeSong', [GameController::class, 'storeSong']);
+
+        Route::get('add-songs', function () {
+            return view('dashboard.teacher.add-songs');
+        });
+
 
     });
 });
