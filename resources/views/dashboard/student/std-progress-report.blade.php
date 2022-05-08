@@ -248,11 +248,6 @@ body, table, input, select, textarea {
 			opacity:1;
 		}
 
-
-
-    
-
-
 	} /* min-width:32em */
 
 } /* grid only */
@@ -332,8 +327,8 @@ body, table, input, select, textarea {
 				<li class="nav-item"><a href="#" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Timetable</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Notices</a></li>
-				<li class="nav-item  active"><a href="/student/instructions" class="nav-link">Tasks</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Results</a></li>
+				<li class="nav-item "><a href="/student/instructions" class="nav-link">Tasks</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link">Results</a></li>
 	        	<li class="nav-item"><a href="#" class="nav-link">Finance</a></li>
                 <li class="nav-item" style="margin-top: 27px; margin-left: 10px"> <b style="color:black"> Hi {{ Auth::guard('student')->user()->fullname }} </b> 
 				<li class="nav-item" style="margin-top: 27px; margin-left: 10px"><a href="{{ route('student.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" onMouseOver="this.style.color='#9b870c'" onMouseOut="this.style.color='red'">Logout</a>
@@ -346,7 +341,17 @@ body, table, input, select, textarea {
 	</section>
 	<!-- END header -->
 
-    <br> <br>
+  <br> <br>
+  <div class="col-md-4"  style="margin-left:800px">
+      <form action="/student/search/{{ Auth::guard('student')->user()->id }}" method="get">
+        <div class="input-group">
+          <input type="search" name="search" class="form-control" placeholder="Search task">
+          <span class="input-group-prepend">
+            <button type="submit" class="btn btn-primary"> Search </button>
+          </span>
+        </div>
+      </form>
+    </div>
 
     <div class="col-md-4"  style="margin-left:800px">
       <form action="/student/search" method="get">
@@ -437,7 +442,7 @@ body, table, input, select, textarea {
     <br><br><br><br><br><br>
 
         <center> <div class="col-12">
-                <a href="#" class="btn btn-primary">
+                <a href="/student/Progress-report-pdf/{{ Auth::guard('student')->user()->id }}" class="btn btn-primary">
                   DOWNLOAD YOUR PROGRESS REPORT 
                 </a>      
         </div> <center>

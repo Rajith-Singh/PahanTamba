@@ -185,7 +185,9 @@ Route::post('/storeAnswer',[TaskController::class,'storeAnswer']);
 
 Route::post('/storeFinalMarks',[TaskController::class,'storeFinalMarks']);
 
+Route::get('/getStdAns', [TaskController::class, 'getStdAns'])->name('getStdAns');
 
+Route::get('/search', [TaskController::class, 'searchStdAns']);
 
 
 

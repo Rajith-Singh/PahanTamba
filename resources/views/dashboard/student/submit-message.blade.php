@@ -203,7 +203,7 @@
       </div>
         <h1>Success</h1> 
         <p>{{ Auth::guard('student')->user()->fullname }}, Your answers have been submitted successfully</p>
-        <button class="pure-button button3 btn-lg">Progress Report</button>
+        <a href="/student/viewProgressReport/{{ Auth::guard('student')->user()->id }}" class="pure-button button3 btn-lg">Progress Report</a>
       </div>
     </center> 
 

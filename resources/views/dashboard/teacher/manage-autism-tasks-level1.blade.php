@@ -139,6 +139,8 @@
 	</section>
 	<!-- END header -->
 
+
+
     <br>
   <center> <h3> Manage Tasks - Autism - Level 1 </h3> </center>
   <br>
@@ -151,6 +153,7 @@
             <thead>
                 <tr>
                     <th><center>Tasks</center></th>
+                    <th><center>Title</center></th>
                     <th><center>Action</center></th>
                 </tr>
             </thead>
@@ -158,6 +161,7 @@
                 @foreach($viewTasks as $data)
                     <tr>
                         <td>{!!$data->task!!}</td>
+                        <td>{{$data->title}}</td>
                         <td><center>
                             <table>
                                 <tr>
