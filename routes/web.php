@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\pagesController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\GameController;
 
@@ -24,6 +25,65 @@ use App\Http\Controllers\TimetableController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blacklist', function () {
+    return view('blacklist');
+});
+
+Route::get('/view', function () {
+    return view('view');
+});
+
+Route::get('/Addfees', function () {
+    return view('Addfees');
+});
+
+
+Route::get('/Addpaymentdetails', function () {
+    return view('Addpaymentdetails');
+});
+
+Route::post('/saveSalary',[pagesController::class,'storeSalary']);
+
+Route::post('/updateSal', [pagesController::class, 'updateSal']);
+
+
+//Route::get('/view-mangesalPage', function(){
+//      $times=App\Models\Salary::all(); 
+//    return view('managesal')->with('times', $times);
+//})
+
+
+//delete salary route
+//Route::get('/deleteSal/{id}', [pagesController::class, 'deleteSal'])->name(deleteSal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //added
 Route::get('/add-lessons', function () {
@@ -132,6 +192,10 @@ Route::get('/view-lessons', function(){
 
 /// //report search
 Route::get('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
+
+
+
+
 
 
 
@@ -398,9 +462,7 @@ Route::post('/storeAttendance', [NoticeController::class, 'storeAttendance']);
 
 // Auth::routes();
 
-Auth::routes([
-    'verify' => true
-]);
+
 
 
 
@@ -470,4 +532,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

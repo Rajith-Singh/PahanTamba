@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
-
+use App\Http\Controllers\pagesController;
 
 
 //User//
@@ -30,5 +30,20 @@ Route::prefix('user')->name('user.')->group(function(){
           Route::post('/logout',[UserController::class,'logout'])->name('logout');
           Route::get('/add-new',[UserController::class,'add'])->name('add');
     });
+
+    Route::get('/AddSalary', function () {
+        return view('dashboard.user.Addfees');
+    });
+
+    Route::get('managesal', function () {
+        $data=App\Models\Salary::all();
+        return view('dashboard.user.managesal')->with('viewSalary',$data);
+    });
+
+    Route::get('/deleteSal/{id}', [pagesController::class, 'deleteSal']);
+
+    Route::get('/editSal/{id}', [pagesController::class, 'editSal']);
+
+
 
 });

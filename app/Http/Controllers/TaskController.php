@@ -95,6 +95,8 @@ class TaskController extends Controller
         DB::table('tasks')->where('id',$id)->delete();
         return back()->with('deleteTask')->with('message', 'The task was successfully deleted.');
     }
+     
+    
 
     
     public function editTask($id){
