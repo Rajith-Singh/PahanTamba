@@ -293,7 +293,8 @@ Route::get('/view-timetable', function(){
 
         Route::get('/download-classReportpdf', [LessonController::class, 'export_pdf']);
 
-
+/// //report search
+Route::post('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
 
 
 

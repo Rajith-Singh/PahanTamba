@@ -60,15 +60,19 @@
 <section class="container">
 
 <div class="col-md-4" >
-
-<form  action="/searchStID" method="GET">
+<br>
+   
+<form  action="/teacher/searchStID" method="post">
 {{@csrf_field()}}
+
 <div class="input-group">
   <input type="search" placeholder="Enter student ID" name="search">
   <span class="input-group-prepend">
-  <button  type="submit"  class="btn btn-primary">Search</button>
+  <button  type="submit" class="btn btn-primary">Search</button>
 </span>
- 
+@error('id')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+     @enderror
 </div>
 </form>
 </div>
@@ -76,21 +80,20 @@
 
 
 
-  <form action="/download-classReportpdf">
+  <form method="post" action="">
   <a  class="btn btn-success mt-4" href="{{url('/download-classReportpdf')}}">Download Report</a>
   <br><br>
   {{@csrf_field()}}
   <h2>Students Details</h2><br>
 <table id="tab2">
 <thead>
-        <tr>
+<tr>
             <th>student ID</th>
             <th>Full Name</th>
             <th>Address</th>
             <th>Age</th>
             <th>Gender</th>
-            <th>subject</th>
-            <th>grade</th>
+           
             <th>Email</th>
         </tr></thead>
 
@@ -105,10 +108,7 @@
     <td>{{ $data->address}}</td>
     <td>{{  $data->age }}</td>
     <td>{{ $data->gender}}</td>
-    <td>{{ $data->subject}}</td>
-    <td>{{ $data->grade}}</td>
     <td>{{ $data->email}}</td>
-
         </tr>
         @endforeach
 </tbody>

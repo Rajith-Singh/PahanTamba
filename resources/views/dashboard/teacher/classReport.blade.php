@@ -61,14 +61,18 @@
 
 <div class="col-md-4" >
 <br>
-<form  action="/searchStID" method="GET">
+   
+<form  action="/teacher/searchStID" method="POST">
 {{@csrf_field()}}
+
 <div class="input-group">
   <input type="search" placeholder="Enter student ID" name="search">
   <span class="input-group-prepend">
-  <button  type="submit"  class="btn btn-primary">Search</button>
+  <button  type="submit" class="btn btn-primary">Search</button>
 </span>
- 
+@error('id')
+    <div class="alert alert-success mt-1 mb-1">{{ $message }}</div>
+     @enderror
 </div>
 </form>
 </div>
@@ -76,7 +80,7 @@
 
 
 
-  <form action="/download-classReportpdf">
+  <form method="post" action="">
   <a  class="btn btn-success mt-4" href="{{url('/download-classReportpdf')}}">Download Report</a>
   <br><br>
   {{@csrf_field()}}

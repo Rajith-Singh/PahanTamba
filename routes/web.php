@@ -129,9 +129,9 @@ Route::get('/view-lessons', function(){
   //search lessons
   Route::post('/search-lessons',[LessonController::class, 'searchL'])->name('searchL');
 
-
+//added
 /// //report search
-Route::get('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
+Route::post('/searchStID', [LessonController::class, 'searchStID'])->name('searchStID');
 
 
 
@@ -155,6 +155,9 @@ Route::get('/common-lessons ', function () {
 });
 
 
+Route::get('/our-organization ', function () {
+    return view('OurOrganization');
+});
 
 
 

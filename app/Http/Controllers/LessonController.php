@@ -182,12 +182,12 @@ public function export_pdf(){
         if($request ->isMethod('post'))
         {
             $name=$request->get('search');
-            $students=Student::where('id', 'LIKE', '%'. $name .'%')->paginate(10);
+            $student=Student::where('id', 'LIKE', '%'. $name .'%')->paginate(10);
             //->where('subject','Math');
             //$file=Lesson::where( 'grade','LIKE', '%', '$name', '%')->paginate(5);  
         }
 
-        return view('dashboard.teacher.classReport', compact('students'));
+        return view('dashboard.teacher.classReport',compact('student'));
     }
 
 
